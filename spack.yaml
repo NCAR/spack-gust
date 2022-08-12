@@ -383,7 +383,7 @@ spack:
   view:
     baseenv:
       root: /glade/u/apps/gust/22.08/opt
-      select: [tmux, ghostscript]
+      select: [tmux, ghostscript, emacs]
       link_type: symlink
       link: roots
   compilers:
@@ -796,3 +796,4 @@ spack:
   - netcdf@4.8.1%cce@14.0.2+mpi ^cray-mpich@8.1.18%cce@14.0.2
   - nco@5.0.1%gcc@11.2.0
   - cdo@2.0.5%gcc@11.2.0
+  - emacs

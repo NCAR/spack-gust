@@ -256,6 +256,10 @@
     {
       "hash": "da67i5s2dyiwkludbckcdsinn5psecp7",
       "spec": "cdo@2.0.5%gcc@11.2.0"
+    },
+    {
+      "hash": "s7egepxunn3yhi4cpszbwnunlwhzypqv",
+      "spec": "emacs"
     }
   ],
   "concrete_specs": {
@@ -14549,6 +14553,377 @@
         }
       ],
       "hash": "iejnijhdn4tg6lirf3plct5w2jtbfr5w"
+    },
+    "s7egepxunn3yhi4cpszbwnunlwhzypqv": {
+      "name": "emacs",
+      "version": "28.1",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "X": false,
+        "native": false,
+        "tls": false,
+        "toolkit": "gtk",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "goevpvazsjxxomzsahcx7sat3y2u6rsjkbf7ushddlralptcumqa====",
+      "dependencies": [
+        {
+          "name": "libjpeg-turbo",
+          "hash": "7hwmlysl62yvgaoms3sjk7x7xplihkbn",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "5vuy43zskcz3kvn5azizmwqi2rrnpvgh",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "ncurses",
+          "hash": "zpj2x3k7fq2vt63eknm5qeyaradcxkyj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "pcre",
+          "hash": "k5z6fv6wf6l35ir7dpcpwbel3wrnyd7b",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "pkg-config",
+          "hash": "apspf2jhkpy5g6xdlsci5vjizzpxowpi",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "fciivsddggweig6cmpe7c4kdrmjddi26",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "s7egepxunn3yhi4cpszbwnunlwhzypqv"
+    },
+    "7hwmlysl62yvgaoms3sjk7x7xplihkbn": {
+      "name": "libjpeg-turbo",
+      "version": "2.1.3",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/glade/u/apps/common/22.08/spack/opt/spack/libjpeg-turbo/2.1.3/gcc/7.5.0",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "zrnzgofpvyatzsy54dngenuasv6keio27lkqcd4gsagsi4zxj3aq====",
+      "hash": "7hwmlysl62yvgaoms3sjk7x7xplihkbn"
+    },
+    "5vuy43zskcz3kvn5azizmwqi2rrnpvgh": {
+      "name": "libxml2",
+      "version": "2.9.13",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "python": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/glade/u/apps/common/22.08/spack/opt/spack/libxml2/2.9.13/gcc/7.5.0",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "fkxwdyj3trnkukxqw7hisq4msubf3hkzevy6tnbtwe2w3y7rsqta====",
+      "hash": "5vuy43zskcz3kvn5azizmwqi2rrnpvgh"
+    },
+    "k5z6fv6wf6l35ir7dpcpwbel3wrnyd7b": {
+      "name": "pcre",
+      "version": "8.45",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "jit": false,
+        "multibyte": true,
+        "utf": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "26ukwtnhaf6y7orbwtvyalrin5ijvqw34g4dhb77tcsg55kcfb5q====",
+      "hash": "k5z6fv6wf6l35ir7dpcpwbel3wrnyd7b"
+    },
+    "fciivsddggweig6cmpe7c4kdrmjddi26": {
+      "name": "zlib",
+      "version": "1.2.12",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "optimize": true,
+        "patches": [
+          "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
+        ],
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/glade/u/apps/common/22.08/spack/opt/spack/zlib/1.2.12/gcc/7.5.0",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "patches": [
+        "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
+      ],
+      "package_hash": "pthf7iophdyonixxeed7gyqiksopxeklzzjbxtjrw7nzlkcqleba====",
+      "hash": "fciivsddggweig6cmpe7c4kdrmjddi26"
     }
   }
 }

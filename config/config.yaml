@@ -1,0 +1,13 @@
+config:
+  install_tree:
+    projections:
+      gcc: '{name}/{version}/{hash:7}'
+      all: '{name}/{version}/{compiler.name}/{compiler.version}/{hash:7}'
+      ^mpi: '{name}/{version}/{compiler.name}/{compiler.version}/{^mpi.name}/{^mpi.version}/{hash:7}'
+  build_jobs: 8
+  test_stage: /glade/gust/scratch/csgteam/temp/spack/tests
+  source_cache: /glade/gust/scratch/csgteam/temp/spack/cache
+  build_stage:
+  - /glade/gust/scratch/csgteam/temp/spack/builds
+  template_dirs:
+  - /glade/work/csgteam/spack/ncar-spack/templates/modules

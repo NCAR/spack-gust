@@ -1,0 +1,21 @@
+mirrors:
+  glade_gust:
+    fetch:
+      url: file:///glade/u/apps/gust/mirror
+      access_pair:
+      - null
+      - null
+      access_token: null
+      profile: null
+      endpoint_url: null
+    push:
+      url: file:///glade/u/apps/gust/mirror
+      access_pair:
+      - null
+      - null
+      access_token: null
+      profile: null
+      endpoint_url: null
+'repos:':
+- /glade/work/csgteam/spack-deployments/gust/22.08/envs/build/repos/ncar.hpcd
+- /glade/work/csgteam/spack-deployments/gust/22.08/envs/build/repos/builtin

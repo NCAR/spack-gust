@@ -60,10 +60,11 @@ modules:
             PE_ENV: NVIDIA
             NVIDIA_VERSION: '{version}'
             NVIDIA_PATH: '{prefix}'
-      nvhpc@22.5:
+      nvhpc@22.7:
         environment:
           set:
             NVLOCALRC: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/22.7/gcc/7.5.0/localrc/gust
+            CRAY_NVIDIA_VERSION: '22.7'
           prepend_path:
             LD_LIBRARY_PATH: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/22.7/gcc/7.5.0/Linux_x86_64/22.7/compilers/lib
       ncarcompilers:

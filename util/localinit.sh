@@ -34,8 +34,8 @@ export MANPATH=${MANPATH}:/usr/local/share/man:/usr/share/man
 export INFOPATH=${INFOPATH}:/usr/local/share/info:/usr/share/info
 
 # Set PBS workdir if appropriate
-if [ -n $PBS_O_WORKDIR ] && [ -z $NCAR_PBS_JOBINIT ]; then
-    if [ -d $PBS_O_WORKDIR ]; then
+if [ -n "$PBS_O_WORKDIR" ] && [ -z "$NCAR_PBS_JOBINIT" ]; then
+    if [ -d "$PBS_O_WORKDIR" ]; then
         cd $PBS_O_WORKDIR
     fi
 

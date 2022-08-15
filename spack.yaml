@@ -17,6 +17,18 @@ spack:
     template_dirs:
     - /glade/work/csgteam/spack/ncar-spack/templates/modules
   packages:
+    cuda:
+      externals:
+      - spec: cuda@11.4.4
+        prefix: /glade/u/apps/common/default/spack/opt/spack/cuda/11.4.4/gcc/7.5.0
+      - spec: cuda@11.7
+        prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/22.7/gcc/7.5.0/Linux_x86_64/22.7/cuda/11.7
+      buildable: false
+    cudnn:
+      externals:
+      - spec: cudnn@8.2.4.15-11.4
+        prefix: /glade/u/apps/common/default/spack/opt/spack/cudnn/8.2.4.15-11.4/gcc/7.5.0
+      buildable: false
     zlib:
       externals:
       - spec: zlib@1.2.12
@@ -325,11 +337,6 @@ spack:
       permissions:
         read: world
         write: user
-    cuda:
-      externals:
-      - spec: cuda@11.7
-        prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/22.7/gcc/7.5.0/Linux_x86_64/22.7/cuda/11.7
-      buildable: false
     pbspro:
       externals:
       - spec: pbspro@2021.1.1
@@ -662,6 +669,10 @@ spack:
           environment:
             prepend_path:
               LD_LIBRARY_PATH: /glade/u/apps/common/22.08/spack/opt/spack/intel-oneapi-compilers/2022.1.0/gcc/7.5.0/compiler/latest/linux/compiler/lib/intel64
+        cuda:
+          environment:
+            prepend_path:
+              LD_LIBRARY_PATH: '{prefix}/extras/CUPTI/lib64'
         nvhpc:
           environment:
             set:
@@ -679,9 +690,9 @@ spack:
           environment:
             set:
               NCAR_EXCLUDE_ASNEEDED: '1'
-              NCAR_WRAPPER_MPI: '{prefix.bin}/mpi'
+              NCAR_WRAPPER_MPI: '{prefix}/bin/mpi'
             prepend_path:
-              PATH: '{prefix.bin}/mpi'
+              PATH: '{prefix}/bin/mpi'
         netcdf:
           environment:
             set:
@@ -706,6 +717,7 @@ spack:
         - gcc@7.5.0
         core_specs:
         - cuda
+        - cudnn
         - r
         - cmake
         - git
@@ -798,3 +810,5 @@ spack:
   - nco@5.0.1%gcc@11.2.0
   - cdo@2.0.5%gcc@11.2.0
   - emacs
+  - cuda@11.4.4
+  - cudnn@8.2.4.15-11.4

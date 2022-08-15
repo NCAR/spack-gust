@@ -54,6 +54,10 @@ modules:
         environment:
           prepend_path:
             LD_LIBRARY_PATH: /glade/u/apps/common/22.08/spack/opt/spack/intel-oneapi-compilers/2022.1.0/gcc/7.5.0/compiler/latest/linux/compiler/lib/intel64
+      cuda:
+        environment:
+          prepend_path:
+            LD_LIBRARY_PATH: '{prefix}/extras/CUPTI/lib64'
       nvhpc:
         environment:
           set:
@@ -71,9 +75,9 @@ modules:
         environment:
           set:
             NCAR_EXCLUDE_ASNEEDED: '1'
-            NCAR_WRAPPER_MPI: '{prefix.bin}/mpi'
+            NCAR_WRAPPER_MPI: '{prefix}/bin/mpi'
           prepend_path:
-            PATH: '{prefix.bin}/mpi'
+            PATH: '{prefix}/bin/mpi'
       netcdf:
         environment:
           set:
@@ -98,6 +102,7 @@ modules:
       - gcc@7.5.0
       core_specs:
       - cuda
+      - cudnn
       - r
       - cmake
       - git

@@ -260,6 +260,14 @@
     {
       "hash": "s7egepxunn3yhi4cpszbwnunlwhzypqv",
       "spec": "emacs"
+    },
+    {
+      "hash": "at4r3v5s7tgobb37vqrh3bsadbj7qq7v",
+      "spec": "cuda@11.4.4"
+    },
+    {
+      "hash": "gc3xesw2pwjhwsgxgmt5t4bk2bl3czfn",
+      "spec": "cudnn@8.2.4.15-11.4"
     }
   ],
   "concrete_specs": {
@@ -14924,6 +14932,134 @@
       ],
       "package_hash": "pthf7iophdyonixxeed7gyqiksopxeklzzjbxtjrw7nzlkcqleba====",
       "hash": "fciivsddggweig6cmpe7c4kdrmjddi26"
+    },
+    "at4r3v5s7tgobb37vqrh3bsadbj7qq7v": {
+      "name": "cuda",
+      "version": "11.4.4",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "allow-unsupported-compilers": false,
+        "dev": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/glade/u/apps/common/default/spack/opt/spack/cuda/11.4.4/gcc/7.5.0",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "uhmpz6ietc7wh26s65dxx3dwh33io6rzbz4z4ctikox5qlgshhua====",
+      "hash": "at4r3v5s7tgobb37vqrh3bsadbj7qq7v"
+    },
+    "gc3xesw2pwjhwsgxgmt5t4bk2bl3czfn": {
+      "name": "cudnn",
+      "version": "8.2.4.15-11.4",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/glade/u/apps/common/default/spack/opt/spack/cudnn/8.2.4.15-11.4/gcc/7.5.0",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "w4m4v7dbopmsormr7ywoslhwoo4njwmezpitexpgz7so5dpft2ia====",
+      "hash": "gc3xesw2pwjhwsgxgmt5t4bk2bl3czfn"
     }
   }
 }

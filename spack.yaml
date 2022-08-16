@@ -812,3 +812,8 @@ spack:
   - emacs
   - cuda@11.4.4
   - cudnn@8.2.4.15-11.4
+  - ncarcompilers@0.6.1%gcc@11.2.0
+  - ncarcompilers@0.6.1%gcc@10.3.0
+  - ncarcompilers@0.6.1%nvhpc@22.7
+  - ncarcompilers@0.6.1%oneapi@2022.1.0
+  - ncarcompilers@0.6.1%cce@14.0.2

@@ -42,10 +42,6 @@
       "spec": "cmake"
     },
     {
-      "hash": "mfqykbayswdo6rcxbr2v7zq6xnu4wli6",
-      "spec": "cuda@11.7"
-    },
-    {
       "hash": "d3w4xtbogp7khlhdllwyuhckxhqlrlzd",
       "spec": "tmux"
     },
@@ -1501,71 +1497,6 @@
       },
       "package_hash": "tpolhzciewq2zvbav5taipfpnopdwx3qzofflrc2z5umep2ufczq====",
       "hash": "mpifbzn5tncb5iqqevtzreqyyxzzvjyn"
-    },
-    "mfqykbayswdo6rcxbr2v7zq6xnu4wli6": {
-      "name": "cuda",
-      "version": "11.7",
-      "arch": {
-        "platform": "cray",
-        "platform_os": "sles15",
-        "target": {
-          "name": "zen",
-          "vendor": "AuthenticAMD",
-          "features": [
-            "abm",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "clzero",
-            "cx16",
-            "f16c",
-            "fma",
-            "fsgsbase",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "sse4a",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "x86_64_v3"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.5.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "allow-unsupported-compilers": false,
-        "dev": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "external": {
-        "path": "/glade/u/apps/common/22.08/spack/opt/spack/nvhpc/22.7/gcc/7.5.0/Linux_x86_64/22.7/cuda/11.7",
-        "module": null,
-        "extra_attributes": {}
-      },
-      "package_hash": "jzxjxep7yzx5n2uga7ybyhm6e7nb43skzbsnmdy3vpw5hzhqk6ga====",
-      "hash": "mfqykbayswdo6rcxbr2v7zq6xnu4wli6"
     },
     "d3w4xtbogp7khlhdllwyuhckxhqlrlzd": {
       "name": "tmux",

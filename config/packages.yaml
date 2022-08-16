@@ -3,8 +3,6 @@ packages:
     externals:
     - spec: cuda@11.4.4
       prefix: /glade/u/apps/common/default/spack/opt/spack/cuda/11.4.4/gcc/7.5.0
-    - spec: cuda@11.7
-      prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/22.7/gcc/7.5.0/Linux_x86_64/22.7/cuda/11.7
     buildable: false
   cudnn:
     externals:

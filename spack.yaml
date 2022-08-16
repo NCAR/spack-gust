@@ -21,8 +21,6 @@ spack:
       externals:
       - spec: cuda@11.4.4
         prefix: /glade/u/apps/common/default/spack/opt/spack/cuda/11.4.4/gcc/7.5.0
-      - spec: cuda@11.7
-        prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/22.7/gcc/7.5.0/Linux_x86_64/22.7/cuda/11.7
       buildable: false
     cudnn:
       externals:
@@ -755,7 +753,6 @@ spack:
   - cray-mpich@8.1.18%cce@14.0.2
   - lmod
   - cmake
-  - cuda@11.7
   - tmux
   - ncarcompilers@0.5.2%gcc@11.2.0
   - ncarcompilers@0.5.2%gcc@10.3.0

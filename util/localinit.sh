@@ -4,7 +4,7 @@ export MODULEPATH_ROOT=/glade/u/apps/gust/modules
 
 # Lmod configuration
 export LMOD_SYSTEM_NAME=gust
-export LMOD_SYSTEM_DEFAULT_MODULES="ncarenv/22.08:craype/2.7.17:cce/14.0.2:ncarcompilers/0.6.1:cray-mpich/8.1.18:netcdf/4.8.1:cray-libsci/22.08.1.1"
+export LMOD_SYSTEM_DEFAULT_MODULES="ncarenv/22.08:craype/2.7.17:cce/14.0.2:ncarcompilers/0.6.2:cray-mpich/8.1.18:netcdf/4.8.1:cray-libsci/22.08.1.1"
 export MODULEPATH=/glade/u/apps/gust/modules/environment
 
 # Location of Lmod initialization scripts

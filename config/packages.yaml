@@ -1,13 +1,30 @@
 packages:
+  libtirpc:
+    externals:
+    - spec: libtirpc@1.2.6
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/libtirpc/1.2.6/gcc/7.5.0
+    buildable: false
+  flex:
+    externals:
+    - spec: flex@2.6.3+lex
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/flex/2.6.3/gcc/7.5.0
+    buildable: false
+  openssl:
+    externals:
+    - spec: openssl@1.1.1q
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/openssl/1.1.1q/gcc/7.5.0
+    - spec: openssl@1.1.1d
+      prefix: /usr
+    buildable: false
   cuda:
     externals:
     - spec: cuda@11.4.4
-      prefix: /glade/u/apps/common/default/spack/opt/spack/cuda/11.4.4/gcc/7.5.0
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/cuda/11.4.4/gcc/7.5.0
     buildable: false
   cudnn:
     externals:
     - spec: cudnn@8.2.4.15-11.4
-      prefix: /glade/u/apps/common/default/spack/opt/spack/cudnn/8.2.4.15-11.4/gcc/7.5.0
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/cudnn/8.2.4.15-11.4/gcc/7.5.0
     buildable: false
   zlib:
     externals:
@@ -283,11 +300,6 @@ packages:
     - spec: m4@1.4.18
       prefix: /usr
     buildable: false
-  openssl:
-    externals:
-    - spec: openssl@1.1.1d
-      prefix: /usr
-    buildable: false
   pkg-config:
     externals:
     - spec: pkg-config@0.29.2
@@ -357,6 +369,8 @@ packages:
     variants: [+dap, -mpi]
   netcdf-c:
     variants: [+dap, -mpi]
+  hdf:
+    variants: [+fortran, +szip]
   hdf5:
     variants: [+hl, +szip, +fortran, +cxx, -mpi]
   netcdf-cxx4:

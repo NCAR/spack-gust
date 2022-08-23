@@ -73,6 +73,8 @@ packages:
     buildable: false
   nvhpc:
     externals:
+    - spec: nvhpc@21.3%gcc@7.5.0
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0
     - spec: nvhpc@22.7%gcc@7.5.0
       prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/22.7/gcc/7.5.0
     buildable: false
@@ -341,21 +343,25 @@ packages:
       modules:
       - cray-mpich/8.1.18
       - craype-network-ofi
+      - libfabric/1.15.0.0
     - spec: cray-mpich@8.1.18 %cce
       prefix: /opt/cray/pe/mpich/8.1.18/ofi/cray/10.0
       modules:
       - cray-mpich/8.1.18
       - craype-network-ofi
+      - libfabric/1.15.0.0
     - spec: cray-mpich@8.1.18 %nvhpc
       prefix: /opt/cray/pe/mpich/8.1.18/ofi/nvidia/20.7
       modules:
       - cray-mpich/8.1.18
       - craype-network-ofi
+      - libfabric/1.15.0.0
     - spec: cray-mpich@8.1.18 %oneapi
       prefix: /opt/cray/pe/mpich/8.1.18/ofi/intel/19.0
       modules:
       - cray-mpich/8.1.18
       - craype-network-ofi
+      - libfabric/1.15.0.0
     buildable: false
   cray-libsci:
     externals:
@@ -364,7 +370,7 @@ packages:
       - cray-libsci/22.08.1.1
     buildable: false
   openmpi:
-    variants: [+cuda, fabrics=auto, schedulers=tm]
+    variants: [+cuda, fabrics=auto, schedulers=tm, +gpfs, +lustre, +thread_multiple]
   netcdf:
     variants: [+dap, -mpi]
   netcdf-c:

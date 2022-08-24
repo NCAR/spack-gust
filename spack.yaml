@@ -17,6 +17,31 @@ spack:
     template_dirs:
     - /glade/work/csgteam/spack/ncar-spack/templates/modules
   packages:
+    squashfs:
+      externals:
+      - spec: squashfs@4.5.1
+        prefix: /glade/u/apps/common/22.08/spack/opt/spack/squashfs/4.5.1/gcc/7.5.0
+      buildable: false
+    libgpg-error:
+      externals:
+      - spec: libgpg-error@1.45
+        prefix: /glade/u/apps/common/22.08/spack/opt/spack/libgpg-error/1.45/gcc/7.5.0
+      buildable: false
+    libseccomp:
+      externals:
+      - spec: libseccomp@2.5.3
+        prefix: /glade/u/apps/common/22.08/spack/opt/spack/libseccomp/2.5.3/gcc/7.5.0
+      buildable: false
+    git:
+      externals:
+      - spec: git@2.37.0
+        prefix: /glade/u/apps/common/22.08/spack/opt/spack/git/2.37.0/gcc/7.5.0
+      buildable: false
+    cryptsetup:
+      externals:
+      - spec: cryptsetup@2.3.5
+        prefix: /glade/u/apps/common/22.08/spack/opt/spack/cryptsetup/2.3.5/gcc/7.5.0
+      buildable: false
     libtirpc:
       externals:
       - spec: libtirpc@1.2.6
@@ -387,6 +412,10 @@ spack:
         modules:
         - cray-libsci/22.08.1.1
       buildable: false
+    apptainer:
+      variants: [~suid]
+    singularityce:
+      variants: [~suid]
     openmpi:
       variants: [+cuda, fabrics=auto, schedulers=tm, +gpfs, +lustre, +thread_multiple]
     netcdf:
@@ -648,6 +677,50 @@ spack:
       - rocmcc/8.3.3
       environment: {}
       extra_rpaths: []
+  - compiler:
+      spec: gcc@8.1.0
+      paths:
+        cc: cc
+        cxx: CC
+        f77: ftn
+        fc: ftn
+      flags: {}
+      operating_system: sles15
+      target: any
+      modules:
+      - PrgEnv-gnu
+      - gcc/8.1.0
+      environment: {}
+      extra_rpaths: []
+  - compiler:
+      spec: aocc@3.1.0
+      paths:
+        cc: clang
+        cxx: clang++
+        f77: null
+        fc: flang
+      flags:
+        cflags: null
+        cxxflags: null
+        fflags: null
+      operating_system: sles15sp3
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  - compiler:
+      spec: gcc@7.5.0
+      paths:
+        cc: gcc
+        cxx: g++
+        f77: null
+        fc: gfortran
+      flags: {}
+      operating_system: sles15sp3
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
   modules:
     'default:':
       roots:
@@ -868,3 +941,5 @@ spack:
   - parallel-netcdf@1.12.2%nvhpc@21.3 ^cray-mpich@8.1.18%nvhpc@21.3
   - hdf5@1.12.2%nvhpc@21.3+mpi ^cray-mpich@8.1.18%nvhpc@21.3
   - netcdf@4.8.1%nvhpc@21.3+mpi ^cray-mpich@8.1.18%nvhpc@21.3
+  - go
+  - apptainer

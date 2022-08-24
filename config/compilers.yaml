@@ -235,3 +235,47 @@ compilers:
     - rocmcc/8.3.3
     environment: {}
     extra_rpaths: []
+- compiler:
+    spec: gcc@8.1.0
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-gnu
+    - gcc/8.1.0
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: aocc@3.1.0
+    paths:
+      cc: clang
+      cxx: clang++
+      f77: null
+      fc: flang
+    flags:
+      cflags: null
+      cxxflags: null
+      fflags: null
+    operating_system: sles15sp3
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@7.5.0
+    paths:
+      cc: gcc
+      cxx: g++
+      f77: null
+      fc: gfortran
+    flags: {}
+    operating_system: sles15sp3
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []

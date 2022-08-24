@@ -1,4 +1,29 @@
 packages:
+  squashfs:
+    externals:
+    - spec: squashfs@4.5.1
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/squashfs/4.5.1/gcc/7.5.0
+    buildable: false
+  libgpg-error:
+    externals:
+    - spec: libgpg-error@1.45
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/libgpg-error/1.45/gcc/7.5.0
+    buildable: false
+  libseccomp:
+    externals:
+    - spec: libseccomp@2.5.3
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/libseccomp/2.5.3/gcc/7.5.0
+    buildable: false
+  git:
+    externals:
+    - spec: git@2.37.0
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/git/2.37.0/gcc/7.5.0
+    buildable: false
+  cryptsetup:
+    externals:
+    - spec: cryptsetup@2.3.5
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/cryptsetup/2.3.5/gcc/7.5.0
+    buildable: false
   libtirpc:
     externals:
     - spec: libtirpc@1.2.6
@@ -369,6 +394,10 @@ packages:
       modules:
       - cray-libsci/22.08.1.1
     buildable: false
+  apptainer:
+    variants: [~suid]
+  singularityce:
+    variants: [~suid]
   openmpi:
     variants: [+cuda, fabrics=auto, schedulers=tm, +gpfs, +lustre, +thread_multiple]
   netcdf:

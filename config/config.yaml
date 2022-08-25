@@ -10,4 +10,4 @@ config:
   build_stage:
   - /glade/gust/scratch/csgteam/temp/spack/builds
   template_dirs:
-  - /glade/work/csgteam/spack/ncar-spack/templates/modules
+  - /glade/work/csgteam/spack-deployments/gust/22.08/envs/build/templates/modules

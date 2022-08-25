@@ -50,12 +50,12 @@ modules:
             PE_ENV: INTEL
             INTEL_VERSION: '{version}'
             INTEL_PATH: '{prefix}'
-            CC: '{prefix}/compiler/2022.1.0/linux/bin/icx'
-            CXX: '{prefix}/compiler/2022.1.0/linux/bin/icpx'
-            FC: '{prefix}/compiler/2022.1.0/linux/bin/ifx'
-            F77: '{prefix}/compiler/2022.1.0/linux/bin/ifx'
+            CC: '{prefix}/compiler/{version}/linux/bin/icx'
+            CXX: '{prefix}/compiler/{version}/linux/bin/icpx'
+            FC: '{prefix}/compiler/{version}/linux/bin/ifx'
+            F77: '{prefix}/compiler/{version}/linux/bin/ifx'
           prepend_path:
-            LD_LIBRARY_PATH: '{prefix}/compiler/latest/linux/compiler/lib/intel64'
+            LD_LIBRARY_PATH: '{prefix}/compiler/{version}/linux/compiler/lib/intel64'
       cuda:
         environment:
           prepend_path:
@@ -86,6 +86,18 @@ modules:
           set:
             NETCDF: '{prefix}'
         autoload: all
+      netcdf~mpi:
+        template: conflict-serial.lua
+      netcdf+mpi:
+        template: conflict-mpi.lua
+      hdf5~mpi:
+        template: conflict-serial.lua
+      hdf5+mpi:
+        template: conflict-mpi.lua
+      fftw~mpi:
+        template: conflict-serial.lua
+      fftw+mpi:
+        template: conflict-mpi.lua
       parallel-netcdf:
         environment:
           set:

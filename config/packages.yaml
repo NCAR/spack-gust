@@ -416,3 +416,7 @@ packages:
     variants: [+tools, +fortran, +netcdf, +png, jp2k=jasper]
   cdo:
     variants: [+curl]
+  intel-oneapi-mpi:
+    variants: [+external-libfabric, +ilp64]
+  intel-oneapi-mkl:
+    variants: [+ilp64]

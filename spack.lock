@@ -380,6 +380,14 @@
     {
       "hash": "b7wvmfz3pdv6rhxfhstzr6jw27fp6h2e",
       "spec": "apptainer"
+    },
+    {
+      "hash": "35ube4453pturbcfzoswozgc4yuxrogn",
+      "spec": "intel-oneapi-mpi@2021.6.0%oneapi@2022.1.0"
+    },
+    {
+      "hash": "d4fjreeagu4lmvkeiytuadc5n62b2u5y",
+      "spec": "intel-oneapi-mkl@2022.1.0%oneapi@2022.1.0"
     }
   ],
   "concrete_specs": {
@@ -20701,6 +20709,287 @@
         }
       ],
       "hash": "hnh7kmdp5ym67zscokmnjpnvokejsdcr"
+    },
+    "35ube4453pturbcfzoswozgc4yuxrogn": {
+      "name": "intel-oneapi-mpi",
+      "version": "2021.6.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2022.1.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "external-libfabric": true,
+        "generic-names": false,
+        "ilp64": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "yncpbzelzgpu62fqn6joxbiu7ytk2h6m764efrmnqit5r6afm2ca====",
+      "dependencies": [
+        {
+          "name": "libfabric",
+          "hash": "5megzdpwir3gppu665pgy67edj5nmj2h",
+          "type": [
+            "link",
+            "run"
+          ]
+        }
+      ],
+      "hash": "35ube4453pturbcfzoswozgc4yuxrogn"
+    },
+    "5megzdpwir3gppu665pgy67edj5nmj2h": {
+      "name": "libfabric",
+      "version": "1.14.1",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2022.1.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "debug": false,
+        "fabrics": [
+          "sockets",
+          "tcp",
+          "udp"
+        ],
+        "kdreg": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "gvmbz3n6xuew32bqmkr54srfsklyjfhocctm6dxsslynmhnva3oq====",
+      "hash": "5megzdpwir3gppu665pgy67edj5nmj2h"
+    },
+    "d4fjreeagu4lmvkeiytuadc5n62b2u5y": {
+      "name": "intel-oneapi-mkl",
+      "version": "2022.1.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2022.1.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cluster": false,
+        "ilp64": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "cvuz5m7agqzek33jgxppa4t7itwvizlzp57jzgud5f5wmewyyzxa====",
+      "dependencies": [
+        {
+          "name": "intel-oneapi-tbb",
+          "hash": "shbfkd5bhguudupwgwyre24rd3i27ew5",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "d4fjreeagu4lmvkeiytuadc5n62b2u5y"
+    },
+    "shbfkd5bhguudupwgwyre24rd3i27ew5": {
+      "name": "intel-oneapi-tbb",
+      "version": "2021.6.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2022.1.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "fy75ealjgplb6zzjrrsmg2mb6z7niwxvhpxpimmslkf72v5imhja====",
+      "hash": "shbfkd5bhguudupwgwyre24rd3i27ew5"
     }
   }
 }

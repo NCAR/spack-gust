@@ -434,6 +434,10 @@ spack:
       variants: [+tools, +fortran, +netcdf, +png, jp2k=jasper]
     cdo:
       variants: [+curl]
+    intel-oneapi-mpi:
+      variants: [+external-libfabric, +ilp64]
+    intel-oneapi-mkl:
+      variants: [+ilp64]
   view:
     baseenv:
       root: /glade/u/apps/gust/22.08/opt
@@ -836,6 +840,8 @@ spack:
           hdf5+mpi: hdf5-mpi/{version}
           netcdf: netcdf/{version}
           intel-oneapi-compilers: intel/{version}
+          intel-oneapi-mpi: impi/{version}
+          intel-oneapi-mkl: mkl/{version}
         core_compilers:
         - gcc@7.5.0
         core_specs:
@@ -963,3 +969,5 @@ spack:
   - netcdf@4.8.1%nvhpc@21.3+mpi ^cray-mpich@8.1.18%nvhpc@21.3
   - go
   - apptainer
+  - intel-oneapi-mpi@2021.6.0%oneapi@2022.1.0
+  - intel-oneapi-mkl@2022.1.0%oneapi@2022.1.0

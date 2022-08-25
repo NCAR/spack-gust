@@ -113,6 +113,8 @@ modules:
         hdf5+mpi: hdf5-mpi/{version}
         netcdf: netcdf/{version}
         intel-oneapi-compilers: intel/{version}
+        intel-oneapi-mpi: impi/{version}
+        intel-oneapi-mkl: mkl/{version}
       core_compilers:
       - gcc@7.5.0
       core_specs:

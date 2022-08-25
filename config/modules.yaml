@@ -50,6 +50,10 @@ modules:
             PE_ENV: INTEL
             INTEL_VERSION: '{version}'
             INTEL_PATH: '{prefix}'
+            CC: '{prefix}/compiler/2022.1.0/linux/bin/icx'
+            CXX: '{prefix}/compiler/2022.1.0/linux/bin/icpx'
+            FC: '{prefix}/compiler/2022.1.0/linux/bin/ifx'
+            F77: '{prefix}/compiler/2022.1.0/linux/bin/ifx'
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/compiler/latest/linux/compiler/lib/intel64'
       cuda:
@@ -71,6 +75,10 @@ modules:
           set:
             NCAR_EXCLUDE_ASNEEDED: '1'
             NCAR_WRAPPER_MPI: '{prefix}/bin/mpi'
+            CC: cc
+            CXX: CC
+            FC: ftn
+            F77: ftn
           prepend_path:
             PATH: '{prefix}/bin/mpi'
       netcdf:

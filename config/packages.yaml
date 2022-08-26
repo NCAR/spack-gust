@@ -1,4 +1,9 @@
 packages:
+  xerces-c:
+    externals:
+    - spec: xerces-c@3.2.3
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/xerces-c/3.2.3/gcc/7.5.0
+    buildable: false
   squashfs:
     externals:
     - spec: squashfs@4.5.1
@@ -420,3 +425,5 @@ packages:
     variants: [+external-libfabric, +ilp64]
   intel-oneapi-mkl:
     variants: [+ilp64]
+  parallelio:
+    variants: [+pnetcdf]

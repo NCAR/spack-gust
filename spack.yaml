@@ -17,6 +17,11 @@ spack:
     template_dirs:
     - /glade/work/csgteam/spack-deployments/gust/22.08/envs/build/templates/modules
   packages:
+    xerces-c:
+      externals:
+      - spec: xerces-c@3.2.3
+        prefix: /glade/u/apps/common/22.08/spack/opt/spack/xerces-c/3.2.3/gcc/7.5.0
+      buildable: false
     squashfs:
       externals:
       - spec: squashfs@4.5.1
@@ -438,6 +443,8 @@ spack:
       variants: [+external-libfabric, +ilp64]
     intel-oneapi-mkl:
       variants: [+ilp64]
+    parallelio:
+      variants: [+pnetcdf]
   view:
     baseenv:
       root: /glade/u/apps/gust/22.08/opt
@@ -842,6 +849,7 @@ spack:
           intel-oneapi-compilers: intel/{version}
           intel-oneapi-mpi: impi/{version}
           intel-oneapi-mkl: mkl/{version}
+          parallelio: pio/{version}
         core_compilers:
         - gcc@7.5.0
         core_specs:
@@ -871,9 +879,9 @@ spack:
         access_token: null
         profile: null
         endpoint_url: null
-  'repos:':
+  repos:
   - /glade/work/csgteam/spack-deployments/gust/22.08/envs/build/repos/ncar.hpcd
-  - /glade/work/csgteam/spack-deployments/gust/22.08/envs/build/repos/builtin
+  - /glade/work/csgteam/spack-deployments/gust/22.08/envs/build/repos/future
   specs:
   - nvhpc@22.7
   - intel-oneapi-compilers@2022.1.0
@@ -971,3 +979,7 @@ spack:
   - apptainer
   - intel-oneapi-mpi@2021.6.0%oneapi@2022.1.0
   - intel-oneapi-mkl@2022.1.0%oneapi@2022.1.0
+  - parallelio@2_5_8%nvhpc@21.3 ^cray-mpich@8.1.18%nvhpc@21.3
+  - parallelio@2_5_8%nvhpc@22.7 ^cray-mpich@8.1.18%nvhpc@22.7
+  - parallelio@2_5_8%oneapi@2022.1.0 ^cray-mpich@8.1.18%oneapi@2022.1.0
+  - parallelio@2_5_8%cce@14.0.2 ^cray-mpich@8.1.18%cce@14.0.2

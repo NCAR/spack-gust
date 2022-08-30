@@ -1,0 +1,121 @@
+modules:
+  'default:':
+    roots:
+      lmod: /glade/u/apps/gust/modules/22.08b
+    arch_folder: false
+    'enable:':
+    - lmod
+    prefix_inspections:
+      bin:
+      - PATH
+      lib:
+      - NCAR_LDFLAGS_{name}
+      lib64:
+      - NCAR_LDFLAGS_{name}64
+      include:
+      - NCAR_INC_{name}
+      man:
+      - MANPATH
+      share/man:
+      - MANPATH
+      lib/pkgconfig:
+      - PKG_CONFIG_PATH
+      lib64/pkgconfig:
+      - PKG_CONFIG_PATH
+    lmod:
+      hierarchy:
+      - mpi
+      hash_length: 0
+      blacklist_implicits: true
+      blacklist:
+      - lmod
+      - netcdf-c
+      - netcdf-fortran
+      - netcdf-cxx4
+      - cray-mpich
+      - cray-libsci
+      - cray-fftw
+      whitelist:
+      - git
+      all:
+        environment:
+          set:
+            NCAR_ROOT_{name}: '{prefix}'
+        template: ncar_default.lua
+      mpi:
+        template: ncar_wrapper_mpi.lua
+      intel-oneapi-compilers:
+        environment:
+          set:
+            PE_ENV: INTEL
+            INTEL_VERSION: '{version}'
+            INTEL_PATH: '{prefix}'
+            CC: '{prefix}/compiler/{version}/linux/bin/icx'
+            CXX: '{prefix}/compiler/{version}/linux/bin/icpx'
+            FC: '{prefix}/compiler/{version}/linux/bin/ifx'
+            F77: '{prefix}/compiler/{version}/linux/bin/ifx'
+          prepend_path:
+            LD_LIBRARY_PATH: '{prefix}/compiler/{version}/linux/compiler/lib/intel64'
+      nvhpc:
+        environment:
+          set:
+            PE_ENV: NVIDIA
+            NVIDIA_VERSION: '{version}'
+            NVIDIA_PATH: '{prefix}'
+            NVLOCALRC: '{prefix}/localrc/gust'
+          prepend_path:
+            LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/compilers/lib'
+      ncarcompilers:
+        environment:
+          set:
+            NCAR_EXCLUDE_ASNEEDED: '1'
+            NCAR_WRAPPER_MPI: '{prefix.bin}/mpi'
+            CC: cc
+            CXX: CC
+            FC: ftn
+            F77: ftn
+          prepend_path:
+            PATH: '{prefix.bin}/mpi'
+      netcdf:
+        environment:
+          set:
+            NETCDF: '{prefix}'
+        autoload: all
+      parallel-netcdf:
+        environment:
+          set:
+            PNETCDF: '{prefix}'
+      ncarenv:
+        template: ncar_env.lua
+      netcdf~mpi:
+        template: conflict-serial.lua
+      netcdf+mpi:
+        template: conflict-mpi.lua
+      hdf5~mpi:
+        template: conflict-serial.lua
+      hdf5+mpi:
+        template: conflict-mpi.lua
+      fftw~mpi:
+        template: conflict-serial.lua
+      fftw+mpi:
+        template: conflict-mpi.lua
+      projections:
+        all: '{name}/{version}'
+        r: R/{version}
+        parallel-netcdf: pnetcdf/{version}
+        fftw+mpi: fftw-mpi/{version}
+        netcdf+mpi: netcdf-mpi/{version}
+        hdf5+mpi: hdf5-mpi/{version}
+        netcdf: netcdf/{version}
+        intel-oneapi-compilers: oneapi/{version}
+        intel-oneapi-compilers-classic: intel/{version}
+      core_compilers:
+      - gcc@7.5.0
+      core_specs:
+      - cuda
+      - r
+      - cmake
+      - git
+      - nco
+      - cdo
+      - wgrib2

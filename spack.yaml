@@ -590,6 +590,8 @@ spack:
         'mpi:': [cray-mpich, openmpi]
         'szip:': [libszip]
         'pkgconfig:': [pkg-config]
+        'lapack:': [cray-libsci, openblas]
+        'blas:': [cray-libsci, openblas]
       permissions:
         read: world
         write: user
@@ -597,6 +599,11 @@ spack:
       externals:
       - spec: pbspro@2021.1.3
         prefix: /opt/pbs
+      buildable: false
+    miniconda3:
+      externals:
+      - spec: miniconda3@4.12.0
+        prefix: /glade/u/apps/opt/conda
       buildable: false
     cray-mpich:
       externals:
@@ -655,6 +662,8 @@ spack:
       variants: [~suid]
     parallelio:
       variants: [+pnetcdf]
+    esmf:
+      variants: [+external-lapack]
   view:
     baseenv:
       root: /glade/u/apps/gust/22.08b/opt
@@ -999,6 +1008,17 @@ spack:
           environment:
             set:
               PNETCDF: '{prefix}'
+        miniconda3:
+          filter:
+            exclude_env_vars: [PATH, LD_LIBRARY_PATH, NCAR_LDFLAGS_MINICONDA3, NCAR_INC_MINICONDA3,
+              NCAR_ROOT_MINICONDA3, ACLOCAL_PATH, PKG_CONFIG_PATH, CMAKE_PREFIX_PATH,
+              CONDA_SHLVL, _CE_CONDA, _CE_M, MANPATH]
+          environment:
+            set:
+              NCAR_ROOT_CONDA: '{prefix}'
+              CONDA_ROOT: '{prefix}'
+              CONDA_EXE: '{prefix}/bin/conda'
+          template: conda.lua
         ncarenv:
           template: ncar_env.lua
         netcdf~mpi:
@@ -1013,6 +1033,10 @@ spack:
           template: conflict-serial.lua
         fftw+mpi:
           template: conflict-mpi.lua
+        esmf~mpi:
+          template: conflict-serial.lua
+        esmf+mpi:
+          template: conflict-mpi.lua
         projections:
           all: '{name}/{version}'
           r: R/{version}
@@ -1023,6 +1047,8 @@ spack:
           netcdf: netcdf/{version}
           intel-oneapi-compilers: oneapi/{version}
           intel-oneapi-compilers-classic: intel/{version}
+          miniconda3: conda/latest
+          esmf+mpi: esmf-mpi/{version}
         core_compilers:
         - gcc@7.5.0
         core_specs:
@@ -1033,6 +1059,7 @@ spack:
         - nco
         - cdo
         - wgrib2
+        - ncview
   mirrors:
     glade_gust:
       fetch:
@@ -1152,3 +1179,14 @@ spack:
   - parallel-netcdf@1.12.2%nvhpc@22.2 ^cray-mpich@8.1.18%nvhpc@22.2
   - hdf5@1.12.2%nvhpc@22.2+mpi ^cray-mpich@8.1.18%nvhpc@22.2
   - netcdf@4.8.1%nvhpc@22.2+mpi ^cray-mpich@8.1.18%nvhpc@22.2
+  - miniconda3
+  - parallelio@2_5_8%gcc@11.2.0 ^cray-mpich@8.1.18%gcc@11.2.0
+  - parallelio@2_5_8%gcc@10.3.0 ^cray-mpich@8.1.18%gcc@10.3.0
+  - parallelio@2_5_8%nvhpc@21.3 ^cray-mpich@8.1.18%nvhpc@21.3
+  - parallelio@2_5_8%nvhpc@22.2 ^cray-mpich@8.1.18%nvhpc@22.2
+  - parallelio@2_5_8%nvhpc@22.7 ^cray-mpich@8.1.18%nvhpc@22.7
+  - parallelio@2_5_8%oneapi@2022.1.0 ^cray-mpich@8.1.18%oneapi@2022.1.0
+  - parallelio@2_5_8%cce@14.0.2 ^cray-mpich@8.1.18%cce@14.0.2
+  - esmf@8.3.0%gcc@11.2.0 ^cray-libsci@22.08.1.1 ^cray-mpich@8.1.18%gcc@11.2.0
+  - esmf@8.3.0%gcc@10.3.0 ^cray-libsci@22.08.1.1 ^cray-mpich@8.1.18%gcc@10.3.0
+  - esmf@8.3.0%cce@14.0.2 ^cray-libsci@22.08.1.1 ^cray-mpich@8.1.18%cce@14.0.2

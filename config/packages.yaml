@@ -569,6 +569,8 @@ packages:
       'mpi:': [cray-mpich, openmpi]
       'szip:': [libszip]
       'pkgconfig:': [pkg-config]
+      'lapack:': [cray-libsci, openblas]
+      'blas:': [cray-libsci, openblas]
     permissions:
       read: world
       write: user
@@ -576,6 +578,11 @@ packages:
     externals:
     - spec: pbspro@2021.1.3
       prefix: /opt/pbs
+    buildable: false
+  miniconda3:
+    externals:
+    - spec: miniconda3@4.12.0
+      prefix: /glade/u/apps/opt/conda
     buildable: false
   cray-mpich:
     externals:
@@ -634,3 +641,5 @@ packages:
     variants: [~suid]
   parallelio:
     variants: [+pnetcdf]
+  esmf:
+    variants: [+external-lapack]

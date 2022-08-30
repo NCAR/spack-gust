@@ -85,6 +85,17 @@ modules:
         environment:
           set:
             PNETCDF: '{prefix}'
+      miniconda3:
+        filter:
+          exclude_env_vars: [PATH, LD_LIBRARY_PATH, NCAR_LDFLAGS_MINICONDA3, NCAR_INC_MINICONDA3,
+            NCAR_ROOT_MINICONDA3, ACLOCAL_PATH, PKG_CONFIG_PATH, CMAKE_PREFIX_PATH,
+            CONDA_SHLVL, _CE_CONDA, _CE_M, MANPATH]
+        environment:
+          set:
+            NCAR_ROOT_CONDA: '{prefix}'
+            CONDA_ROOT: '{prefix}'
+            CONDA_EXE: '{prefix}/bin/conda'
+        template: conda.lua
       ncarenv:
         template: ncar_env.lua
       netcdf~mpi:
@@ -99,6 +110,10 @@ modules:
         template: conflict-serial.lua
       fftw+mpi:
         template: conflict-mpi.lua
+      esmf~mpi:
+        template: conflict-serial.lua
+      esmf+mpi:
+        template: conflict-mpi.lua
       projections:
         all: '{name}/{version}'
         r: R/{version}
@@ -109,6 +124,8 @@ modules:
         netcdf: netcdf/{version}
         intel-oneapi-compilers: oneapi/{version}
         intel-oneapi-compilers-classic: intel/{version}
+        miniconda3: conda/latest
+        esmf+mpi: esmf-mpi/{version}
       core_compilers:
       - gcc@7.5.0
       core_specs:
@@ -119,3 +136,4 @@ modules:
       - nco
       - cdo
       - wgrib2
+      - ncview

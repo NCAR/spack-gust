@@ -643,3 +643,7 @@ packages:
     variants: [+pnetcdf]
   esmf:
     variants: [+external-lapack]
+  intel-oneapi-mpi:
+    variants: [+external-libfabric, +ilp64]
+  intel-oneapi-mkl:
+    variants: [+ilp64]

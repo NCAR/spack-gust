@@ -124,6 +124,8 @@ modules:
         netcdf: netcdf/{version}
         intel-oneapi-compilers: oneapi/{version}
         intel-oneapi-compilers-classic: intel/{version}
+        intel-oneapi-mpi: impi/{version}
+        intel-oneapi-mkl: mkl/{version}
         miniconda3: conda/latest
         esmf+mpi: esmf-mpi/{version}
       core_compilers:

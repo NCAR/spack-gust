@@ -610,6 +610,12 @@ packages:
       - cray-mpich/8.1.18
       - craype-network-ofi
       - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.18 %intel
+      prefix: /opt/cray/pe/mpich/8.1.18/ofi/intel/19.0
+      modules:
+      - cray-mpich/8.1.18
+      - craype-network-ofi
+      - libfabric/1.15.0.0
     buildable: false
   cray-libsci:
     externals:

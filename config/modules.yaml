@@ -56,6 +56,18 @@ modules:
             F77: '{prefix}/compiler/{version}/linux/bin/ifx'
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/compiler/{version}/linux/compiler/lib/intel64'
+      intel-oneapi-compilers-classic:
+        autoload: none
+        filter:
+          exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_COMPILERS_CLASSIC, CMAKE_PREFIX_PATH]
+        environment:
+          set:
+            PE_ENV: INTEL
+            INTEL_VERSION: '{version}'
+            INTEL_PATH: '{^intel-oneapi-compilers.prefix}'
+            NCAR_ROOT_INTEL: '{^intel-oneapi-compilers.prefix}'
+          prepend_path:
+            LD_LIBRARY_PATH: '{^intel-oneapi-compilers.prefix}/compiler/{version}/linux/compiler/lib/intel64'
       nvhpc:
         environment:
           set:
@@ -85,6 +97,13 @@ modules:
         environment:
           set:
             PNETCDF: '{prefix}'
+      cuda:
+        environment:
+          set:
+            CRAY_ACCEL_TARGET: nvidia80
+            CRAY_TCMALLOC_MEMFS_FORCE: 1
+            CRAYPE_LINK_TYPE: dynamic
+            CRAY_ACCEL_VENDOR: nvidia
       miniconda3:
         filter:
           exclude_env_vars: [PATH, LD_LIBRARY_PATH, NCAR_LDFLAGS_MINICONDA3, NCAR_INC_MINICONDA3,

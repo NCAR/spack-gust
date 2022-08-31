@@ -1250,3 +1250,5 @@ spack:
   - netcdf@4.8.1%intel@2022.1.0+mpi ^cray-mpich@8.1.18%intel@2022.1.0
   - parallelio@2_5_8%intel@2022.1.0 ^cray-mpich@8.1.18%intel@2022.1.0
   - intel-oneapi-compilers-classic@2022.1.0
+  - intel-oneapi-mkl@2022.1.0%intel@2022.1.0
+  - intel-oneapi-mpi@2021.6.0%intel@2022.1.0

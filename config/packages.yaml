@@ -350,11 +350,6 @@ packages:
     - spec: intel-oneapi-compilers@2022.1.0
       prefix: /glade/u/apps/common/22.08/spack/opt/spack/intel-oneapi-compilers/2022.1.0/gcc/7.5.0
     buildable: false
-  intel-oneapi-compilers-classic:
-    externals:
-    - spec: intel-oneapi-compilers-classic@2022.1.0
-      prefix: /glade/u/apps/common/22.08/spack/opt/spack/intel-oneapi-compilers-classic/2022.1.0/gcc/7.5.0
-    buildable: false
   inputproto:
     externals:
     - spec: inputproto@2.3.2

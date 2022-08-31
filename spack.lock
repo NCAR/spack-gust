@@ -496,6 +496,10 @@
     {
       "hash": "p3bpkezxmjqhdotsiilbezam2kcgmoil",
       "spec": "parallelio@2_5_8%intel@2022.1.0 ^cray-mpich@8.1.18%intel@2022.1.0"
+    },
+    {
+      "hash": "jx7avnmvalgreliyr5vdtn2fmabrl3az",
+      "spec": "intel-oneapi-compilers-classic@2022.1.0"
     }
   ],
   "concrete_specs": {
@@ -29006,6 +29010,73 @@
         }
       ],
       "hash": "545ugkews5765ysi2xu7icynh4ehshoi"
+    },
+    "jx7avnmvalgreliyr5vdtn2fmabrl3az": {
+      "name": "intel-oneapi-compilers-classic",
+      "version": "2022.1.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "2xqyt2lgqkyt27jyhh5mguoydr3bjn56htrzfzold2aacfgij6za====",
+      "dependencies": [
+        {
+          "name": "intel-oneapi-compilers",
+          "hash": "gjaxbkvlylvuqmutbopqyxjqu2svjnyi",
+          "type": [
+            "run"
+          ]
+        }
+      ],
+      "hash": "jx7avnmvalgreliyr5vdtn2fmabrl3az"
     }
   }
 }

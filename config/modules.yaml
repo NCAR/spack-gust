@@ -78,6 +78,7 @@ modules:
             NVIDIA_VERSION: '{version}'
             NVIDIA_PATH: '{prefix}'
             NVLOCALRC: '{prefix}/localrc/gust'
+            CRAY_NVIDIA_VERSION: '{version}'
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/compilers/lib'
       ncarcompilers:

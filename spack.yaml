@@ -1011,6 +1011,9 @@ spack:
               NCAR_ROOT_INTEL: '{^intel-oneapi-compilers.prefix}'
             prepend_path:
               LD_LIBRARY_PATH: '{^intel-oneapi-compilers.prefix}/compiler/{version}/linux/compiler/lib/intel64'
+              PATH: '{^intel-oneapi-compilers.prefix}/compiler/{version}/linux/bin/intel64'
+              NLSPATH: '{^intel-oneapi-compilers.prefix}/compiler/{version}/linux/compiler/lib/intel64_lin/locale/%l_%t/%N'
+              MANPATH: '{^intel-oneapi-compilers.prefix}/compiler/{version}/documentation/en/man/common'
         nvhpc:
           environment:
             set:

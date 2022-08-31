@@ -1049,7 +1049,7 @@ spack:
           environment:
             set:
               CRAY_ACCEL_TARGET: nvidia80
-              CRAY_TCMALLOC_MEMFS_FORCE: 1
+              CRAY_TCMALLOC_MEMFS_FORCE: '1'
               CRAYPE_LINK_TYPE: dynamic
               CRAY_ACCEL_VENDOR: nvidia
         miniconda3:
@@ -1238,7 +1238,6 @@ spack:
   - esmf@8.3.0%cce@14.0.2 ^cray-libsci@22.08.1.1 ^cray-mpich@8.1.18%cce@14.0.2
   - intel-oneapi-mkl@2022.1.0%oneapi@2022.1.0
   - intel-oneapi-mpi@2021.6.0%oneapi@2022.1.0
-  - intel-oneapi-compilers-classic@2022.1.0
   - cray-mpich@8.1.18%intel@2022.1.0
   - ncarcompilers@0.6.2%intel@2022.1.0
   - fftw@3.3.10%intel@2022.1.0

@@ -101,7 +101,7 @@ modules:
         environment:
           set:
             CRAY_ACCEL_TARGET: nvidia80
-            CRAY_TCMALLOC_MEMFS_FORCE: 1
+            CRAY_TCMALLOC_MEMFS_FORCE: '1'
             CRAYPE_LINK_TYPE: dynamic
             CRAY_ACCEL_VENDOR: nvidia
       miniconda3:

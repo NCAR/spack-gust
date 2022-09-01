@@ -1254,3 +1254,11 @@ spack:
   - intel-oneapi-compilers-classic@2022.1.0
   - intel-oneapi-mkl@2022.1.0%intel@2022.1.0
   - intel-oneapi-mpi@2021.6.0%intel@2022.1.0
+  - ncarcompilers@0.6.2%gcc@11.2.0
+  - ncarcompilers@0.6.2%gcc@10.3.0
+  - ncarcompilers@0.6.2%nvhpc@21.3
+  - ncarcompilers@0.6.2%nvhpc@22.2
+  - ncarcompilers@0.6.2%nvhpc@22.7
+  - ncarcompilers@0.6.2%oneapi@2022.1.0
+  - ncarcompilers@0.6.2%intel@2022.1.0
+  - ncarcompilers@0.6.2%cce@14.0.2

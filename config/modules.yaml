@@ -85,13 +85,8 @@ modules:
         environment:
           set:
             NCAR_EXCLUDE_ASNEEDED: '1'
-            NCAR_WRAPPER_MPI: '{prefix.bin}/mpi'
-            CC: cc
-            CXX: CC
-            FC: ftn
-            F77: ftn
-          prepend_path:
-            PATH: '{prefix.bin}/mpi'
+            NCAR_WRAPPER_MPI_PATH: '{prefix}/bin/mpi'
+        template: ncar_wrapper.lua
       netcdf:
         environment:
           set:

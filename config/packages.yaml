@@ -614,7 +614,24 @@ packages:
     buildable: false
   cray-libsci:
     externals:
-    - spec: cray-libsci@22.08.1.1
+    - spec: cray-libsci@22.08.1.1 %gcc
+      prefix: /opt/cray/pe/libsci/22.08.1.1/gnu/9.1/x86_64
+      modules:
+      - cray-libsci/22.08.1.1
+    - spec: cray-libsci@22.08.1.1 %cce
+      prefix: /opt/cray/pe/libsci/22.08.1.1/cray/9.0/x86_64
+      modules:
+      - cray-libsci/22.08.1.1
+    - spec: cray-libsci@22.08.1.1 %nvhpc
+      prefix: /opt/cray/pe/libsci/22.08.1.1/nvidia/20.7/x86_64
+      modules:
+      - cray-libsci/22.08.1.1
+    - spec: cray-libsci@22.08.1.1 %oneapi
+      prefix: /opt/cray/pe/libsci/22.08.1.1/intel/19.0/x86_64
+      modules:
+      - cray-libsci/22.08.1.1
+    - spec: cray-libsci@22.08.1.1 %intel
+      prefix: /opt/cray/pe/libsci/22.08.1.1/intel/19.0/x86_64
       modules:
       - cray-libsci/22.08.1.1
     buildable: false

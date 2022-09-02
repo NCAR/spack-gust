@@ -512,6 +512,10 @@
     {
       "hash": "3fwulf2wre6g2jdsbanhlfu3uatf6lyy",
       "spec": "esmf@8.3.0%cce@14.0.2 ^cray-libsci@22.08.1.1 ^cray-mpich@8.1.18%cce@14.0.2"
+    },
+    {
+      "hash": "eoqnjyd62u4ftj6hppnw4e4ftaxyaaok",
+      "spec": "ncview@2.1.8%gcc@11.2.0"
     }
   ],
   "concrete_specs": {
@@ -29728,6 +29732,169 @@
       },
       "package_hash": "frmlhc542uwvwpzampnd2pxmubwaunmophzcmgxgyjhs2e75fhna====",
       "hash": "sgv4zlronyifn66wsziugkxwwjj5ztum"
+    },
+    "eoqnjyd62u4ftj6hppnw4e4ftaxyaaok": {
+      "name": "ncview",
+      "version": "2.1.8",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "11.2.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "vxhlfvbxlvcwiczq7c4sfj2henmzsicvdipqr7im53r2gful52ga====",
+      "dependencies": [
+        {
+          "name": "libpng",
+          "hash": "kkuouhn5xloe3pmjouanr6se5nb5uflf",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxaw",
+          "hash": "ivuhittrqvln3zhx23hfcylln4eihtcl",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-c",
+          "hash": "p56lm7jbxksqw7c7jvg6gskcpgrli7gq",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "udunits",
+          "hash": "zitpk4iehcjsga2ladym5ewf3fw3iyhp",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "eoqnjyd62u4ftj6hppnw4e4ftaxyaaok"
+    },
+    "ivuhittrqvln3zhx23hfcylln4eihtcl": {
+      "name": "libxaw",
+      "version": "1.0.13",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "11.2.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/glade/u/apps/common/22.08/spack/opt/spack/libxaw/1.0.13/gcc/7.5.0",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "4a6hfsz566paadev3w3fmw2lknd7w5y32iabzbhlc7rknlwod2cq====",
+      "hash": "ivuhittrqvln3zhx23hfcylln4eihtcl"
     }
   }
 }

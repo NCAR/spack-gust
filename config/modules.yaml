@@ -99,6 +99,7 @@ modules:
       cuda:
         environment:
           set:
+            NVHPC_CUDA_HOME: '{prefix}'
             CRAY_ACCEL_TARGET: nvidia80
             CRAY_TCMALLOC_MEMFS_FORCE: '1'
             CRAYPE_LINK_TYPE: dynamic

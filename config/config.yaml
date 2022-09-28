@@ -10,6 +10,7 @@ config:
   build_jobs: 8
   test_stage: /glade/gust/scratch/csgteam/temp/spack/tests
   source_cache: /glade/gust/scratch/csgteam/temp/spack/cache
+  misc_cache: /glade/gust/scratch/csgteam/temp/spack/gust/22.08b/caches/misc
   build_stage:
   - /glade/gust/scratch/csgteam/temp/spack/builds
   template_dirs:

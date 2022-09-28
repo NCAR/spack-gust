@@ -104,6 +104,13 @@ modules:
             CRAY_TCMALLOC_MEMFS_FORCE: '1'
             CRAYPE_LINK_TYPE: dynamic
             CRAY_ACCEL_VENDOR: nvidia
+            CRAY_CUDATOOLKIT_VERSION: '{version}'
+            CRAY_CUDATOOLKIT_PREFIX: '{prefix}'
+            CRAY_CUDATOOLKIT_DIR: '{prefix}'
+            CUDATOOLKIT_HOME: '{prefix}'
+          prepend_path:
+            LD_LIBRARY_PATH: '{prefix}/lib64:{prefix}/nvvm/lib64:{prefix}/extras/CUPTI/lib64:{prefix}/extras/Debugger/lib64'
+            CRAY_LD_LIBRARY_PATH: '{prefix}/lib64'
       miniconda3:
         filter:
           exclude_env_vars: [PATH, LD_LIBRARY_PATH, NCAR_LDFLAGS_MINICONDA3, NCAR_INC_MINICONDA3,

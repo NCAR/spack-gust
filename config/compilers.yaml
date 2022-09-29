@@ -131,8 +131,28 @@ compilers:
     operating_system: sles15
     target: any
     modules:
-    - PrgEnv-cray
+    - PrgEnv-cray/8.3.2
     - cce/14.0.2
+    environment:
+      prepend_path:
+        CPATH: /glade/u/apps/common/22.08/opt/include
+        LIBRARY_PATH: /glade/u/apps/common/22.08/opt/lib64:/glade/u/apps/common/22.08/opt/lib
+    extra_rpaths:
+    - /glade/u/apps/common/22.08/opt/lib64
+    - /glade/u/apps/common/22.08/opt/lib
+- compiler:
+    spec: cce@14.0.3
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-cray/8.3.3
+    - cce/14.0.3
     environment:
       prepend_path:
         CPATH: /glade/u/apps/common/22.08/opt/include
@@ -151,7 +171,7 @@ compilers:
     operating_system: sles15
     target: any
     modules:
-    - PrgEnv-gnu
+    - PrgEnv-gnu/8.3.2
     - gcc/10.3.0
     environment:
       prepend_path:
@@ -171,8 +191,28 @@ compilers:
     operating_system: sles15
     target: any
     modules:
-    - PrgEnv-gnu
+    - PrgEnv-gnu/8.3.2
     - gcc/11.2.0
+    environment:
+      prepend_path:
+        CPATH: /glade/u/apps/common/22.08/opt/include
+        LIBRARY_PATH: /glade/u/apps/common/22.08/opt/lib64:/glade/u/apps/common/22.08/opt/lib
+    extra_rpaths:
+    - /glade/u/apps/common/22.08/opt/lib64
+    - /glade/u/apps/common/22.08/opt/lib
+- compiler:
+    spec: gcc@12.1.0
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-gnu/8.3.3
+    - gcc/12.1.0
     environment:
       prepend_path:
         CPATH: /glade/u/apps/common/22.08/opt/include

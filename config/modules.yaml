@@ -81,6 +81,10 @@ modules:
             CRAY_NVIDIA_VERSION: '{version}'
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/compilers/lib'
+      nvhpc@21.3:
+        environment:
+          set:
+            CRAY_CPU_TARGET: x86-rome
       ncarcompilers:
         environment:
           set:

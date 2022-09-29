@@ -516,6 +516,38 @@
     {
       "hash": "eoqnjyd62u4ftj6hppnw4e4ftaxyaaok",
       "spec": "ncview@2.1.8%gcc@11.2.0"
+    },
+    {
+      "hash": "yeakovhovase4gqc3zaqorwem2ipkrur",
+      "spec": "ncarcompilers@0.7.0%gcc@11.2.0"
+    },
+    {
+      "hash": "zypzxizqy6opm4tt7n2etoy2ni7fdces",
+      "spec": "ncarcompilers@0.7.0%gcc@10.3.0"
+    },
+    {
+      "hash": "zegass6bruw6l7hw5w2rfw2pxgbwq3y7",
+      "spec": "ncarcompilers@0.7.0%nvhpc@21.3"
+    },
+    {
+      "hash": "3lqiix5de4mi3y3ey63eg72yl7fgudj7",
+      "spec": "ncarcompilers@0.7.0%nvhpc@22.2"
+    },
+    {
+      "hash": "5tjruj5pbnsf7cqk5z4ndkebplzny3mq",
+      "spec": "ncarcompilers@0.7.0%nvhpc@22.7"
+    },
+    {
+      "hash": "p5qmxrqpm7s667wvpslmb565bnow4hjt",
+      "spec": "ncarcompilers@0.7.0%oneapi@2022.1.0"
+    },
+    {
+      "hash": "nqebe4iitu3ixwjox6ensj5asdoetqxv",
+      "spec": "ncarcompilers@0.7.0%intel@2022.1.0"
+    },
+    {
+      "hash": "odcqp6tmdc6f33uzfmifcj5u6nprhv7g",
+      "spec": "ncarcompilers@0.7.0%cce@14.0.2"
     }
   ],
   "concrete_specs": {
@@ -29895,6 +29927,502 @@
       },
       "package_hash": "4a6hfsz566paadev3w3fmw2lknd7w5y32iabzbhlc7rknlwod2cq====",
       "hash": "ivuhittrqvln3zhx23hfcylln4eihtcl"
+    },
+    "yeakovhovase4gqc3zaqorwem2ipkrur": {
+      "name": "ncarcompilers",
+      "version": "0.7.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "11.2.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "553mqikbwhgziopumxbfv7arfkihewqserbtytksgoeamtnamrja====",
+      "hash": "yeakovhovase4gqc3zaqorwem2ipkrur"
+    },
+    "zypzxizqy6opm4tt7n2etoy2ni7fdces": {
+      "name": "ncarcompilers",
+      "version": "0.7.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "10.3.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "553mqikbwhgziopumxbfv7arfkihewqserbtytksgoeamtnamrja====",
+      "hash": "zypzxizqy6opm4tt7n2etoy2ni7fdces"
+    },
+    "zegass6bruw6l7hw5w2rfw2pxgbwq3y7": {
+      "name": "ncarcompilers",
+      "version": "0.7.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "553mqikbwhgziopumxbfv7arfkihewqserbtytksgoeamtnamrja====",
+      "hash": "zegass6bruw6l7hw5w2rfw2pxgbwq3y7"
+    },
+    "3lqiix5de4mi3y3ey63eg72yl7fgudj7": {
+      "name": "ncarcompilers",
+      "version": "0.7.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "22.2"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "553mqikbwhgziopumxbfv7arfkihewqserbtytksgoeamtnamrja====",
+      "hash": "3lqiix5de4mi3y3ey63eg72yl7fgudj7"
+    },
+    "5tjruj5pbnsf7cqk5z4ndkebplzny3mq": {
+      "name": "ncarcompilers",
+      "version": "0.7.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "22.7"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "553mqikbwhgziopumxbfv7arfkihewqserbtytksgoeamtnamrja====",
+      "hash": "5tjruj5pbnsf7cqk5z4ndkebplzny3mq"
+    },
+    "p5qmxrqpm7s667wvpslmb565bnow4hjt": {
+      "name": "ncarcompilers",
+      "version": "0.7.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2022.1.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "553mqikbwhgziopumxbfv7arfkihewqserbtytksgoeamtnamrja====",
+      "hash": "p5qmxrqpm7s667wvpslmb565bnow4hjt"
+    },
+    "nqebe4iitu3ixwjox6ensj5asdoetqxv": {
+      "name": "ncarcompilers",
+      "version": "0.7.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "intel",
+        "version": "2022.1.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "553mqikbwhgziopumxbfv7arfkihewqserbtytksgoeamtnamrja====",
+      "hash": "nqebe4iitu3ixwjox6ensj5asdoetqxv"
+    },
+    "odcqp6tmdc6f33uzfmifcj5u6nprhv7g": {
+      "name": "ncarcompilers",
+      "version": "0.7.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "14.0.2"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "553mqikbwhgziopumxbfv7arfkihewqserbtytksgoeamtnamrja====",
+      "hash": "odcqp6tmdc6f33uzfmifcj5u6nprhv7g"
     }
   }
 }

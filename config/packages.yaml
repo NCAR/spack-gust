@@ -611,6 +611,36 @@ packages:
       - cray-mpich/8.1.18
       - craype-network-ofi
       - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.19 %gcc
+      prefix: /opt/cray/pe/mpich/8.1.19/ofi/gnu/9.1
+      modules:
+      - cray-mpich/8.1.19
+      - craype-network-ofi
+      - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.19 %cce
+      prefix: /opt/cray/pe/mpich/8.1.19/ofi/cray/10.0
+      modules:
+      - cray-mpich/8.1.19
+      - craype-network-ofi
+      - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.19 %nvhpc
+      prefix: /opt/cray/pe/mpich/8.1.19/ofi/nvidia/20.7
+      modules:
+      - cray-mpich/8.1.19
+      - craype-network-ofi
+      - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.19 %oneapi
+      prefix: /opt/cray/pe/mpich/8.1.19/ofi/intel/19.0
+      modules:
+      - cray-mpich/8.1.19
+      - craype-network-ofi
+      - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.19 %intel
+      prefix: /opt/cray/pe/mpich/8.1.19/ofi/intel/19.0
+      modules:
+      - cray-mpich/8.1.19
+      - craype-network-ofi
+      - libfabric/1.15.0.0
     buildable: false
   cray-libsci:
     externals:

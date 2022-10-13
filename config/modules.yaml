@@ -44,6 +44,13 @@ modules:
         template: ncar_default.lua
       mpi:
         template: ncar_wrapper_mpi.lua
+        environment:
+          append_path:
+            MODULEPATH: /glade/u/apps/cseg/modules/{name}/{version}/{compiler.name}/{compiler.version}
+      gcc:
+        environment:
+          append_path:
+            MODULEPATH: /glade/u/apps/cseg/modules/{name}/{version}
       intel-oneapi-compilers:
         environment:
           set:
@@ -56,6 +63,8 @@ modules:
             F77: '{prefix}/compiler/{version}/linux/bin/ifx'
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/compiler/{version}/linux/compiler/lib/intel64'
+          append_path:
+            MODULEPATH: /glade/u/apps/cseg/modules/oneapi/{version}
       intel-oneapi-compilers-classic:
         autoload: none
         filter:
@@ -71,6 +80,8 @@ modules:
             PATH: '{^intel-oneapi-compilers.prefix}/compiler/{version}/linux/bin/intel64'
             NLSPATH: '{^intel-oneapi-compilers.prefix}/compiler/{version}/linux/compiler/lib/intel64_lin/locale/%l_%t/%N'
             MANPATH: '{^intel-oneapi-compilers.prefix}/compiler/{version}/documentation/en/man/common'
+          append_path:
+            MODULEPATH: /glade/u/apps/cseg/modules/intel/{version}
       nvhpc:
         environment:
           set:
@@ -81,6 +92,8 @@ modules:
             CRAY_NVIDIA_VERSION: '{version}'
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/compilers/lib'
+          append_path:
+            MODULEPATH: /glade/u/apps/cseg/modules/nvhpc/{version}
       nvhpc@21.3:
         environment:
           set:
@@ -126,6 +139,10 @@ modules:
             CONDA_ROOT: '{prefix}'
             CONDA_EXE: '{prefix}/bin/conda'
         template: conda.lua
+      apptainer:
+        environment:
+          prepend_path:
+            PATH: '{^squashfs.prefix}/bin'
       ncarenv:
         template: ncar_env.lua
       netcdf~mpi:

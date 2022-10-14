@@ -1,0 +1,18 @@
+mirrors:
+  glade_gust:
+    fetch:
+      url: file:///glade/u/apps/gust/mirror
+      access_pair:
+      - null
+      - null
+      access_token: null
+      profile: null
+      endpoint_url: null
+    push:
+      url: file:///glade/u/apps/gust/mirror
+      access_pair:
+      - null
+      - null
+      access_token: null
+      profile: null
+      endpoint_url: null

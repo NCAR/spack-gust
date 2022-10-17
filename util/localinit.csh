@@ -6,8 +6,6 @@ setenv MODULEPATH_ROOT /glade/u/apps/gust/modules
 setenv LMOD_SYSTEM_NAME gust
 setenv LMOD_SYSTEM_DEFAULT_MODULES ""
 setenv MODULEPATH /glade/u/apps/gust/modules/environment
-setenv LMOD_PACKAGE_PATH /glade/work/csgteam/spack-deployments/gust/22.10/envs/public/util
-setenv LMOD_AVAIL_STYLE grouped:system
 
 # Get location of Lmod initialization scripts
 setenv LMOD_ROOT /glade/u/apps/gust/22.10/spack/opt/spack/lmod/8.7.2/gcc/7.5.0

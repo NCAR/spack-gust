@@ -4,7 +4,7 @@ setenv MODULEPATH_ROOT /glade/u/apps/gust/modules
 
 # Lmod configuration
 setenv LMOD_SYSTEM_NAME gust
-setenv LMOD_SYSTEM_DEFAULT_MODULES "ncarenv/22.10:craype/2.7.17:cce/14.0.3:ncarcompilers/0.7.1:cray-mpich/8.1.19:netcdf/4.8.1:cray-libsci/22.08.1.1"
+setenv LMOD_SYSTEM_DEFAULT_MODULES ""
 setenv MODULEPATH /glade/u/apps/gust/modules/environment
 setenv LMOD_PACKAGE_PATH /glade/work/csgteam/spack-deployments/gust/22.10/envs/public/util
 setenv LMOD_AVAIL_STYLE grouped:system

@@ -34,10 +34,16 @@ local mapT =
       ['modules[/%.%d]*/gcc/10%.3%.0$'] = 'Compiler-dependent Software - [gcc/10.3.0]',
       ['modules[/%.%d]*/gcc/12%.1%.0$'] = 'Compiler-dependent Software - [gcc/12.1.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/nvhpc/22%.7$'] = 'MPI-dependent Software - [nvhpc/22.7 + mpi-serial/2.3.0]',
+      ['modules[/%.%d]*/mpi%-serial/2%.3%.0/intel/2021%.6%.0$'] = 'MPI-dependent Software - [intel/2021.6.0 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/intel/2022%.1%.0$'] = 'MPI-dependent Software - [intel/2022.1.0 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/oneapi/2022%.1%.0$'] = 'MPI-dependent Software - [oneapi/2022.1.0 + mpi-serial/2.3.0]',
+      ['modules[/%.%d]*/mpi%-serial/2%.3%.0/cce/14%.0%.3$'] = 'MPI-dependent Software - [cce/14.0.3 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/cce/14%.0%.2$'] = 'MPI-dependent Software - [cce/14.0.2 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/gcc/11%.2%.0$'] = 'MPI-dependent Software - [gcc/11.2.0 + mpi-serial/2.3.0]',
+      ['modules[/%.%d]*/mpi%-serial/2%.3%.0/gcc/12%.1%.0$'] = 'MPI-dependent Software - [gcc/12.1.0 + mpi-serial/2.3.0]',
+      ['perftools/21%.12%.0/modulefiles$'] = 'Cray Performance Analysis Tools - [perftools-base/21.12.0]',
+      ['perftools/22%.06%.0/modulefiles$'] = 'Cray Performance Analysis Tools - [perftools-base/22.06.0]',
+      ['perftools/22%.09%.0/modulefiles$'] = 'Cray Performance Analysis Tools - [perftools-base/22.09.0]',
    },
 }
 

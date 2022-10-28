@@ -35,6 +35,10 @@ modules:
       - cray-mpich
       - cray-libsci
       - cray-fftw
+      - tmux
+      - ghostscript
+      - emacs
+      - gdb
       whitelist:
       - git
       all:

@@ -712,3 +712,5 @@ packages:
     variants: [+external-libfabric, +ilp64]
   intel-oneapi-mkl:
     variants: [+ilp64]
+  gdb:
+    variants: [+gold, +ld, +lto, +tui, ~python]

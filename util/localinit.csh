@@ -8,7 +8,7 @@ setenv LMOD_SYSTEM_DEFAULT_MODULES "ncarenv/22.10:craype/2.7.17:cce/14.0.3:ncarc
 setenv MODULEPATH /glade/u/apps/gust/modules/environment
 
 # Get location of Lmod initialization scripts
-setenv LMOD_ROOT /glade/u/apps/gust/22.10/spack/opt/spack/lmod/8.7.2/gcc/7.5.0
+setenv LMOD_ROOT /glade/u/apps/gust/22.10/spack/opt/spack/lmod/8.7.14/gcc/7.5.0
 
 # Add shell settings so Lmod can be used in bash scripts
 setenv PROFILEREAD true

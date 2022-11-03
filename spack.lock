@@ -664,6 +664,10 @@
     {
       "hash": "vv6ipz2avrkifjbjgmhgip6mz5r6tdxq",
       "spec": "gdb"
+    },
+    {
+      "hash": "uoqhkkaba5ebi3sxunfja52o6ajmiksc",
+      "spec": "lmod@8.7.14"
     }
   ],
   "concrete_specs": {
@@ -38925,6 +38929,101 @@
       },
       "package_hash": "4hfd47525vdxda6dpwhpwrxvllokotb5w53mis6twgg7sour7e4q====",
       "hash": "vayscu3pwga4fyrgi7exd6qa5rr6w5nx"
+    },
+    "uoqhkkaba5ebi3sxunfja52o6ajmiksc": {
+      "name": "lmod",
+      "version": "8.7.14",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "future",
+      "parameters": {
+        "auto_swap": true,
+        "redirect": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "kj265unnpzztyjvbojlawrpafpxlc7tve6rzfy4fvivy6brfhasa====",
+      "dependencies": [
+        {
+          "name": "lua",
+          "hash": "qcd44gvwmpdrulqfgymklcna3nrnhlnt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "lua-luafilesystem",
+          "hash": "6l45wchqefdfn55o4nvpm56vtcmsuwhk",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "lua-luaposix",
+          "hash": "dujesq4mgsyzvv4nwsws3hhbqkmmavxy",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "tcl",
+          "hash": "ym3p2eue7px4eg2nhg2yt2jklwxqhpir",
+          "type": [
+            "build",
+            "link",
+            "run"
+          ]
+        }
+      ],
+      "hash": "uoqhkkaba5ebi3sxunfja52o6ajmiksc"
     }
   }
 }

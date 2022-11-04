@@ -1,4 +1,97 @@
 packages:
+  zstd:
+    externals:
+    - spec: zstd@1.5.2
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/zstd/1.5.2/gcc/7.5.0
+    buildable: false
+  arm-forge:
+    externals:
+    - spec: arm-forge@22.1.1
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/arm-forge/22.1.1/gcc/7.5.0
+    buildable: false
+  gawk:
+    externals:
+    - spec: gawk@4.2.1
+      prefix: /usr
+  gcc:
+    externals:
+    - spec: gcc@7.5.0 languages=c,c++,fortran
+      prefix: /usr
+      extra_attributes:
+        compilers:
+          c: /usr/bin/gcc
+          cxx: /usr/bin/g++
+          fortran: /usr/bin/gfortran
+    compiler: [gcc@7.5.0]
+    variants: [+piclibs, 'languages=c,c++,fortran,go']
+  groff:
+    externals:
+    - spec: groff@1.22.3
+      prefix: /usr
+  libfuse:
+    externals:
+    - spec: libfuse@2.9.7
+      prefix: /usr
+    - spec: libfuse@3.6.1
+      prefix: /usr
+  openssh:
+    externals:
+    - spec: openssh@8.4p1
+      prefix: /usr
+  rsync:
+    externals:
+    - spec: rsync@3.1.3
+      prefix: /usr
+  bash:
+    externals:
+    - spec: bash@4.4.23
+      prefix: /usr
+    buildable: false
+  cpio:
+    externals:
+    - spec: cpio@2.12
+      prefix: /usr
+    buildable: false
+  diffutils:
+    externals:
+    - spec: diffutils@3.6
+      prefix: /usr
+    buildable: false
+  findutils:
+    externals:
+    - spec: findutils@4.8.0
+      prefix: /usr
+    buildable: false
+  gmake:
+    externals:
+    - spec: gmake@4.2.1
+      prefix: /usr
+    buildable: false
+  lustre:
+    externals:
+    - spec: lustre@2.12.6.2_cray_6_g44c857f
+      prefix: /usr
+    buildable: false
+  m4:
+    externals:
+    - spec: m4@1.4.18
+      prefix: /usr
+    buildable: false
+  pkg-config:
+    externals:
+    - spec: pkg-config@0.29.2
+      prefix: /usr
+    buildable: false
+  tar:
+    externals:
+    - spec: tar@1.30
+      prefix: /usr
+    buildable: false
+  ghostscript:
+    externals:
+    - spec: ghostscript@9.52
+      prefix: /usr
+    buildable: false
   libfabric:
     externals:
     - spec: libfabric@1.15.0.0
@@ -476,89 +569,6 @@ packages:
     externals:
     - spec: antlr@2.7.7
       prefix: /glade/u/apps/common/22.08/spack/opt/spack/antlr/2.7.7/gcc/7.5.0
-    buildable: false
-  gawk:
-    externals:
-    - spec: gawk@4.2.1
-      prefix: /usr
-  gcc:
-    externals:
-    - spec: gcc@7.5.0 languages=c,c++,fortran
-      prefix: /usr
-      extra_attributes:
-        compilers:
-          c: /usr/bin/gcc
-          cxx: /usr/bin/g++
-          fortran: /usr/bin/gfortran
-    compiler: [gcc@7.5.0]
-    variants: [+piclibs, 'languages=c,c++,fortran,go']
-  groff:
-    externals:
-    - spec: groff@1.22.3
-      prefix: /usr
-  libfuse:
-    externals:
-    - spec: libfuse@2.9.7
-      prefix: /usr
-    - spec: libfuse@3.6.1
-      prefix: /usr
-  openssh:
-    externals:
-    - spec: openssh@8.4p1
-      prefix: /usr
-  rsync:
-    externals:
-    - spec: rsync@3.1.3
-      prefix: /usr
-  bash:
-    externals:
-    - spec: bash@4.4.23
-      prefix: /usr
-    buildable: false
-  cpio:
-    externals:
-    - spec: cpio@2.12
-      prefix: /usr
-    buildable: false
-  diffutils:
-    externals:
-    - spec: diffutils@3.6
-      prefix: /usr
-    buildable: false
-  findutils:
-    externals:
-    - spec: findutils@4.8.0
-      prefix: /usr
-    buildable: false
-  gmake:
-    externals:
-    - spec: gmake@4.2.1
-      prefix: /usr
-    buildable: false
-  lustre:
-    externals:
-    - spec: lustre@2.12.6.2_cray_6_g44c857f
-      prefix: /usr
-    buildable: false
-  m4:
-    externals:
-    - spec: m4@1.4.18
-      prefix: /usr
-    buildable: false
-  pkg-config:
-    externals:
-    - spec: pkg-config@0.29.2
-      prefix: /usr
-    buildable: false
-  tar:
-    externals:
-    - spec: tar@1.30
-      prefix: /usr
-    buildable: false
-  ghostscript:
-    externals:
-    - spec: ghostscript@9.52
-      prefix: /usr
     buildable: false
   all:
     'compiler:': [gcc@7.5.0, gcc, cce, nvhpc, oneapi]

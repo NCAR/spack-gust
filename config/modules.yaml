@@ -39,6 +39,7 @@ modules:
       - ghostscript
       - emacs
       - gdb
+      - pkg-config
       whitelist:
       - git
       all:
@@ -204,3 +205,5 @@ modules:
       - cdo
       - wgrib2
       - ncview
+      defaults:
+      - netcdf@4.8.1

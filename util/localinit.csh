@@ -50,3 +50,10 @@ if ( $?PBS_O_WORKDIR  && ! $?NCAR_PBS_JOBINIT ) then
 
     setenv NCAR_PBS_JOBINIT $PBS_JOBID
 endif
+
+# Set number of GPUs (analogous to NCPUS)
+if ( `where nvidia-smi` != "" ) then
+    setenv NGPUS `nvidia-smi -L | wc -l`
+else
+    setenv NGPUS 0
+endif

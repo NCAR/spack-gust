@@ -586,6 +586,11 @@ packages:
     - spec: pbspro@2021.1.3
       prefix: /opt/pbs
     buildable: false
+  openpbs:
+    externals:
+    - spec: openpbs@2021.1.3
+      prefix: /opt/pbs
+    buildable: false
   miniconda3:
     externals:
     - spec: miniconda3@4.12.0
@@ -653,6 +658,36 @@ packages:
       - cray-mpich/8.1.19
       - craype-network-ofi
       - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.21 %gcc
+      prefix: /opt/cray/pe/mpich/8.1.21/ofi/gnu/9.1
+      modules:
+      - cray-mpich/8.1.21
+      - craype-network-ofi
+      - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.21 %cce
+      prefix: /opt/cray/pe/mpich/8.1.21/ofi/cray/10.0
+      modules:
+      - cray-mpich/8.1.21
+      - craype-network-ofi
+      - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.21 %nvhpc
+      prefix: /opt/cray/pe/mpich/8.1.21/ofi/nvidia/20.7
+      modules:
+      - cray-mpich/8.1.21
+      - craype-network-ofi
+      - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.21 %oneapi
+      prefix: /opt/cray/pe/mpich/8.1.21/ofi/intel/19.0
+      modules:
+      - cray-mpich/8.1.21
+      - craype-network-ofi
+      - libfabric/1.15.0.0
+    - spec: cray-mpich@8.1.21 %intel
+      prefix: /opt/cray/pe/mpich/8.1.21/ofi/intel/19.0
+      modules:
+      - cray-mpich/8.1.21
+      - craype-network-ofi
+      - libfabric/1.15.0.0
     buildable: false
   cray-libsci:
     externals:
@@ -676,6 +711,26 @@ packages:
       prefix: /opt/cray/pe/libsci/22.08.1.1/intel/19.0/x86_64
       modules:
       - cray-libsci/22.08.1.1
+    - spec: cray-libsci@22.11.1.2 %gcc
+      prefix: /opt/cray/pe/libsci/22.11.1.2/gnu/9.1/x86_64
+      modules:
+      - cray-libsci/22.11.1.2
+    - spec: cray-libsci@22.11.1.2 %cce
+      prefix: /opt/cray/pe/libsci/22.11.1.2/cray/9.0/x86_64
+      modules:
+      - cray-libsci/22.11.1.2
+    - spec: cray-libsci@22.11.1.2 %nvhpc
+      prefix: /opt/cray/pe/libsci/22.11.1.2/nvida/20.7/x86_64
+      modules:
+      - cray-libsci/22.11.1.2
+    - spec: cray-libsci@22.11.1.2 %oneapi
+      prefix: /opt/cray/pe/libsci/22.11.1.2/intel/19.0/x86_64
+      modules:
+      - cray-libsci/22.11.1.2
+    - spec: cray-libsci@22.11.1.2 %intel
+      prefix: /opt/cray/pe/libsci/22.11.1.2/intel/19.0/x86_64
+      modules:
+      - cray-libsci/22.11.1.2
     buildable: false
   cuda:
     externals:
@@ -695,17 +750,17 @@ packages:
   pmix:
     require: '%gcc@7.5.0'
   netcdf:
-    variants: [+dap, -mpi]
+    variants: [+dap, ~mpi]
   netcdf-c:
-    variants: [+dap, -mpi]
+    variants: [+dap, ~mpi]
   hdf:
     variants: [+fortran, +szip]
   hdf5:
-    variants: [+hl, +szip, +fortran, +cxx, -mpi]
+    variants: [+hl, +szip, +fortran, +cxx, ~mpi]
   netcdf-cxx4:
-    variants: [-doxygen]
+    variants: [~doxygen]
   fftw:
-    variants: [-mpi]
+    variants: [~mpi]
   eccodes:
     variants: [+tools, +fortran, +netcdf, +png, jp2k=jasper]
   cdo:

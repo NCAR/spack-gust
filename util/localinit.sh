@@ -41,3 +41,10 @@ if [ -n "$PBS_O_WORKDIR" ] && [ -z "$NCAR_PBS_JOBINIT" ]; then
 
     export NCAR_PBS_JOBINIT=$PBS_JOBID
 fi
+
+# Set number of GPUs (analogous to NCPUS)
+if command -v nvidia-smi &> /dev/null; then
+    export NGPUS=`nvidia-smi -L | wc -l`
+else
+    export NGPUS=0
+fi

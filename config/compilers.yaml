@@ -12,6 +12,7 @@ compilers:
       prepend_path:
         CPATH: /glade/u/apps/common/22.08/opt/include
         LIBRARY_PATH: /glade/u/apps/common/22.08/opt/lib64:/glade/u/apps/common/22.08/opt/lib
+        PKG_CONFIG_PATH: /glade/u/apps/common/22.08/opt/lib64/pkgconfig:/glade/u/apps/common/22.08/opt/lib/pkgconfig
     extra_rpaths:
     - /glade/u/apps/common/22.08/opt/lib64
     - /glade/u/apps/common/22.08/opt/lib

@@ -207,3 +207,4 @@ modules:
       - ncview
       defaults:
       - netcdf@4.8.1
+      - parallel-netcdf@1.12.2

@@ -965,3 +965,4 @@ spack:
   - nco@5.1.0%gcc@11.2.0
   - cdo@2.0.6%gcc@11.2.0
   - ncview@2.1.8%gcc@11.2.0
+  - ncl ^esmf@8.0.0 ^gdal~armadillo ^hdf5~mpi

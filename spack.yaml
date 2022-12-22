@@ -659,6 +659,7 @@ spack:
               PE_ENV: INTEL
               INTEL_VERSION: '{version}'
               INTEL_PATH: '{prefix}'
+              INTEL_COMPILER_TYPE: RECOMMENDED
               NCAR_ROOT_ONEAPI: '{prefix}'
               NCAR_SPACK_HASH_ONEAPI: '{hash}'
             append_path:
@@ -673,6 +674,7 @@ spack:
               PE_ENV: INTEL
               INTEL_VERSION: '{version}'
               INTEL_PATH: '{^intel-oneapi-compilers.prefix}'
+              INTEL_COMPILER_TYPE: CLASSIC
               NCAR_ROOT_INTEL: '{^intel-oneapi-compilers.prefix}'
               NCAR_SPACK_HASH_INTEL: '{hash}'
             append_path:

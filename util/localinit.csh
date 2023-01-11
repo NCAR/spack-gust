@@ -21,25 +21,29 @@ set shell = `/bin/basename $comm`
 source $LMOD_ROOT/lmod/lmod/init/$shell
 unset comm shell
 
+# Set system default stuff
+setenv NCAR_DEFAULT_PATH /usr/local/bin:/usr/bin:/sbin:/bin
+setenv NCAR_DEFAULT_MANPATH /usr/local/share/man:/usr/share/man
+setenv NCAR_DEFAULT_INFOPATH /usr/local/share/info:/usr/share/info
+
+setenv PATH ${PATH}:$NCAR_DEFAULT_PATH
+
+if ( ! ($?MANPATH) ) then
+    setenv MANPATH $NCAR_DEFAULT_MANPATH
+else
+    setenv MANPATH ${MANPATH}:$NCAR_DEFAULT_MANPATH
+endif
+
+if ( ! ($?INFOPATH) ) then
+    setenv INFOPATH $NCAR_DEFAULT_INFOPATH
+else
+    setenv INFOPATH ${INFOPATH}:$NCAR_DEFAULT_INFOPATH
+endif
+
 # Load default modules
 if ( ! $?__Init_Default_Modules || ! $?LD_LIBRARY_PATH ) then
   setenv __Init_Default_Modules 1
   module -q restore
-endif
-
-# Set system default stuff
-setenv PATH ${PATH}:/usr/local/bin:/usr/bin:/sbin:/bin
-
-if ( ! ($?MANPATH) ) then
-    setenv MANPATH /usr/local/share/man:/usr/share/man
-else
-    setenv MANPATH ${MANPATH}:/usr/local/share/man:/usr/share/man
-endif
-
-if ( ! ($?INFOPATH) ) then
-    setenv INFOPATH /usr/local/share/info:/usr/share/info
-else
-    setenv INFOPATH ${INFOPATH}:/usr/local/share/info:/usr/share/info
 endif
 
 # Set PBS workdir if appropriate

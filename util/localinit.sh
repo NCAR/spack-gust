@@ -22,16 +22,20 @@ fi
 
 unset comm shell
 
+# Set system default stuff
+export NCAR_DEFAULT_PATH=/usr/local/bin:/usr/bin:/sbin:/bin
+export NCAR_DEFAULT_MANPATH=/usr/local/share/man:/usr/share/man
+export NCAR_DEFAULT_INFOPATH=/usr/local/share/info:/usr/share/info
+
+export PATH=${PATH}:$NCAR_DEFAULT_PATH
+export MANPATH=${MANPATH}:$NCAR_DEFAULT_MANPATH
+export INFOPATH=${INFOPATH}:$NCAR_DEFAULT_INFOPATH
+
 # Load default modules
 if [ -z "$__Init_Default_Modules" -o -z "$LD_LIBRARY_PATH" ]; then
   __Init_Default_Modules=1; export __Init_Default_Modules;
   module -q restore 
 fi
-
-# Set system default stuff
-export PATH=${PATH}:/usr/local/bin:/usr/bin:/sbin:/bin
-export MANPATH=${MANPATH}:/usr/local/share/man:/usr/share/man
-export INFOPATH=${INFOPATH}:/usr/local/share/info:/usr/share/info
 
 # Set PBS workdir if appropriate
 if [ -n "$PBS_O_WORKDIR" ] && [ -z "$NCAR_PBS_JOBINIT" ]; then

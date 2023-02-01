@@ -8,7 +8,7 @@ export LMOD_SYSTEM_DEFAULT_MODULES="ncarenv/22.12:craype/2.7.19:cce/15.0.0:ncarc
 export MODULEPATH=/glade/u/apps/gust/modules/environment
 
 # Location of Lmod initialization scripts
-LMOD_ROOT=/glade/u/apps/gust/22.12/spack/opt/spack/lmod/8.7.14/gcc/7.5.0
+export LMOD_ROOT=/glade/u/apps/gust/22.12/spack/opt/spack/lmod/8.7.14/gcc/7.5.0
 
 # Use shell-specific init
 comm=`/bin/ps -p $$ -o cmd= |awk '{print $1}'|sed -e 's/-sh/csh/' -e 's/-csh/tcsh/' -e 's/-//g'`

@@ -245,3 +245,4 @@ modules:
       - parallel-netcdf@1.12.3
       - fftw@3.3.10
       - openmpi@4.1.4
+      - nvhpc@22.11

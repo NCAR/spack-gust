@@ -760,6 +760,10 @@
     {
       "hash": "ykxeek7ez3c3av6rraqs6fck6w4yl4qo",
       "spec": "fftw@3.3.10%nvhpc@23.1+mpi ^cray-mpich@8.1.21%nvhpc@23.1"
+    },
+    {
+      "hash": "qa3ngmceboock6beli7hxr46yt7mfvv6",
+      "spec": "charliecloud ^libfuse@3.11"
     }
   ],
   "concrete_specs": {
@@ -34768,6 +34772,1055 @@
         }
       ],
       "hash": "ykxeek7ez3c3av6rraqs6fck6w4yl4qo"
+    },
+    "qa3ngmceboock6beli7hxr46yt7mfvv6": {
+      "name": "charliecloud",
+      "version": "0.30",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "docs": false,
+        "squash": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "akseuo7w2ptdwj7w2kizmynb6jzpscjcqahvr3brwnlii2nzgsma====",
+      "dependencies": [
+        {
+          "name": "autoconf",
+          "hash": "qfjhangjnh7zvxzlj2bzefnlcnimixax",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "automake",
+          "hash": "j4at4tnryxx6l6pwu7vn2vxx6jvbclko",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "git",
+          "hash": "h35wyipadgj6gnhvnzze37gswbi67cdv",
+          "type": [
+            "run"
+          ]
+        },
+        {
+          "name": "libtool",
+          "hash": "a4qrlihwvk2wmgc5kxv3urjneinqtwtf",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "kmokjpw5nn5lzjspwosw42q3ooykuoaq",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-requests",
+          "hash": "agwldiwkpeetnlmh4vfl34rndmvtlsmq",
+          "type": [
+            "run"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "ljwmzstyhnuzekyrey4tmrnjiojykqgv",
+          "type": [
+            "run"
+          ]
+        },
+        {
+          "name": "squashfs",
+          "hash": "26nnnaa47o7de32qxzz4ixxtnznlzfnn",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "squashfuse",
+          "hash": "34ce6vt3cybf6jjocoq3gtiys2yegpwv",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "qa3ngmceboock6beli7hxr46yt7mfvv6"
+    },
+    "agwldiwkpeetnlmh4vfl34rndmvtlsmq": {
+      "name": "py-requests",
+      "version": "2.28.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "python_pip",
+        "socks": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "7obbc67tq5ftazgzqonnpsby3za7rrxzkok5s5dtky6trjkegaqa====",
+      "dependencies": [
+        {
+          "name": "py-certifi",
+          "hash": "jksqmasmc2tehoql2z5ml7t3pzj6tuvp",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "py-charset-normalizer",
+          "hash": "xunby7cutdafanqozkwpt4heqw4r2ron",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "py-idna",
+          "hash": "yqfgstj4nfmhvk4kgrukwjcp567z3bzi",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "py-pip",
+          "hash": "7branjajlzfnwou6arvk2e7r3ut4zong",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-setuptools",
+          "hash": "bhkicssvscnan6lvcj26lysapjrmg7oo",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-urllib3",
+          "hash": "h7dy5323yx7slwh52i3ecnm6v2ufwjsn",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "2ffjj3wlqhizjmi4nktmlmlc2te7u42q",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "ljwmzstyhnuzekyrey4tmrnjiojykqgv",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "agwldiwkpeetnlmh4vfl34rndmvtlsmq"
+    },
+    "jksqmasmc2tehoql2z5ml7t3pzj6tuvp": {
+      "name": "py-certifi",
+      "version": "2022.9.14",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "python_pip",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "hvqdvwjbdmfbk3f6qwimokmhl5uxlwaxqglc7d26kr5kdneuvaaa====",
+      "dependencies": [
+        {
+          "name": "py-pip",
+          "hash": "7branjajlzfnwou6arvk2e7r3ut4zong",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-setuptools",
+          "hash": "bhkicssvscnan6lvcj26lysapjrmg7oo",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "2ffjj3wlqhizjmi4nktmlmlc2te7u42q",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "ljwmzstyhnuzekyrey4tmrnjiojykqgv",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "jksqmasmc2tehoql2z5ml7t3pzj6tuvp"
+    },
+    "xunby7cutdafanqozkwpt4heqw4r2ron": {
+      "name": "py-charset-normalizer",
+      "version": "2.0.12",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "python_pip",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "ryimo54xl3x5duejca33jd5kv4ksrtmbeeujpvfilbnkkxdajgeq====",
+      "dependencies": [
+        {
+          "name": "py-pip",
+          "hash": "7branjajlzfnwou6arvk2e7r3ut4zong",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-setuptools",
+          "hash": "bhkicssvscnan6lvcj26lysapjrmg7oo",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "2ffjj3wlqhizjmi4nktmlmlc2te7u42q",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "ljwmzstyhnuzekyrey4tmrnjiojykqgv",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "xunby7cutdafanqozkwpt4heqw4r2ron"
+    },
+    "yqfgstj4nfmhvk4kgrukwjcp567z3bzi": {
+      "name": "py-idna",
+      "version": "3.4",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "python_pip",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "juqfz7zzjikmubb4t52a3ehjj5j7zat5inlrcphlbqpmmwsr2sra====",
+      "dependencies": [
+        {
+          "name": "py-flit-core",
+          "hash": "k2cbkzgptetmoqdn5inbpdixw3wi7gfs",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-pip",
+          "hash": "7branjajlzfnwou6arvk2e7r3ut4zong",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "2ffjj3wlqhizjmi4nktmlmlc2te7u42q",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "ljwmzstyhnuzekyrey4tmrnjiojykqgv",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "yqfgstj4nfmhvk4kgrukwjcp567z3bzi"
+    },
+    "k2cbkzgptetmoqdn5inbpdixw3wi7gfs": {
+      "name": "py-flit-core",
+      "version": "3.7.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "python_pip",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "m7ft6hn3ekcqosmholwdy2z5t4willynwxwn2lgcahg3jhm7vrda====",
+      "dependencies": [
+        {
+          "name": "py-pip",
+          "hash": "7branjajlzfnwou6arvk2e7r3ut4zong",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "2ffjj3wlqhizjmi4nktmlmlc2te7u42q",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "ljwmzstyhnuzekyrey4tmrnjiojykqgv",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "k2cbkzgptetmoqdn5inbpdixw3wi7gfs"
+    },
+    "h7dy5323yx7slwh52i3ecnm6v2ufwjsn": {
+      "name": "py-urllib3",
+      "version": "1.26.12",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "brotli": false,
+        "build_system": "python_pip",
+        "secure": false,
+        "socks": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "z7uljc6s46btvy6mq2gd3gld43ewq3imr5qz4c2snh5gpvq54bkq====",
+      "dependencies": [
+        {
+          "name": "py-pip",
+          "hash": "7branjajlzfnwou6arvk2e7r3ut4zong",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-setuptools",
+          "hash": "bhkicssvscnan6lvcj26lysapjrmg7oo",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "2ffjj3wlqhizjmi4nktmlmlc2te7u42q",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "ljwmzstyhnuzekyrey4tmrnjiojykqgv",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "h7dy5323yx7slwh52i3ecnm6v2ufwjsn"
+    },
+    "34ce6vt3cybf6jjocoq3gtiys2yegpwv": {
+      "name": "squashfuse",
+      "version": "0.1.105",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "lz4": true,
+        "lzo": true,
+        "min_size": false,
+        "shared": true,
+        "static": true,
+        "xz": true,
+        "zlib": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "3ajr6sshwnadmblskix3ken4tiackos5tjbg5ggwgh2yr4uefcea====",
+      "dependencies": [
+        {
+          "name": "autoconf",
+          "hash": "qfjhangjnh7zvxzlj2bzefnlcnimixax",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "automake",
+          "hash": "j4at4tnryxx6l6pwu7vn2vxx6jvbclko",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "libfuse",
+          "hash": "qyzduqdewi3n4gapfz2menth25f52ftx",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libtool",
+          "hash": "a4qrlihwvk2wmgc5kxv3urjneinqtwtf",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "lz4",
+          "hash": "2gphjpscqvs5sjl5yu3lwjyjmteqx27y",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "lzo",
+          "hash": "egifcrry2jwnjnlj3hq6gj2j6pge6qoe",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "pkg-config",
+          "hash": "2gf47lm44wrkwrbpejkqnrwuw555qwdd",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "xz",
+          "hash": "55c7m22najndrox3xtoqk24qin6yac2b",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "gbopbddrxdop7ea7ti4kfkqifrn7x3om",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "63ydqhklgitn2mnaij5jkhphwpt3pfik",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "34ce6vt3cybf6jjocoq3gtiys2yegpwv"
+    },
+    "qyzduqdewi3n4gapfz2menth25f52ftx": {
+      "name": "libfuse",
+      "version": "3.11.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "meson",
+        "buildtype": "debugoptimized",
+        "default_library": [
+          "shared"
+        ],
+        "strip": false,
+        "utils": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "nacq663o63mp27jqvx6b25fvrkt7hten37bz3mmz6sc3pqngshqa====",
+      "dependencies": [
+        {
+          "name": "meson",
+          "hash": "fip6gwccd52lix6vtanoglgfkhabh7uf",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "ninja",
+          "hash": "qkvfo3zq56ss7q5grc2o2vyirtaphr57",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "qyzduqdewi3n4gapfz2menth25f52ftx"
+    },
+    "2gphjpscqvs5sjl5yu3lwjyjmteqx27y": {
+      "name": "lz4",
+      "version": "1.9.4",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "makefile",
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "q3w4yyhzr4gca3v73pyviouaacrai6popu2v2tqpkp6ijkskcrya====",
+      "hash": "2gphjpscqvs5sjl5yu3lwjyjmteqx27y"
+    },
+    "egifcrry2jwnjnlj3hq6gj2j6pge6qoe": {
+      "name": "lzo",
+      "version": "2.10",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "2ef4xllxfwgrukzueosrnk4yrymrkqwhd4wuqdprs77nw4ymjvwa====",
+      "hash": "egifcrry2jwnjnlj3hq6gj2j6pge6qoe"
     }
   }
 }

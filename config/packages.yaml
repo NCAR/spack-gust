@@ -24,6 +24,7 @@ packages:
       prefix: /usr
     - spec: libfuse@3.6.1
       prefix: /usr
+    require: ~utils
   openssh:
     externals:
     - spec: openssh@8.4p1

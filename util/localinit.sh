@@ -52,3 +52,6 @@ if command -v nvidia-smi &> /dev/null; then
 else
     export NGPUS=0
 fi
+
+# Add Python import monitoring to environment
+export PYTHONPATH=/glade/u/apps/opt/conda/ncarbin/monitor/site-packages:$PYTHONPATH

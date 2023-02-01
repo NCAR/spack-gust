@@ -61,3 +61,10 @@ if ( `where nvidia-smi` != "" ) then
 else
     setenv NGPUS 0
 endif
+
+# Add Python import monitoring to environment
+if ( ! ($?PYTHONPATH) ) then
+    setenv PYTHONPATH=/glade/u/apps/opt/conda/ncarbin/monitor/site-packages
+else
+    setenv PYTHONPATH=/glade/u/apps/opt/conda/ncarbin/monitor/site-packages:$PYTHONPATH
+endif

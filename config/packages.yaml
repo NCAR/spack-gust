@@ -164,6 +164,8 @@ packages:
     externals:
     - spec: nvhpc@22.11
       prefix: /glade/u/apps/common/22.12/spack/opt/spack/nvhpc/22.11
+    - spec: nvhpc@23.1
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/nvhpc/23.1
     buildable: false
   arm-forge:
     externals:
@@ -176,6 +178,8 @@ packages:
       prefix: /glade/u/apps/common/22.08/spack/opt/spack/intel-oneapi-compilers/2022.1.0/gcc/7.5.0
     - spec: intel-oneapi-compilers@2022.2.1
       prefix: /glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-compilers/2022.2.1
+    - spec: intel-oneapi-compilers@2023.0.0
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-compilers/2023.0.0
     buildable: false
   libfabric:
     externals:

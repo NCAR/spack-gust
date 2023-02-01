@@ -919,7 +919,6 @@ spack:
   - git
   - go
   - singularityce
-  - podman
   - cuda@11.7.1
   - cudnn@8.5.0.96-11.7
   - intel-oneapi-mkl@2022.2.1%oneapi@2022.2.1

@@ -1062,3 +1062,4 @@ spack:
   - netcdf@4.9.0%nvhpc@23.1+mpi ^cray-mpich@8.1.21%nvhpc@23.1
   - fftw@3.3.10%nvhpc@23.1+mpi ^cray-mpich@8.1.21%nvhpc@23.1
   - charliecloud ^libfuse@3.11
+  - podman

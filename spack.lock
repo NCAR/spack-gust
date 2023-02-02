@@ -764,6 +764,10 @@
     {
       "hash": "j66zfpnmoi6u5atzr7v5pmpa44l2ee3s",
       "spec": "podman"
+    },
+    {
+      "hash": "wsm2fcwlyrfmxg2vxosxdhiq22m7dja5",
+      "spec": "slirp4netns"
     }
   ],
   "concrete_specs": {

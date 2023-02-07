@@ -768,6 +768,14 @@
     {
       "hash": "wsm2fcwlyrfmxg2vxosxdhiq22m7dja5",
       "spec": "slirp4netns"
+    },
+    {
+      "hash": "upjs35dib5nrfrt5tkk47g4qamvxrkyl",
+      "spec": "peak-memusage"
+    },
+    {
+      "hash": "rfgbkx5bf7iijmcxrvqn2pogkhsn373w",
+      "spec": "pigz"
     }
   ],
   "concrete_specs": {
@@ -37599,6 +37607,176 @@
         }
       ],
       "hash": "3leikirmo7thvs5nvoasm24xlhfg5hyt"
+    },
+    "upjs35dib5nrfrt5tkk47g4qamvxrkyl": {
+      "name": "peak-memusage",
+      "version": "3.0.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "fortran": true,
+        "nvml": true,
+        "openmp": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "lld3kkazypizuyhwdagsd4dppaalc56elpwh2p5z2eqksqz2kssa====",
+      "dependencies": [
+        {
+          "name": "autoconf",
+          "hash": "qfjhangjnh7zvxzlj2bzefnlcnimixax",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "automake",
+          "hash": "j4at4tnryxx6l6pwu7vn2vxx6jvbclko",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "libtool",
+          "hash": "a4qrlihwvk2wmgc5kxv3urjneinqtwtf",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "kmokjpw5nn5lzjspwosw42q3ooykuoaq",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "pkg-config",
+          "hash": "2gf47lm44wrkwrbpejkqnrwuw555qwdd",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "upjs35dib5nrfrt5tkk47g4qamvxrkyl"
+    },
+    "rfgbkx5bf7iijmcxrvqn2pogkhsn373w": {
+      "name": "pigz",
+      "version": "2.7",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "makefile",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "qsaexggeegq3vvlfb52f627syjifgkn6cl5a7krpc7gokavzjtiq====",
+      "dependencies": [
+        {
+          "name": "zlib",
+          "hash": "gbopbddrxdop7ea7ti4kfkqifrn7x3om",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "rfgbkx5bf7iijmcxrvqn2pogkhsn373w"
     }
   }
 }

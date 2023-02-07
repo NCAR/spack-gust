@@ -1079,3 +1079,5 @@ spack:
   - charliecloud ^libfuse@3.11
   - podman
   - slirp4netns
+  - peak-memusage
+  - pigz

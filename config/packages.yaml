@@ -1,4 +1,15 @@
 packages:
+  cudnn:
+    externals:
+    - spec: cudnn@8.5.0.96-11.7
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/cudnn/8.5.0.96-11.7
+    buildable: false
+  cuda:
+    externals:
+    - spec: cuda@11.7.99
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/cuda/11.7.1
+    buildable: false
+    require: +allow-unsupported-compilers
   gawk:
     externals:
     - spec: gawk@4.2.1
@@ -239,8 +250,6 @@ packages:
       modules:
       - cray-libsci/22.11.1.2
     buildable: false
-  cuda:
-    require: +allow-unsupported-compilers
   openmpi:
     variants: [+cuda]
     require: fabrics=cma,ofi schedulers=tm +gpfs +lustre

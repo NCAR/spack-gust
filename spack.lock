@@ -776,6 +776,14 @@
     {
       "hash": "rfgbkx5bf7iijmcxrvqn2pogkhsn373w",
       "spec": "pigz"
+    },
+    {
+      "hash": "x5mahckk7s77ljk2elt4b25rmepg4oag",
+      "spec": "hdf@4.2.15%nvhpc@23.1"
+    },
+    {
+      "hash": "w73345tqf5vno4jotnj7fuli4v4o5ebl",
+      "spec": "hdf@4.2.15%cce@15.0.0"
     }
   ],
   "concrete_specs": {
@@ -37777,6 +37785,262 @@
         }
       ],
       "hash": "rfgbkx5bf7iijmcxrvqn2pogkhsn373w"
+    },
+    "x5mahckk7s77ljk2elt4b25rmepg4oag": {
+      "name": "hdf",
+      "version": "4.2.15",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "external-xdr": true,
+        "fortran": true,
+        "java": false,
+        "netcdf": false,
+        "patches": [
+          "49733dd6143be7b30a28d386701df64a72507974274f7e4c0a9e74205510ea72",
+          "5434f29a87856aa05124c7a9409b3ec3106c30b1ad722720773623190f6bfda8",
+          "ce75518cccbeb80ab976b299225ea6104c3eec1ec13c09e2289913279fcf1b39",
+          "d54592df281c92e7e655b8312d18bef9ed096848de9430510e0699e98246ccd3",
+          "f7d67e8c3d0dad8bfca308936c6ac917cc0b63222c6339a29efdce14e8be6475"
+        ],
+        "pic": true,
+        "shared": false,
+        "szip": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "patches": [
+        "5434f29a87856aa05124c7a9409b3ec3106c30b1ad722720773623190f6bfda8",
+        "ce75518cccbeb80ab976b299225ea6104c3eec1ec13c09e2289913279fcf1b39",
+        "f7d67e8c3d0dad8bfca308936c6ac917cc0b63222c6339a29efdce14e8be6475",
+        "d54592df281c92e7e655b8312d18bef9ed096848de9430510e0699e98246ccd3",
+        "49733dd6143be7b30a28d386701df64a72507974274f7e4c0a9e74205510ea72"
+      ],
+      "package_hash": "rhgy5fupyluiaucp4o4misfuvxw24q3sjecv6k3fcdp6ycchhofa====",
+      "dependencies": [
+        {
+          "name": "bison",
+          "hash": "wvgzbf2ubmqhia6ky5mmmofa7dyxaiet",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "flex",
+          "hash": "ex3fslglj64vw3jlyle5fkdxtgcqh7xm",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "libjpeg-turbo",
+          "hash": "knsu3a6otmulbvwagi7554tnla52exqk",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libszip",
+          "hash": "rgb6s2ot35yyb7ku2lbdzuy3ylmyacuy",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libtirpc",
+          "hash": "edw4z5kgbhbtvpcb3uxysl254gbm3ocp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "gbopbddrxdop7ea7ti4kfkqifrn7x3om",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "x5mahckk7s77ljk2elt4b25rmepg4oag"
+    },
+    "w73345tqf5vno4jotnj7fuli4v4o5ebl": {
+      "name": "hdf",
+      "version": "4.2.15",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "x86_64_v3"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.0"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "external-xdr": true,
+        "fortran": true,
+        "java": false,
+        "netcdf": false,
+        "patches": [
+          "49733dd6143be7b30a28d386701df64a72507974274f7e4c0a9e74205510ea72",
+          "5434f29a87856aa05124c7a9409b3ec3106c30b1ad722720773623190f6bfda8",
+          "ce75518cccbeb80ab976b299225ea6104c3eec1ec13c09e2289913279fcf1b39",
+          "d54592df281c92e7e655b8312d18bef9ed096848de9430510e0699e98246ccd3",
+          "f7d67e8c3d0dad8bfca308936c6ac917cc0b63222c6339a29efdce14e8be6475"
+        ],
+        "pic": true,
+        "shared": false,
+        "szip": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "patches": [
+        "5434f29a87856aa05124c7a9409b3ec3106c30b1ad722720773623190f6bfda8",
+        "ce75518cccbeb80ab976b299225ea6104c3eec1ec13c09e2289913279fcf1b39",
+        "f7d67e8c3d0dad8bfca308936c6ac917cc0b63222c6339a29efdce14e8be6475",
+        "d54592df281c92e7e655b8312d18bef9ed096848de9430510e0699e98246ccd3",
+        "49733dd6143be7b30a28d386701df64a72507974274f7e4c0a9e74205510ea72"
+      ],
+      "package_hash": "rhgy5fupyluiaucp4o4misfuvxw24q3sjecv6k3fcdp6ycchhofa====",
+      "dependencies": [
+        {
+          "name": "bison",
+          "hash": "wvgzbf2ubmqhia6ky5mmmofa7dyxaiet",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "flex",
+          "hash": "ex3fslglj64vw3jlyle5fkdxtgcqh7xm",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "libjpeg-turbo",
+          "hash": "knsu3a6otmulbvwagi7554tnla52exqk",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libszip",
+          "hash": "rgb6s2ot35yyb7ku2lbdzuy3ylmyacuy",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libtirpc",
+          "hash": "edw4z5kgbhbtvpcb3uxysl254gbm3ocp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "gbopbddrxdop7ea7ti4kfkqifrn7x3om",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "w73345tqf5vno4jotnj7fuli4v4o5ebl"
     }
   }
 }

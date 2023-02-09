@@ -1085,3 +1085,17 @@ spack:
   - pigz
   - hdf@4.2.15%nvhpc@23.1
   - hdf@4.2.15%cce@15.0.0
+  - intel-oneapi-compilers@2023.0.0
+  - cray-mpich@8.1.21%oneapi@2023.0.0
+  - ncarcompilers@0.7.2%oneapi@2023.0.0
+  - fftw@3.3.10%oneapi@2023.0.0
+  - udunits@2.2.28%oneapi@2023.0.0
+  - hdf5@1.12.2%oneapi@2023.0.0
+  - netcdf@4.9.0%oneapi@2023.0.0
+  - eccodes@2.25.0%oneapi@2023.0.0
+  - proj@8.2.1%oneapi@2023.0.0
+  - geos@3.9.1%oneapi@2023.0.0
+  - parallel-netcdf@1.12.3%oneapi@2023.0.0 ^cray-mpich@8.1.21%oneapi@2023.0.0
+  - hdf5@1.12.2%oneapi@2023.0.0+mpi ^cray-mpich@8.1.21%oneapi@2023.0.0
+  - netcdf@4.9.0%oneapi@2023.0.0+mpi ^cray-mpich@8.1.21%oneapi@2023.0.0
+  - fftw@3.3.10%oneapi@2023.0.0+mpi ^cray-mpich@8.1.21%oneapi@2023.0.0

@@ -36,6 +36,8 @@ local mapT =
       ['modulefiles/perftools/22%.06%.0$'] = 'Cray Performance Analysis Tools - [perftools-base/22.06.0]',
       ['perftools/22%.09%.0/modulefiles$'] = 'Cray Performance Analysis Tools - [perftools-base/22.09.0]',
       ['modulefiles/perftools/22%.09%.0$'] = 'Cray Performance Analysis Tools - [perftools-base/22.09.0]',
+      ['perftools/23%.02%.0/modulefiles$'] = 'Cray Performance Analysis Tools - [perftools-base/23.02.0]',
+      ['modulefiles/perftools/23%.02%.0$'] = 'Cray Performance Analysis Tools - [perftools-base/23.02.0]',
    },
 }
 

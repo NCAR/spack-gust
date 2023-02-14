@@ -33,7 +33,9 @@ local mapT =
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/cce/15%.0%.0$'] = 'MPI-dependent Software - [cce/15.0.0 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/gcc/12%.1%.0$'] = 'MPI-dependent Software - [gcc/12.1.0 + mpi-serial/2.3.0]',
       ['perftools/22%.06%.0/modulefiles$'] = 'Cray Performance Analysis Tools - [perftools-base/22.06.0]',
+      ['modulefiles/perftools/22%.06%.0$'] = 'Cray Performance Analysis Tools - [perftools-base/22.06.0]',
       ['perftools/22%.09%.0/modulefiles$'] = 'Cray Performance Analysis Tools - [perftools-base/22.09.0]',
+      ['modulefiles/perftools/22%.09%.0$'] = 'Cray Performance Analysis Tools - [perftools-base/22.09.0]',
    },
 }
 

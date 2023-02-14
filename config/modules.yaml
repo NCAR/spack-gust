@@ -91,6 +91,7 @@ modules:
           set:
             NCAR_ID_COMPILER: '{name}-{version}'
             NCAR_BUILD_ENV_COMPILER: gust-{name}-{version}
+            NCAR_BUILD_ENV: gust-{name}-{version}
           append_path:
             MODULEPATH: /glade/u/apps/cseg/modules/22.12/{name}/{version}
       intel-oneapi-compilers:
@@ -106,6 +107,7 @@ modules:
             NCAR_SPACK_HASH_ONEAPI: '{hash}'
             NCAR_ID_COMPILER: oneapi-{version}
             NCAR_BUILD_ENV_COMPILER: gust-oneapi-{version}
+            NCAR_BUILD_ENV: gust-oneapi-{version}
           append_path:
             MODULEPATH: /glade/u/apps/cseg/modules/22.12/oneapi/{version}
       intel-oneapi-compilers-classic:
@@ -123,6 +125,7 @@ modules:
             NCAR_SPACK_HASH_INTEL: '{hash}'
             NCAR_ID_COMPILER: intel-{version}
             NCAR_BUILD_ENV_COMPILER: gust-intel-{version}
+            NCAR_BUILD_ENV: gust-intel-{version}
           append_path:
             MODULEPATH: /glade/u/apps/cseg/modules/22.12/intel/{version}
       intel-oneapi-mkl:
@@ -150,6 +153,7 @@ modules:
             CRAY_NVIDIA_VERSION: '{version}'
             NCAR_ID_COMPILER: '{name}-{version}'
             NCAR_BUILD_ENV_COMPILER: gust-{name}-{version}
+            NCAR_BUILD_ENV: gust-{name}-{version}
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/compilers/lib'
           append_path:

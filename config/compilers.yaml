@@ -198,6 +198,21 @@ compilers:
       set:
         PE_ENV: CRAY
 - compiler:
+    spec: cce@15.0.1
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    operating_system: sles15
+    target: any
+    modules:
+    - craype
+    - cce/15.0.1
+    environment:
+      set:
+        PE_ENV: CRAY
+- compiler:
     spec: gcc@10.3.0
     paths:
       cc: cc

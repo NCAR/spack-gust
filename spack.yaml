@@ -1183,3 +1183,6 @@ spack:
   - netcdf@4.9.1%intel@2021.7.1
   - netcdf@4.9.1%oneapi@2023.0.0
   - netcdf@4.9.1%cce@15.0.1
+  - proj@8.2.1%cce@15.0.1
+  - geos@3.9.1%cce@15.0.1
+  - hdf@4.2.15%cce@15.0.1

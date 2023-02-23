@@ -194,7 +194,7 @@ modules:
             CRAY_LD_LIBRARY_PATH: '{prefix}/lib64'
       cudnn:
         environment:
-          set:
+          prepend_path:
             LD_LIBRARY_PATH: '{prefix}/lib'
       openmpi:
         environment:

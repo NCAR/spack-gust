@@ -38,6 +38,7 @@ local mapT =
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/nvhpc/23%.1$'] = 'MPI-dependent Software - [nvhpc/23.1 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/intel/2021%.7%.1$'] = 'MPI-dependent Software - [intel/2021.7.1 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/oneapi/2022%.2%.1$'] = 'MPI-dependent Software - [oneapi/2022.2.1 + mpi-serial/2.3.0]',
+      ['modules[/%.%d]*/mpi%-serial/2%.3%.0/oneapi/2023%.0%.0$'] = 'MPI-dependent Software - [oneapi/2023.0.0 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/cce/15%.0%.0$'] = 'MPI-dependent Software - [cce/15.0.0 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/cce/15%.0%.1$'] = 'MPI-dependent Software - [cce/15.0.1 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/gcc/12%.1%.0$'] = 'MPI-dependent Software - [gcc/12.1.0 + mpi-serial/2.3.0]',

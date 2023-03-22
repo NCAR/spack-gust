@@ -603,7 +603,7 @@ spack:
               I_MPI_F90: ifort
               I_MPI_F77: ifort
             append_path:
-              MODULEPATH: /glade/u/apps/cseg/modules/23.03/oneapi/{version}
+              MODULEPATH: /glade/u/apps/cseg/modules/23.03/oneapi/{^intel-oneapi-compilers.version}
         intel-oneapi-mkl:
           filter:
             exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_MKL, NCAR_LDFLAGS_INTEL_ONEAPI_MKL,

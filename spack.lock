@@ -464,6 +464,10 @@
     {
       "hash": "pip5pivhaebnbx6nq77whg6p7hie3o65",
       "spec": "ncview@2.1.8%gcc@12.2.0"
+    },
+    {
+      "hash": "cfatajwafbh7zxhoeihjzqdase2dpzws",
+      "spec": "squashfuse"
     }
   ],
   "concrete_specs": {

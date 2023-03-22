@@ -319,6 +319,7 @@ spack:
     baseenv:
       root: /glade/u/apps/gust/23.03/opt
       select:
+      - squashfuse
       - slirp4netns
       - libtree
       - tree
@@ -487,6 +488,8 @@ spack:
         hash_length: 0
         exclude_implicits: true
         exclude:
+        - squashfuse
+        - gcc@10.4.0
         - slirp4netns
         - libtree
         - tree
@@ -520,7 +523,6 @@ spack:
         - libtool
         - autoconf@2.71
         - automake
-        - gcc@10.4.0
         - lmod
         - netcdf-c
         - netcdf-fortran
@@ -867,3 +869,4 @@ spack:
   - nco@5.1.4%gcc@12.2.0
   - cdo@2.1.1%gcc@12.2.0
   - ncview@2.1.8%gcc@12.2.0
+  - squashfuse

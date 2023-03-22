@@ -28,6 +28,8 @@ modules:
       hash_length: 0
       exclude_implicits: true
       exclude:
+      - squashfuse
+      - gcc@10.4.0
       - slirp4netns
       - libtree
       - tree
@@ -61,7 +63,6 @@ modules:
       - libtool
       - autoconf@2.71
       - automake
-      - gcc@10.4.0
       - lmod
       - netcdf-c
       - netcdf-fortran

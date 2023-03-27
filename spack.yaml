@@ -546,6 +546,8 @@ spack:
               NCAR_BUILD_ENV_MPI: gust-{compiler.name}-{compiler.version}-{name}-{version}
             append_path:
               MODULEPATH: /glade/u/apps/cseg/modules/23.03/{name}/{version}/{compiler.name}/{compiler.version}
+        blas:
+          template: ncar_math.lua
         gcc:
           environment:
             set:

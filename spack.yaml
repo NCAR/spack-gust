@@ -245,6 +245,8 @@ spack:
       externals:
       - spec: cray-mpich@8.1.25 %gcc
         prefix: /opt/cray/pe/mpich/8.1.25/ofi/gnu/9.1
+      - spec: cray-mpich@8.1.24 %cce
+        prefix: /opt/cray/pe/mpich/8.1.24/ofi/cray/10.0
       - spec: cray-mpich@8.1.25 %cce
         prefix: /opt/cray/pe/mpich/8.1.25/ofi/cray/10.0
       - spec: cray-mpich@8.1.25 %nvhpc
@@ -488,8 +490,8 @@ spack:
         hash_length: 0
         exclude_implicits: true
         exclude:
-        - squashfuse
         - gcc@10.4.0
+        - squashfuse
         - slirp4netns
         - libtree
         - tree
@@ -872,3 +874,8 @@ spack:
   - cdo@2.1.1%gcc@12.2.0
   - ncview@2.1.8%gcc@12.2.0
   - squashfuse
+  - cray-mpich@8.1.24%cce@15.0.1
+  - parallel-netcdf@1.12.3%cce@15.0.1 ^cray-mpich@8.1.24%cce@15.0.1
+  - hdf5@1.12.2%cce@15.0.1+mpi ^cray-mpich@8.1.24%cce@15.0.1
+  - netcdf@4.9.1%cce@15.0.1+mpi ^cray-mpich@8.1.24%cce@15.0.1
+  - fftw@3.3.10%cce@15.0.1+mpi ^cray-mpich@8.1.24%cce@15.0.1

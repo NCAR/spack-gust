@@ -13,6 +13,7 @@ local mapT =
       ['modules[/%.%d]*/cray%-mpich/8%.1%.25/oneapi/2023%.0%.0$'] = 'MPI-dependent Software - [oneapi/2023.0.0 + cray-mpich/8.1.25]',
       ['modules[/%.%d]*/cray%-mpich/8%.1%.25/cce/15%.0%.1$'] = 'MPI-dependent Software - [cce/15.0.1 + cray-mpich/8.1.25]',
       ['modules[/%.%d]*/cray%-mpich/8%.1%.25/gcc/12%.2%.0$'] = 'MPI-dependent Software - [gcc/12.2.0 + cray-mpich/8.1.25]',
+      ['modules[/%.%d]*/cray%-mpich/8%.1%.24/cce/15%.0%.1$'] = 'MPI-dependent Software - [cce/15.0.1 + cray-mpich/8.1.24]',
       ['modules[/%.%d]*/gcc/12%.2%.0$'] = 'Compiler-dependent Software - [gcc/12.2.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/nvhpc/23%.1$'] = 'MPI-dependent Software - [nvhpc/23.1 + mpi-serial/2.3.0]',
       ['modules[/%.%d]*/mpi%-serial/2%.3%.0/oneapi/2023%.0%.0$'] = 'MPI-dependent Software - [oneapi/2023.0.0 + mpi-serial/2.3.0]',

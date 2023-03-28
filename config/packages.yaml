@@ -214,6 +214,8 @@ packages:
     externals:
     - spec: cray-mpich@8.1.25 %gcc
       prefix: /opt/cray/pe/mpich/8.1.25/ofi/gnu/9.1
+    - spec: cray-mpich@8.1.24 %cce
+      prefix: /opt/cray/pe/mpich/8.1.24/ofi/cray/10.0
     - spec: cray-mpich@8.1.25 %cce
       prefix: /opt/cray/pe/mpich/8.1.25/ofi/cray/10.0
     - spec: cray-mpich@8.1.25 %nvhpc

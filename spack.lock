@@ -464,6 +464,10 @@
     {
       "hash": "tkmcj2vwawmxfofs7kxexdpwniup2l5w",
       "spec": "ncview@2.1.8%gcc@12.2.0"
+    },
+    {
+      "hash": "5r2la2tyjt2do75buqv2azkpsnyj6uxn",
+      "spec": "git-lfs"
     }
   ],
   "concrete_specs": {
@@ -16832,6 +16836,47 @@
         }
       ],
       "hash": "tkmcj2vwawmxfofs7kxexdpwniup2l5w"
+    },
+    "5r2la2tyjt2do75buqv2azkpsnyj6uxn": {
+      "name": "git-lfs",
+      "version": "3.3.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "makefile",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "lx5hw64gu7wk7af7kqokgfay6v3yvxm6jzxdm4wjm6b2g3ofbpbq====",
+      "dependencies": [
+        {
+          "name": "git",
+          "hash": "bitkeh3w3kivzpbnojfay3sa4f3pdfql",
+          "type": [
+            "run"
+          ]
+        },
+        {
+          "name": "go",
+          "hash": "c5cnfkijesh6g4opd2ukoa6k3vtwv5h4",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "5r2la2tyjt2do75buqv2azkpsnyj6uxn"
     }
   }
 }

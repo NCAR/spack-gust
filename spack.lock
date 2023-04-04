@@ -488,6 +488,10 @@
     {
       "hash": "6g57zruq2htqfxiqdvfbzpo33d77mm6n",
       "spec": "fftw@3.3.10%cce@15.0.1+mpi ^cray-mpich@8.1.24%cce@15.0.1"
+    },
+    {
+      "hash": "ohcfs4pgqqvfux3n2js3gpfvpksrsfwb",
+      "spec": "git-lfs"
     }
   ],
   "concrete_specs": {
@@ -28973,6 +28977,85 @@
         }
       ],
       "hash": "6g57zruq2htqfxiqdvfbzpo33d77mm6n"
+    },
+    "ohcfs4pgqqvfux3n2js3gpfvpksrsfwb": {
+      "name": "git-lfs",
+      "version": "3.3.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "10.4.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "makefile",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "lx5hw64gu7wk7af7kqokgfay6v3yvxm6jzxdm4wjm6b2g3ofbpbq====",
+      "dependencies": [
+        {
+          "name": "git",
+          "hash": "ormeh2jfh4aj7vittgozwlsif7oius6e",
+          "type": [
+            "run"
+          ]
+        },
+        {
+          "name": "go",
+          "hash": "kqfldqknxrk3bzn5az5w55r6pfqzldtb",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "ohcfs4pgqqvfux3n2js3gpfvpksrsfwb"
     }
   }
 }

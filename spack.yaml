@@ -321,6 +321,7 @@ spack:
     baseenv:
       root: /glade/u/apps/gust/23.03/opt
       select:
+      - git
       - git-lfs
       - squashfuse
       - slirp4netns
@@ -491,6 +492,7 @@ spack:
         hash_length: 0
         exclude_implicits: true
         exclude:
+        - git
         - git-lfs
         - gcc@10.4.0
         - squashfuse

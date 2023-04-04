@@ -28,6 +28,7 @@ modules:
       hash_length: 0
       exclude_implicits: true
       exclude:
+      - git
       - git-lfs
       - gcc@10.4.0
       - squashfuse

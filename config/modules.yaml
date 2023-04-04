@@ -86,8 +86,6 @@ modules:
             NCAR_BUILD_ENV_MPI: gust-{compiler.name}-{compiler.version}-{name}-{version}
           append_path:
             MODULEPATH: /glade/u/apps/cseg/modules/23.03/{name}/{version}/{compiler.name}/{compiler.version}
-      blas:
-        template: ncar_math.lua
       gcc:
         environment:
           set:
@@ -149,6 +147,7 @@ modules:
           append_path:
             MODULEPATH: /glade/u/apps/cseg/modules/23.03/oneapi/{^intel-oneapi-compilers.version}
       intel-oneapi-mkl:
+        template: ncar_math.lua
         filter:
           exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_MKL, NCAR_LDFLAGS_INTEL_ONEAPI_MKL,
             NCAR_SPACK_HASH_INTEL_ONEAPI_MKL]

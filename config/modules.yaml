@@ -26,6 +26,7 @@ modules:
       hash_length: 0
       exclude_implicits: true
       exclude:
+      - flex@2.6.4
       - git
       - git-lfs
       - slirp4netns
@@ -41,7 +42,6 @@ modules:
       - antlr
       - squashfuse
       - squashfs
-      - flex
       - tcl
       - ruby
       - bison

@@ -311,6 +311,7 @@ spack:
     baseenv:
       root: /glade/u/apps/gust/23.04/opt
       select:
+      - flex@2.6.4
       - git
       - git-lfs
       - slirp4netns
@@ -325,7 +326,6 @@ spack:
       - antlr
       - squashfuse
       - squashfs
-      - flex
       - tcl
       - ruby
       - bison
@@ -469,6 +469,7 @@ spack:
         hash_length: 0
         exclude_implicits: true
         exclude:
+        - flex@2.6.4
         - git
         - git-lfs
         - slirp4netns
@@ -484,7 +485,6 @@ spack:
         - antlr
         - squashfuse
         - squashfs
-        - flex
         - tcl
         - ruby
         - bison
@@ -846,3 +846,4 @@ spack:
   - cdo@2.1.1%gcc@12.2.0
   - ncview@2.1.8%gcc@12.2.0
   - git-lfs
+  - flex@2.6.4

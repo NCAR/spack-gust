@@ -331,6 +331,10 @@ spack:
 
 
 
+
+
+
+
       
         #- python
       - zstd
@@ -858,3 +862,4 @@ spack:
   - ncview@2.1.8%gcc@12.2.0
   - git-lfs
   - flex@2.6.4
+  - openmpi@4.1.5%gcc@12.2.0

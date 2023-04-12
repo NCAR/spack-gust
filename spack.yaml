@@ -30,6 +30,86 @@ spack:
     template_dirs:
     - /glade/work/csgteam/spack-deployments/gust/23.04/envs/build/templates/modules
   packages:
+    libpciaccess:
+      require: '%gcc@7.5.0'
+    gawk:
+      externals:
+      - spec: gawk@4.2.1
+        prefix: /usr
+    gcc:
+      externals:
+      - spec: gcc@7.5.0 languages=c,c++,fortran
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/gcc-7
+            cxx: /usr/bin/g++-7
+            fortran: /usr/bin/gfortran-7
+      variants: [+piclibs, 'languages=c,c++,fortran,go']
+    groff:
+      externals:
+      - spec: groff@1.22.3
+        prefix: /usr
+    openssh:
+      externals:
+      - spec: openssh@8.4p1
+        prefix: /usr
+    rsync:
+      externals:
+      - spec: rsync@3.1.3
+        prefix: /usr
+    bash:
+      externals:
+      - spec: bash@4.4.23
+        prefix: /usr
+      buildable: false
+    cpio:
+      externals:
+      - spec: cpio@2.12
+        prefix: /usr
+      buildable: false
+    diffutils:
+      externals:
+      - spec: diffutils@3.6
+        prefix: /usr
+      buildable: false
+    findutils:
+      externals:
+      - spec: findutils@4.8.0
+        prefix: /usr
+      buildable: false
+    gmake:
+      externals:
+      - spec: gmake@4.2.1
+        prefix: /usr
+      buildable: false
+    lustre:
+      externals:
+      - spec: lustre@2.12.6.2_cray_6_g44c857f
+        prefix: /usr
+      buildable: false
+    m4:
+      externals:
+      - spec: m4@1.4.18
+        prefix: /usr
+      buildable: false
+    pkg-config:
+      externals:
+      - spec: pkg-config@0.29.2
+        prefix: /usr
+      buildable: false
+    tar:
+      externals:
+      - spec: tar@1.34
+        prefix: /usr
+      buildable: false
+    ghostscript:
+      externals:
+      - spec: ghostscript@9.52
+        prefix: /usr
+      buildable: false
+    launchmon:
+      require: '%gcc@7.5.0'
     cairo:
       require: '%gcc@7.5.0'
     libxcb:
@@ -133,82 +213,6 @@ spack:
       - spec: libfabric@1.15.0 fabrics=tcp,udp
         prefix: /opt/cray/libfabric/1.15.0.0
       buildable: false
-    gawk:
-      externals:
-      - spec: gawk@4.2.1
-        prefix: /usr
-    gcc:
-      externals:
-      - spec: gcc@7.5.0 languages=c,c++,fortran
-        prefix: /usr
-        extra_attributes:
-          compilers:
-            c: /usr/bin/gcc-7
-            cxx: /usr/bin/g++-7
-            fortran: /usr/bin/gfortran-7
-      variants: [+piclibs, 'languages=c,c++,fortran,go']
-    groff:
-      externals:
-      - spec: groff@1.22.3
-        prefix: /usr
-    openssh:
-      externals:
-      - spec: openssh@8.4p1
-        prefix: /usr
-    rsync:
-      externals:
-      - spec: rsync@3.1.3
-        prefix: /usr
-    bash:
-      externals:
-      - spec: bash@4.4.23
-        prefix: /usr
-      buildable: false
-    cpio:
-      externals:
-      - spec: cpio@2.12
-        prefix: /usr
-      buildable: false
-    diffutils:
-      externals:
-      - spec: diffutils@3.6
-        prefix: /usr
-      buildable: false
-    findutils:
-      externals:
-      - spec: findutils@4.8.0
-        prefix: /usr
-      buildable: false
-    gmake:
-      externals:
-      - spec: gmake@4.2.1
-        prefix: /usr
-      buildable: false
-    lustre:
-      externals:
-      - spec: lustre@2.12.6.2_cray_6_g44c857f
-        prefix: /usr
-      buildable: false
-    m4:
-      externals:
-      - spec: m4@1.4.18
-        prefix: /usr
-      buildable: false
-    pkg-config:
-      externals:
-      - spec: pkg-config@0.29.2
-        prefix: /usr
-      buildable: false
-    tar:
-      externals:
-      - spec: tar@1.34
-        prefix: /usr
-      buildable: false
-    ghostscript:
-      externals:
-      - spec: ghostscript@9.52
-        prefix: /usr
-      buildable: false
     all:
       'compiler:': [gcc@7.5.0, gcc, cce, nvhpc, oneapi, intel]
       providers:
@@ -262,6 +266,9 @@ spack:
     openmpi:
       variants: [+cuda]
       require: fabrics=cma,ofi schedulers=tm +gpfs +lustre
+    mvapich2:
+      variants: [~cuda]
+      require: fabrics=nemesisofi
     zstd:
       require: '%gcc@7.5.0'
       variants: [+programs]
@@ -321,7 +328,11 @@ spack:
       - emacs
       - openjdk
       - meson
-      - python
+
+
+
+      
+        #- python
       - zstd
       - antlr
       - squashfuse
@@ -347,7 +358,7 @@ spack:
       - autoconf@2.71
       - automake
       - tmux
-      link_type: symlink
+      link_type: hardlink
       link: roots
   compilers:
   - compiler:

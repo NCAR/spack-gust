@@ -30,8 +30,6 @@ spack:
     template_dirs:
     - /glade/work/csgteam/spack-deployments/gust/23.04/envs/build/templates/modules
   packages:
-    libpciaccess:
-      require: '%gcc@7.5.0'
     gawk:
       externals:
       - spec: gawk@4.2.1
@@ -108,6 +106,8 @@ spack:
       - spec: ghostscript@9.52
         prefix: /usr
       buildable: false
+    libpciaccess:
+      require: '%gcc@7.5.0'
     launchmon:
       require: '%gcc@7.5.0'
     cairo:
@@ -191,6 +191,8 @@ spack:
       buildable: false
     nvhpc:
       externals:
+      - spec: nvhpc@21.3
+        prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0
       - spec: nvhpc@23.1
         prefix: /glade/u/apps/common/22.12/spack/opt/spack/nvhpc/23.1
       - spec: nvhpc@22.11
@@ -328,16 +330,7 @@ spack:
       - emacs
       - openjdk
       - meson
-
-
-
-
-
-
-
-
-      
-        #- python
+      - python
       - zstd
       - antlr
       - squashfuse
@@ -363,7 +356,7 @@ spack:
       - autoconf@2.71
       - automake
       - tmux
-      link_type: hardlink
+      link_type: symlink
       link: roots
   compilers:
   - compiler:
@@ -419,6 +412,21 @@ spack:
       environment:
         prepend_path:
           LD_LIBRARY_PATH: /glade/u/apps/common/22.12/spack/opt/spack/nvhpc/23.1/Linux_x86_64/23.1/compilers/lib
+        append_path:
+          LD_LIBRARY_PATH: /opt/cray/libfabric/1.15.0.0/lib64
+  - compiler:
+      spec: nvhpc@21.3
+      paths:
+        cc: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0/Linux_x86_64/21.3/compilers/bin/nvc
+        cxx: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0/Linux_x86_64/21.3/compilers/bin/nvc++
+        f77: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0/Linux_x86_64/21.3/compilers/bin/nvfortran
+        fc: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0/Linux_x86_64/21.3/compilers/bin/nvfortran
+      operating_system: sles15
+      target: x86_64
+      modules: []
+      environment:
+        prepend_path:
+          LD_LIBRARY_PATH: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0/Linux_x86_64/21.3/compilers/lib
         append_path:
           LD_LIBRARY_PATH: /opt/cray/libfabric/1.15.0.0/lib64
   - compiler:
@@ -541,7 +549,7 @@ spack:
               NCAR_ID_MPI: '{name}-{version}'
               NCAR_BUILD_ENV_MPI: gust-{compiler.name}-{compiler.version}-{name}-{version}
             append_path:
-              MODULEPATH: /glade/u/apps/cseg/modules/23.03/{name}/{version}/{compiler.name}/{compiler.version}
+              MODULEPATH: /glade/u/apps/cseg/modules/23.04/{name}/{version}/{compiler.name}/{compiler.version}:"..os.getenv("NCAR_USER_MODULEROOT").."/{name}/{version}/{compiler.name}/{compiler.version}
         gcc:
           environment:
             set:
@@ -549,7 +557,7 @@ spack:
               NCAR_BUILD_ENV_COMPILER: gust-{name}-{version}
               NCAR_BUILD_ENV: gust-{name}-{version}
             append_path:
-              MODULEPATH: /glade/u/apps/cseg/modules/23.04/{name}/{version}
+              MODULEPATH: /glade/u/apps/cseg/modules/23.04/{name}/{version}:"..os.getenv("NCAR_USER_MODULEROOT").."/{name}/{version}
         intel-oneapi-compilers:
           filter:
             exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_COMPILERS, NCAR_SPACK_HASH_INTEL_ONEAPI_COMPILERS]
@@ -574,7 +582,7 @@ spack:
               I_MPI_F90: ifx
               I_MPI_F77: ifx
             append_path:
-              MODULEPATH: /glade/u/apps/cseg/modules/23.04/oneapi/{version}
+              MODULEPATH: /glade/u/apps/cseg/modules/23.04/oneapi/{version}:"..os.getenv("NCAR_USER_MODULEROOT").."/oneapi/{version}
         intel-oneapi-compilers-classic:
           autoload: none
           filter:
@@ -601,7 +609,7 @@ spack:
               I_MPI_F90: ifort
               I_MPI_F77: ifort
             append_path:
-              MODULEPATH: /glade/u/apps/cseg/modules/23.04/oneapi/{^intel-oneapi-compilers.version}
+              MODULEPATH: /glade/u/apps/cseg/modules/23.04/oneapi/{^intel-oneapi-compilers.version}:"..os.getenv("NCAR_USER_MODULEROOT").."/oneapi/{^intel-oneapi-compilers.version}
         intel-oneapi-mkl:
           template: ncar_math.lua
           filter:
@@ -632,7 +640,11 @@ spack:
             prepend_path:
               LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/compilers/lib'
             append_path:
-              MODULEPATH: /glade/u/apps/cseg/modules/23.04/{name}/{version}
+              MODULEPATH: /glade/u/apps/cseg/modules/23.04/{name}/{version}:"..os.getenv("NCAR_USER_MODULEROOT").."/{name}/{version}
+        nvhpc@21.3:
+          environment:
+            set:
+              CRAY_CPU_TARGET: x86-rome
         ncarcompilers:
           environment:
             set:
@@ -863,3 +875,18 @@ spack:
   - ncview@2.1.8%gcc@12.2.0
   - git-lfs
   - flex@2.6.4
+  - nvhpc@21.3
+  - cray-mpich@8.1.25%nvhpc@21.3
+  - ncarcompilers@0.8.0%nvhpc@21.3
+  - fftw@3.3.10%nvhpc@21.3~mpi
+  - udunits@2.2.28%nvhpc@21.3
+  - hdf5@1.12.2%nvhpc@21.3~mpi
+  - netcdf@4.9.1%nvhpc@21.3~mpi
+  - proj@8.2.1%nvhpc@21.3
+  - geos@3.9.1%nvhpc@21.3
+  - hdf@4.2.15%nvhpc@21.3
+  - eccodes@2.25.0%nvhpc@21.3
+  - parallel-netcdf@1.12.3%nvhpc@21.3 ^cray-mpich@8.1.25%nvhpc@21.3
+  - hdf5@1.12.2%nvhpc@21.3+mpi ^cray-mpich@8.1.25%nvhpc@21.3
+  - netcdf@4.9.1%nvhpc@21.3+mpi ^cray-mpich@8.1.25%nvhpc@21.3
+  - fftw@3.3.10%nvhpc@21.3+mpi ^cray-mpich@8.1.25%nvhpc@21.3

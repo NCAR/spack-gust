@@ -1,6 +1,4 @@
 packages:
-  libpciaccess:
-    require: '%gcc@7.5.0'
   gawk:
     externals:
     - spec: gawk@4.2.1
@@ -77,6 +75,8 @@ packages:
     - spec: ghostscript@9.52
       prefix: /usr
     buildable: false
+  libpciaccess:
+    require: '%gcc@7.5.0'
   launchmon:
     require: '%gcc@7.5.0'
   cairo:
@@ -160,6 +160,8 @@ packages:
     buildable: false
   nvhpc:
     externals:
+    - spec: nvhpc@21.3
+      prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0
     - spec: nvhpc@23.1
       prefix: /glade/u/apps/common/22.12/spack/opt/spack/nvhpc/23.1
     - spec: nvhpc@22.11

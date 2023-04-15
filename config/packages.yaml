@@ -266,8 +266,10 @@ packages:
     variants: [~suid]
   apptainer:
     variants: [~suid]
+  parallelio:
+    variants: [+pnetcdf, ~logging]
   esmf:
-    variants: [~mpi]
+    variants: [~mpi, ~xerces, +external-lapack, +parallelio]
   ncl:
     variants: [+gdal, +hdf4]
   intel-oneapi-mpi:

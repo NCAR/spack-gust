@@ -40,12 +40,6 @@ else
     setenv INFOPATH ${INFOPATH}:$NCAR_DEFAULT_INFOPATH
 endif
 
-# Load default modules
-if ( ! $?__Init_Default_Modules || ! $?LD_LIBRARY_PATH ) then
-  setenv __Init_Default_Modules 1
-  module -q restore
-endif
-
 # Set PBS workdir if appropriate
 if ( $?PBS_O_WORKDIR  && ! $?NCAR_PBS_JOBINIT ) then
     if ( -d $PBS_O_WORKDIR ) then
@@ -57,7 +51,11 @@ endif
 
 # Set number of GPUs (analogous to NCPUS)
 if ( `where nvidia-smi` != "" ) then
-    setenv NGPUS `nvidia-smi -L | wc -l`
+    setenv NGPUS `nvidia-smi -L |& grep -c UUID`
+
+    if ( $NGPUS > 0 ) then
+        setenv MPICH_GPU_MANAGED_MEMORY_SUPPORT_ENABLED 1
+    endif
 else
     setenv NGPUS 0
 endif
@@ -68,3 +66,12 @@ if ( ! ($?PYTHONPATH) ) then
 else
     setenv PYTHONPATH=/glade/u/apps/opt/conda/ncarbin/monitor/site-packages:$PYTHONPATH
 endif
+
+# Load default modules
+if ( ! $?__Init_Default_Modules || ! $?LD_LIBRARY_PATH ) then
+  setenv __Init_Default_Modules 1
+  module -q restore
+endif
+
+# Hide specified modules
+setenv LMOD_MODULERCFILE /glade/work/csgteam/spack-deployments/gust/23.04/envs/public/util/hidden-modules

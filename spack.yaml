@@ -300,7 +300,7 @@ spack:
     parallelio:
       variants: [+pnetcdf, ~logging]
     esmf:
-      variants: [~mpi, ~xerces, +external-lapack, +parallelio]
+      variants: [~mpi, ~xerces, +external-lapack, +parallelio, +pnetcdf]
     ncl:
       variants: [+gdal, +hdf4]
     intel-oneapi-mpi:
@@ -893,3 +893,13 @@ spack:
   - hdf5@1.12.2%nvhpc@21.3+mpi ^cray-mpich@8.1.25%nvhpc@21.3
   - netcdf@4.9.1%nvhpc@21.3+mpi ^cray-mpich@8.1.25%nvhpc@21.3
   - fftw@3.3.10%nvhpc@21.3+mpi ^cray-mpich@8.1.25%nvhpc@21.3
+  - parallelio@2.5.10%gcc@12.2.0 ^cray-mpich@8.1.25%gcc@12.2.0
+  - parallelio@2.5.10%nvhpc@21.3 ^cray-mpich@8.1.25%nvhpc@21.3
+  - parallelio@2.5.10%nvhpc@23.1 ^cray-mpich@8.1.25%nvhpc@23.1
+  - parallelio@2.5.10%oneapi@2023.0.0 ^cray-mpich@8.1.25%oneapi@2023.0.0
+  - parallelio@2.5.10%cce@15.0.1 ^cray-mpich@8.1.25%cce@15.0.1
+  - esmf@8.4.1%gcc@12.2.0+mpi ^cray-mpich@8.1.25%gcc@12.2.0
+  - esmf@8.4.1+mpi ^cray-mpich@8.1.25%nvhpc@21.3 ^nvhpc%nvhpc@21.3
+  - esmf@8.4.1+mpi ^cray-mpich@8.1.25%nvhpc@23.1 ^nvhpc%nvhpc@23.1
+  - esmf@8.4.1+mpi ^cray-mpich@8.1.25%oneapi@2023.0.0 ^intel-oneapi-mkl%oneapi@2023.0.0
+  - esmf@8.4.1%cce@15.0.1+mpi ^cray-mpich@8.1.25%cce@15.0.1

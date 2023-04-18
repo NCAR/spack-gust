@@ -269,7 +269,7 @@ packages:
   parallelio:
     variants: [+pnetcdf, ~logging]
   esmf:
-    variants: [~mpi, ~xerces, +external-lapack, +parallelio]
+    variants: [~mpi, ~xerces, +external-lapack, +parallelio, +pnetcdf]
   ncl:
     variants: [+gdal, +hdf4]
   intel-oneapi-mpi:

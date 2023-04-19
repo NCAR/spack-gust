@@ -31,6 +31,7 @@ export PATH=${PATH}:$NCAR_DEFAULT_PATH
 export MANPATH=${MANPATH}:$NCAR_DEFAULT_MANPATH
 export INFOPATH=${INFOPATH}:$NCAR_DEFAULT_INFOPATH
 
+
 # Set PBS workdir if appropriate
 if [ -n "$PBS_O_WORKDIR" ] && [ -z "$NCAR_PBS_JOBINIT" ]; then
     if [ -d "$PBS_O_WORKDIR" ]; then

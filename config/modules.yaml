@@ -81,16 +81,12 @@ modules:
           set:
             NCAR_ID_MPI: '{name}-{version}'
             NCAR_BUILD_ENV_MPI: gust-{compiler.name}-{compiler.version}-{name}-{version}
-          append_path:
-            MODULEPATH: \"..os.getenv("__NCAR_USER_MODULEROOT").."/{name}/{version}/{compiler.name}/{compiler.version}
       gcc:
         environment:
           set:
             NCAR_ID_COMPILER: '{name}-{version}'
             NCAR_BUILD_ENV_COMPILER: gust-{name}-{version}
             NCAR_BUILD_ENV: gust-{name}-{version}
-          append_path:
-            MODULEPATH: \"..os.getenv("__NCAR_USER_MODULEROOT").."/{name}/{version}
       intel-oneapi-compilers:
         filter:
           exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_COMPILERS, NCAR_SPACK_HASH_INTEL_ONEAPI_COMPILERS]
@@ -114,8 +110,6 @@ modules:
             I_MPI_FC: ifx
             I_MPI_F90: ifx
             I_MPI_F77: ifx
-          append_path:
-            MODULEPATH: \"..os.getenv("__NCAR_USER_MODULEROOT").."/oneapi/{version}
       intel-oneapi-compilers-classic:
         autoload: none
         filter:
@@ -141,8 +135,6 @@ modules:
             I_MPI_FC: ifort
             I_MPI_F90: ifort
             I_MPI_F77: ifort
-          append_path:
-            MODULEPATH: \"..os.getenv("__NCAR_USER_MODULEROOT").."/oneapi/{^intel-oneapi-compilers.version}
       intel-oneapi-mkl:
         template: ncar_math.lua
         filter:
@@ -172,8 +164,6 @@ modules:
             NCAR_BUILD_ENV: gust-{name}-{version}
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/compilers/lib'
-          append_path:
-            MODULEPATH: \"..os.getenv("__NCAR_USER_MODULEROOT").."/{name}/{version}
       nvhpc@21.3:
         environment:
           set:

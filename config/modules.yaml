@@ -274,3 +274,5 @@ modules:
       - fftw@3.3.10
       - openmpi@4.1.4
       - nvhpc@23.1
+      - parallelio+mpi
+      - esmf+mpi

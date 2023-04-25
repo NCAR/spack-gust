@@ -88,6 +88,7 @@ modules:
             NCAR_BUILD_ENV_COMPILER: gust-{name}-{version}
             NCAR_BUILD_ENV: gust-{name}-{version}
       intel-oneapi-compilers:
+        template: ncar_intel.lua
         filter:
           exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_COMPILERS, NCAR_SPACK_HASH_INTEL_ONEAPI_COMPILERS]
         environment:
@@ -112,6 +113,7 @@ modules:
             I_MPI_F77: ifx
       intel-oneapi-compilers-classic:
         autoload: none
+        template: ncar_intel.lua
         filter:
           exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_COMPILERS_CLASSIC, CMAKE_PREFIX_PATH,
             NCAR_SPACK_HASH_INTEL_ONEAPI_COMPILERS_CLASSIC]

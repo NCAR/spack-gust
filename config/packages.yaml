@@ -1,4 +1,9 @@
 packages:
+  nag:
+    externals:
+    - spec: nag@7.1
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/nag/7.1
+    buildable: false
   gawk:
     externals:
     - spec: gawk@4.2.1

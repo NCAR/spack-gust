@@ -278,9 +278,7 @@ packages:
   ncl:
     variants: [+gdal, +hdf4]
   intel-oneapi-mpi:
-    variants: [+external-libfabric, +ilp64]
-  intel-oneapi-mkl:
-    variants: [+ilp64]
+    variants: [+external-libfabric]
   gdb:
     variants: [+gold, +ld, +lto, +tui, ~python, ~debuginfod]
   curl:

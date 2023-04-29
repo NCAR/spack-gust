@@ -309,9 +309,7 @@ spack:
     ncl:
       variants: [+gdal, +hdf4]
     intel-oneapi-mpi:
-      variants: [+external-libfabric, +ilp64]
-    intel-oneapi-mkl:
-      variants: [+ilp64]
+      variants: [+external-libfabric]
     gdb:
       variants: [+gold, +ld, +lto, +tui, ~python, ~debuginfod]
     curl:
@@ -914,3 +912,6 @@ spack:
   - esmf@8.4.1~mpi~pnetcdf ^nvhpc%nvhpc@21.3
   - esmf@8.4.1~mpi~pnetcdf ^nvhpc%nvhpc@23.1
   - esmf@8.4.1%cce@15.0.1~mpi~pnetcdf
+  - intel-oneapi-mkl@2023.0.0%oneapi@2023.0.0
+  - esmf@8.4.1~mpi~pnetcdf esmf_os=Unicos ^intel-oneapi-mkl%oneapi@2023.0.0
+  - esmf@8.4.1+mpi ^cray-mpich@8.1.25%oneapi@2023.0.0 ^intel-oneapi-mkl%oneapi@2023.0.0

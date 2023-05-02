@@ -235,7 +235,7 @@ packages:
     - spec: cuda@11.7.1
       prefix: /glade/u/apps/common/22.12/spack/opt/spack/cuda/11.7.1
     buildable: false
-    require: +allow-unsupported-compilers
+    require: '%gcc@7.5.0 +allow-unsupported-compilers'
   hwloc:
     require: '%gcc@7.5.0'
     variants: [+cuda]
@@ -243,8 +243,8 @@ packages:
     variants: [+cuda]
     require: fabrics=cma,ofi schedulers=tm +gpfs +lustre
   mvapich2:
-    variants: [~cuda]
-    require: fabrics=nemesisofi
+    variants: [+cuda]
+    require: fabrics=cxi
   zstd:
     require: '%gcc@7.5.0'
     variants: [+programs]

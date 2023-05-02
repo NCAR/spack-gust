@@ -26,6 +26,7 @@ modules:
       hash_length: 0
       exclude_implicits: true
       exclude:
+      - nano
       - flex@2.6.4
       - git
       - git-lfs
@@ -270,6 +271,7 @@ modules:
       - cdo
       - wgrib2
       - ncview
+      - nccmp
       defaults:
       - netcdf@4.9.1
       - parallel-netcdf@1.12.3

@@ -632,6 +632,14 @@
     {
       "hash": "5oivxt5ucoi3trclzx6mtw6ax43khsrf",
       "spec": "esmf@8.4.1+mpi ^cray-mpich@8.1.25%oneapi@2023.0.0 ^intel-oneapi-mkl%oneapi@2023.0.0"
+    },
+    {
+      "hash": "t5odelann7tevs74cqigv4maft7ehqqx",
+      "spec": "nano"
+    },
+    {
+      "hash": "udjpix324icb2jmcdagpm2zdme46docc",
+      "spec": "nccmp@1.9.0.1%gcc@12.2.0"
     }
   ],
   "concrete_specs": {
@@ -20120,6 +20128,85 @@
         }
       ],
       "hash": "5oivxt5ucoi3trclzx6mtw6ax43khsrf"
+    },
+    "t5odelann7tevs74cqigv4maft7ehqqx": {
+      "name": "nano",
+      "version": "6.3",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "zng4ptw4jg2xh7jvuyu67ji4df74cw73p6tkgtive7fodv3mn6gq====",
+      "dependencies": [
+        {
+          "name": "ncurses",
+          "hash": "n65ulw3knpyqok7upflu2dhv72p3ve2l",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "t5odelann7tevs74cqigv4maft7ehqqx"
+    },
+    "udjpix324icb2jmcdagpm2zdme46docc": {
+      "name": "nccmp",
+      "version": "1.9.0.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "ipo": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "3txjlrlxrnijicwyp3j6jmkvzcd63acfuhcocjqhgklcuocbtwbq====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "wzsqkudo2f5hvlvjzhexamqilaysy73f",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "netcdf-c",
+          "hash": "hxvov2nf45k52eaph7wlrxchcvwtxg32",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "udjpix324icb2jmcdagpm2zdme46docc"
     }
   }
 }

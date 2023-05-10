@@ -1,4 +1,5 @@
 require("strict")
+require("sandbox")
 local hook = require("Hook")
 
 local mapT =
@@ -119,3 +120,11 @@ function avail_hook(t)
 end
 
 hook.register("avail",avail_hook)
+
+function always_mgrload(required, active)
+   if (mode() == "load" or mode() == "unload") then
+      MCP:mgrload(required, active)
+   end
+end
+
+sandbox_registration{ always_mgrload = always_mgrload, }

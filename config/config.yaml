@@ -5,6 +5,7 @@ config:
       hdf5+threadsafe: '{name}/{version}-safe/{compiler.name}/{compiler.version}'
       netcdf-c^hdf5+threadsafe: '{name}/{version}-safe/{compiler.name}/{compiler.version}'
       eccodes^hdf5+threadsafe: '{name}/{version}-safe/{compiler.name}/{compiler.version}'
+      cairo~X: '{name}/{version}-nox/{compiler.name}/{compiler.version}'
       netcdf-c^mpi: netcdf/{version}/packages/{name}/{version}/{^mpi.name}/{^mpi.version}/{compiler.name}/{compiler.version}
       netcdf-fortran^mpi: netcdf/{^netcdf-c.version}/packages/{name}/{version}/{^mpi.name}/{^mpi.version}/{compiler.name}/{compiler.version}
       netcdf-cxx4^mpi: netcdf/{^netcdf-c.version}/packages/{name}/{version}/{^mpi.name}/{^mpi.version}/{compiler.name}/{compiler.version}

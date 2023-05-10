@@ -290,3 +290,5 @@ packages:
       +sqlite3, +zstd]
   arpack-ng:
     variants: [~mpi]
+  imagemagick:
+    variants: [+ghostscript]

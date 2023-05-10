@@ -640,6 +640,46 @@
     {
       "hash": "udjpix324icb2jmcdagpm2zdme46docc",
       "spec": "nccmp@1.9.0.1%gcc@12.2.0"
+    },
+    {
+      "hash": "yhnx3m6dgttf7ts56pd2sic5ouzfwxut",
+      "spec": "netcdf@4.9.2%gcc@12.2.0~mpi"
+    },
+    {
+      "hash": "bv6vdta45itq7nkqyeblnznl7ely6jas",
+      "spec": "netcdf@4.9.2%nvhpc@21.3~mpi"
+    },
+    {
+      "hash": "att5q2v3fuf2rlffbf2pqkhsfolwxmfw",
+      "spec": "netcdf@4.9.2%oneapi@2023.0.0~mpi"
+    },
+    {
+      "hash": "xkjwfjj4igtnm2iphlvof4jkpxocm5o6",
+      "spec": "netcdf@4.9.2%cce@15.0.1~mpi"
+    },
+    {
+      "hash": "dqrnaldu2rag7sm5q2ekrt6muqhfagh5",
+      "spec": "netcdf@4.9.2%gcc@12.2.0+mpi ^cray-mpich@8.1.25%gcc@12.2.0"
+    },
+    {
+      "hash": "sxn5q7bc2qbymujzbfehwoui7w4n6k7i",
+      "spec": "netcdf@4.9.2%nvhpc@21.3+mpi ^cray-mpich@8.1.25%nvhpc@21.3"
+    },
+    {
+      "hash": "5l3t2jutxmk5pj2ethuhxa2qcbocfhru",
+      "spec": "netcdf@4.9.2%nvhpc@23.1+mpi ^cray-mpich@8.1.25%nvhpc@23.1"
+    },
+    {
+      "hash": "ipdv62qm4kdww437e762buideybozcka",
+      "spec": "netcdf@4.9.2%oneapi@2023.0.0+mpi ^cray-mpich@8.1.25%oneapi@2023.0.0"
+    },
+    {
+      "hash": "jqv4juszqbhzlftgtyzbsytmqfh2lpn7",
+      "spec": "netcdf@4.9.2%cce@15.0.1+mpi ^cray-mpich@8.1.25%cce@15.0.1"
+    },
+    {
+      "hash": "kvnnxdjdgkrzonp4r37h7xvqy724lhka",
+      "spec": "netcdf@4.9.2%nvhpc@23.1~mpi"
     }
   ],
   "concrete_specs": {
@@ -20207,6 +20247,2196 @@
         }
       ],
       "hash": "udjpix324icb2jmcdagpm2zdme46docc"
+    },
+    "yhnx3m6dgttf7ts56pd2sic5ouzfwxut": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": false,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "min6qbnlrwneg5arphob7pg4adb7htqh",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "kujfg5aoqrgmfwwob6vwoqbapt7powtf",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "lwcduppjdbmkiwy37n6emxe7z22ixhj6",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "yhnx3m6dgttf7ts56pd2sic5ouzfwxut"
+    },
+    "min6qbnlrwneg5arphob7pg4adb7htqh": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": false,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "qv64tdpusejdrq5tbn5x5654zrbry3k3",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "vmpienn4hueslwhbcmfajpva4u4uyvj3",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "min6qbnlrwneg5arphob7pg4adb7htqh"
+    },
+    "kujfg5aoqrgmfwwob6vwoqbapt7powtf": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "min6qbnlrwneg5arphob7pg4adb7htqh",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "kujfg5aoqrgmfwwob6vwoqbapt7powtf"
+    },
+    "lwcduppjdbmkiwy37n6emxe7z22ixhj6": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "min6qbnlrwneg5arphob7pg4adb7htqh",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "lwcduppjdbmkiwy37n6emxe7z22ixhj6"
+    },
+    "bv6vdta45itq7nkqyeblnznl7ely6jas": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": false,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "uvl2m2fpugaudkyme7tsmnipmcc3bvdx",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "xscf2pvznj7oh5er6are5zat3duv5bw2",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "utu5ex2baetafk6fmyk77ca4ww7cdcex",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "bv6vdta45itq7nkqyeblnznl7ely6jas"
+    },
+    "uvl2m2fpugaudkyme7tsmnipmcc3bvdx": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": false,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "svlpfz4pg4la7h2i3mrz747jqu6bbyy6",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "4eq5o4yhbxmn3ivhl2i4tssscuosbyha",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "uvl2m2fpugaudkyme7tsmnipmcc3bvdx"
+    },
+    "xscf2pvznj7oh5er6are5zat3duv5bw2": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "uvl2m2fpugaudkyme7tsmnipmcc3bvdx",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "xscf2pvznj7oh5er6are5zat3duv5bw2"
+    },
+    "utu5ex2baetafk6fmyk77ca4ww7cdcex": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "uvl2m2fpugaudkyme7tsmnipmcc3bvdx",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "utu5ex2baetafk6fmyk77ca4ww7cdcex"
+    },
+    "att5q2v3fuf2rlffbf2pqkhsfolwxmfw": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2023.0.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": false,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "a3muxkw2iufonfdxxggtft52zlxquv7v",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "uqys4pk5gtg5oppmytjjpfadyktevphd",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "7wx7fix6bw44krwn6v2kpvug66mfmozn",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "att5q2v3fuf2rlffbf2pqkhsfolwxmfw"
+    },
+    "a3muxkw2iufonfdxxggtft52zlxquv7v": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2023.0.0"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": false,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "v3m2uf6gqcrxy4xrfjai246dawqsozxb",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "mh5hrrim3g3p5z64jjxq52z7nwerrd43",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "a3muxkw2iufonfdxxggtft52zlxquv7v"
+    },
+    "uqys4pk5gtg5oppmytjjpfadyktevphd": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2023.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "a3muxkw2iufonfdxxggtft52zlxquv7v",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "uqys4pk5gtg5oppmytjjpfadyktevphd"
+    },
+    "7wx7fix6bw44krwn6v2kpvug66mfmozn": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2023.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "a3muxkw2iufonfdxxggtft52zlxquv7v",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "7wx7fix6bw44krwn6v2kpvug66mfmozn"
+    },
+    "xkjwfjj4igtnm2iphlvof4jkpxocm5o6": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.1"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": false,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "qooat4wthpshndwmhuebh4j7uooftghu",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "5kxdxwonnjid2bkqpgopykdy4pxfij5u",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "iwqfue66rcalsdngm34sfrzclgnmkito",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "xkjwfjj4igtnm2iphlvof4jkpxocm5o6"
+    },
+    "qooat4wthpshndwmhuebh4j7uooftghu": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.1"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": false,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "3hdeozleccngeljiqosaontqgfh6g2cy",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "bsgjodt73emxraz3xrz36vjxuk4vpwwz",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "qooat4wthpshndwmhuebh4j7uooftghu"
+    },
+    "5kxdxwonnjid2bkqpgopykdy4pxfij5u": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "qooat4wthpshndwmhuebh4j7uooftghu",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "5kxdxwonnjid2bkqpgopykdy4pxfij5u"
+    },
+    "iwqfue66rcalsdngm34sfrzclgnmkito": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "qooat4wthpshndwmhuebh4j7uooftghu",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "iwqfue66rcalsdngm34sfrzclgnmkito"
+    },
+    "dqrnaldu2rag7sm5q2ekrt6muqhfagh5": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": true,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "vj2gsajojx2xpvvqubm3tqpp3xmr7a73",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "py5ysvxauwu6afatrpmhse6rpkngww2a",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "r3b7nkvmx66l6wgblo3rliwxjk7slqy5",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "dqrnaldu2rag7sm5q2ekrt6muqhfagh5"
+    },
+    "vj2gsajojx2xpvvqubm3tqpp3xmr7a73": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": true,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "cray-mpich",
+          "hash": "moe4qr5y5rb7fv2povkpsn446x5couhe",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "pj3nrac5guueb7xvidqvhnubyg2am5mf",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "vmpienn4hueslwhbcmfajpva4u4uyvj3",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "vj2gsajojx2xpvvqubm3tqpp3xmr7a73"
+    },
+    "py5ysvxauwu6afatrpmhse6rpkngww2a": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "vj2gsajojx2xpvvqubm3tqpp3xmr7a73",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "py5ysvxauwu6afatrpmhse6rpkngww2a"
+    },
+    "r3b7nkvmx66l6wgblo3rliwxjk7slqy5": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "12.2.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "vj2gsajojx2xpvvqubm3tqpp3xmr7a73",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "r3b7nkvmx66l6wgblo3rliwxjk7slqy5"
+    },
+    "sxn5q7bc2qbymujzbfehwoui7w4n6k7i": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": true,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "wtyfnvp75bce2h5dct3thz3yoh7pxdgb",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "huhnoawpkbw7kf3eufvox6sjn4zm7yj4",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "vsbjtgydax5ibx6go7zzgl4usvd2ojmg",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "sxn5q7bc2qbymujzbfehwoui7w4n6k7i"
+    },
+    "wtyfnvp75bce2h5dct3thz3yoh7pxdgb": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": true,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "cray-mpich",
+          "hash": "kdx2yprblakupetzvluxtf5ya6p57mxc",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "ddyh7ydhzojmfuaeputwjz7nbdaekz76",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "4eq5o4yhbxmn3ivhl2i4tssscuosbyha",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "wtyfnvp75bce2h5dct3thz3yoh7pxdgb"
+    },
+    "huhnoawpkbw7kf3eufvox6sjn4zm7yj4": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "wtyfnvp75bce2h5dct3thz3yoh7pxdgb",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "huhnoawpkbw7kf3eufvox6sjn4zm7yj4"
+    },
+    "vsbjtgydax5ibx6go7zzgl4usvd2ojmg": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "21.3"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "wtyfnvp75bce2h5dct3thz3yoh7pxdgb",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "vsbjtgydax5ibx6go7zzgl4usvd2ojmg"
+    },
+    "5l3t2jutxmk5pj2ethuhxa2qcbocfhru": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": true,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "ln6agvhjmrnwid6hunr5v4hy5ynafg6f",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "kvhws2rthjsvhbcxmrq6d6qr2zgnjxif",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "ufnsfehfsj5it6a6smd3jaaup6xjtmoi",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "5l3t2jutxmk5pj2ethuhxa2qcbocfhru"
+    },
+    "ln6agvhjmrnwid6hunr5v4hy5ynafg6f": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": true,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "cray-mpich",
+          "hash": "m2cjfrjdqae2cxo65tckhvx6f5tkvphm",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "of7gopw35yuzjby45wobtnz32hwstd74",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "2s75kwq4yx4sirv6aic3tbedfkjstqto",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "ln6agvhjmrnwid6hunr5v4hy5ynafg6f"
+    },
+    "kvhws2rthjsvhbcxmrq6d6qr2zgnjxif": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "ln6agvhjmrnwid6hunr5v4hy5ynafg6f",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "kvhws2rthjsvhbcxmrq6d6qr2zgnjxif"
+    },
+    "ufnsfehfsj5it6a6smd3jaaup6xjtmoi": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "ln6agvhjmrnwid6hunr5v4hy5ynafg6f",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "ufnsfehfsj5it6a6smd3jaaup6xjtmoi"
+    },
+    "ipdv62qm4kdww437e762buideybozcka": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2023.0.0"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": true,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "xtv74qc5tfzhtpt5up36omxe7ay3pfsh",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "bvnubf6mrppms5lmu3kbxyypo76ahbjn",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "jufp6m3oc63oqsymw6kdxcfl6w3egvbr",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "ipdv62qm4kdww437e762buideybozcka"
+    },
+    "xtv74qc5tfzhtpt5up36omxe7ay3pfsh": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2023.0.0"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": true,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "cray-mpich",
+          "hash": "ynu6talwag6gsswygjj46pr3b6hmtayu",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "lvwm5swfhvgr5osragih3bnz766zn3d6",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "mh5hrrim3g3p5z64jjxq52z7nwerrd43",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "xtv74qc5tfzhtpt5up36omxe7ay3pfsh"
+    },
+    "bvnubf6mrppms5lmu3kbxyypo76ahbjn": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2023.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "xtv74qc5tfzhtpt5up36omxe7ay3pfsh",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "bvnubf6mrppms5lmu3kbxyypo76ahbjn"
+    },
+    "jufp6m3oc63oqsymw6kdxcfl6w3egvbr": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "oneapi",
+        "version": "2023.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "xtv74qc5tfzhtpt5up36omxe7ay3pfsh",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "jufp6m3oc63oqsymw6kdxcfl6w3egvbr"
+    },
+    "jqv4juszqbhzlftgtyzbsytmqfh2lpn7": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.1"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": true,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "baurpeoqfngh6cettpwpfc6rvczzqgla",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "mmbn3tav6vax6ic6pld3qibkiljkkfib",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "yvxpjdsgt3c5a5rc2h5rltrl76q37b5k",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "jqv4juszqbhzlftgtyzbsytmqfh2lpn7"
+    },
+    "baurpeoqfngh6cettpwpfc6rvczzqgla": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.1"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": true,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "cray-mpich",
+          "hash": "wwqkoqm5rcprj7kozngllajxtz3sljtl",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "yt7spry7mdaxjhq7zbbuqnslcknsurn7",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "bsgjodt73emxraz3xrz36vjxuk4vpwwz",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "baurpeoqfngh6cettpwpfc6rvczzqgla"
+    },
+    "mmbn3tav6vax6ic6pld3qibkiljkkfib": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "baurpeoqfngh6cettpwpfc6rvczzqgla",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "mmbn3tav6vax6ic6pld3qibkiljkkfib"
+    },
+    "yvxpjdsgt3c5a5rc2h5rltrl76q37b5k": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "cce",
+        "version": "15.0.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "baurpeoqfngh6cettpwpfc6rvczzqgla",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "yvxpjdsgt3c5a5rc2h5rltrl76q37b5k"
+    },
+    "kvnnxdjdgkrzonp4r37h7xvqy724lhka": {
+      "name": "netcdf",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "ncar.hpcd",
+      "parameters": {
+        "build_system": "bundle",
+        "dap": true,
+        "hdf4": false,
+        "mpi": false,
+        "parallel-netcdf": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "glqt2vxuw4zdcgy4mdim5r7cfbkthg2bp3avwfdgdqgfoz6zxlta====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "rl26o3q4istqwu2x6hmuln7iq2jxoa6d",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-cxx4",
+          "hash": "2oxfpmvm6igph2wtfgn2ovdgx2tla7xf",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "netcdf-fortran",
+          "hash": "swzaqtgezqe5pov44y74krjo3hufue3r",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "kvnnxdjdgkrzonp4r37h7xvqy724lhka"
+    },
+    "rl26o3q4istqwu2x6hmuln7iq2jxoa6d": {
+      "name": "netcdf-c",
+      "version": "4.9.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "future",
+      "parameters": {
+        "build_system": "autotools",
+        "dap": true,
+        "fsync": false,
+        "hdf4": false,
+        "jna": false,
+        "mpi": false,
+        "optimize": true,
+        "parallel-netcdf": false,
+        "pic": true,
+        "shared": true,
+        "zstd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "wmsc4n7bssv3cjjetubnhazmr2wq2shpkclbr4g6g2ujqrajq7ia====",
+      "dependencies": [
+        {
+          "name": "curl",
+          "hash": "uap4dnhnqr6shaywdeyl5thzupidzvxj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "i7bt7cyqefsmk6uwxat2ivkqhyissabg",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "hash": "2mxrymuqyprljqcm6dhxdc3ko4jmqmgt",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "2s75kwq4yx4sirv6aic3tbedfkjstqto",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "dw5eltokzc5tzlzio4srpskiukpmps3w",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "jmbd6zjsozyn7yfknxxvu5t5upp5ep5j",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "rl26o3q4istqwu2x6hmuln7iq2jxoa6d"
+    },
+    "2oxfpmvm6igph2wtfgn2ovdgx2tla7xf": {
+      "name": "netcdf-cxx4",
+      "version": "4.3.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "mhimjw7lce5wtday5knt6zd6dbi5ew2wp45cnr425eszkywvgb7q====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "rl26o3q4istqwu2x6hmuln7iq2jxoa6d",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "2oxfpmvm6igph2wtfgn2ovdgx2tla7xf"
+    },
+    "swzaqtgezqe5pov44y74krjo3hufue3r": {
+      "name": "netcdf-fortran",
+      "version": "4.6.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "nvhpc",
+        "version": "23.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "doc": false,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4phjv4wbuh4bnhl2xlsc2uspjcwbc6rnkcyj4iwbynzictjmaanq====",
+      "dependencies": [
+        {
+          "name": "netcdf-c",
+          "hash": "rl26o3q4istqwu2x6hmuln7iq2jxoa6d",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "swzaqtgezqe5pov44y74krjo3hufue3r"
     }
   }
 }

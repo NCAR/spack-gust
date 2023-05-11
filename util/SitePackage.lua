@@ -1,4 +1,5 @@
 require("strict")
+require("sandbox")
 local hook = require("Hook")
 
 local mapT =
@@ -76,6 +77,16 @@ local mapT =
       ['modules/[^/]+/mvapich2%-gdr/[^/]+/nag/[^/]*$'] = 'MPI-dependent Software - [nag + mvapich2-gdr]',
       ['modules/[^/]+/openmpi/[^/]+/nag/[^/]*$'] = 'MPI-dependent Software - [nag + openmpi]',
       ['modules/[^/]+/nag/[^/]*$'] = 'Compiler-dependent Software - [nag]',
+      ['modules/[^/]+/cray%-mpich/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + cray-mpich]',
+      ['modules/[^/]+/hpcx%-mpi/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + hpcx-mpi]',
+      ['modules/[^/]+/intel%-mpi/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + intel-mpi]',
+      ['modules/[^/]+/intel%-oneapi%-mpi/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + intel-oneapi-mpi]',
+      ['modules/[^/]+/mpi%-serial/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + mpi-serial]',
+      ['modules/[^/]+/mpich/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + mpich]',
+      ['modules/[^/]+/mvapich2/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + mvapich2]',
+      ['modules/[^/]+/mvapich2%-gdr/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + mvapich2-gdr]',
+      ['modules/[^/]+/openmpi/[^/]+/nvhpc/[^/]*$'] = 'MPI-dependent Software - [nvhpc + openmpi]',
+      ['modules/[^/]+/nvhpc/[^/]*$'] = 'Compiler-dependent Software - [nvhpc]',
       ['modules/[^/]+/cray%-mpich/[^/]+/oneapi/[^/]*$'] = 'MPI-dependent Software - [oneapi + cray-mpich]',
       ['modules/[^/]+/hpcx%-mpi/[^/]+/oneapi/[^/]*$'] = 'MPI-dependent Software - [oneapi + hpcx-mpi]',
       ['modules/[^/]+/intel%-mpi/[^/]+/oneapi/[^/]*$'] = 'MPI-dependent Software - [oneapi + intel-mpi]',
@@ -86,16 +97,6 @@ local mapT =
       ['modules/[^/]+/mvapich2%-gdr/[^/]+/oneapi/[^/]*$'] = 'MPI-dependent Software - [oneapi + mvapich2-gdr]',
       ['modules/[^/]+/openmpi/[^/]+/oneapi/[^/]*$'] = 'MPI-dependent Software - [oneapi + openmpi]',
       ['modules/[^/]+/oneapi/[^/]*$'] = 'Compiler-dependent Software - [oneapi]',
-      ['modules/[^/]+/cray%-mpich/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + cray-mpich]',
-      ['modules/[^/]+/hpcx%-mpi/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + hpcx-mpi]',
-      ['modules/[^/]+/intel%-mpi/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + intel-mpi]',
-      ['modules/[^/]+/intel%-oneapi%-mpi/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + intel-oneapi-mpi]',
-      ['modules/[^/]+/mpi%-serial/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + mpi-serial]',
-      ['modules/[^/]+/mpich/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + mpich]',
-      ['modules/[^/]+/mvapich2/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + mvapich2]',
-      ['modules/[^/]+/mvapich2%-gdr/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + mvapich2-gdr]',
-      ['modules/[^/]+/openmpi/[^/]+/pgi/[^/]*$'] = 'MPI-dependent Software - [pgi + openmpi]',
-      ['modules/[^/]+/pgi/[^/]*$'] = 'Compiler-dependent Software - [pgi]',
       ['perftools/[^/]+/modulefiles$'] = 'Cray Performance Analysis Tools - [perftools-base]',
       ['modulefiles/perftools/[^/]*$'] = 'Cray Performance Analysis Tools - [perftools-base]',
    },
@@ -119,3 +120,13 @@ function avail_hook(t)
 end
 
 hook.register("avail",avail_hook)
+
+function universal_mgrload(required, active)
+   if (mode() == "load" or mode() == "unload") then
+      MCP:mgrload(required, active)
+   end
+end
+
+sandbox_registration {
+    universal_mgrload = universal_mgrload
+}

@@ -19,7 +19,7 @@ spack:
         netcdf-cxx4: netcdf/{^netcdf-c.version}/packages/{name}/{version}/{compiler.name}/{compiler.version}
         all: '{name}/{version}/{compiler.name}/{compiler.version}'
         ^mpi: '{name}/{version}/{^mpi.name}/{^mpi.version}/{compiler.name}/{compiler.version}'
-    build_jobs: 8
+    build_jobs: 4
     test_stage: /glade/gust/scratch/$user/temp/spack/gust/23.04/tests
     source_cache: /glade/gust/scratch/$user/temp/spack/cache
     misc_cache: /glade/gust/scratch/$user/temp/spack/gust/23.04/misc
@@ -949,3 +949,10 @@ spack:
   - netcdf@4.9.2%cce@15.0.1+mpi ^cray-mpich@8.1.25%cce@15.0.1
   - netcdf@4.9.2%nvhpc@23.1~mpi
   - imagemagick
+  - parallelio@2.6.0%gcc@12.2.0~mpi+ncint~pnetcdf
+  - parallelio@2.6.0%nvhpc@21.3~mpi+ncint~pnetcdf
+  - parallelio@2.6.0%nvhpc@23.1~mpi+ncint~pnetcdf
+  - parallelio@2.6.0%oneapi@2023.0.0 cflags="-Wno-error=implicit-function-declaration"
+    ~mpi+ncint~pnetcdf
+  - parallelio@2.6.0%oneapi@2023.0.0 cflags="-Wno-error=implicit-function-declaration"
+    +ncint ^cray-mpich@8.1.25%oneapi@2023.0.0

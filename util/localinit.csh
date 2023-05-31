@@ -50,21 +50,16 @@ if ( $?PBS_O_WORKDIR  && ! $?NCAR_PBS_JOBINIT ) then
 endif
 
 # Set number of GPUs (analogous to NCPUS)
-if ( `where nvidia-smi` != "" ) then
-    setenv NGPUS `nvidia-smi -L |& grep -c UUID`
+if ( $?PBS_JOBID ) then
+    if ( `where nvidia-smi` != "" ) then
+        setenv NGPUS `nvidia-smi -L |& grep -c UUID`
 
-    if ( $NGPUS > 0 ) then
-        setenv MPICH_GPU_MANAGED_MEMORY_SUPPORT_ENABLED 1
+        if ( $NGPUS > 0 ) then
+            setenv MPICH_GPU_MANAGED_MEMORY_SUPPORT_ENABLED 1
+        endif
+    else
+        setenv NGPUS 0
     endif
-else
-    setenv NGPUS 0
-endif
-
-# Add Python import monitoring to environment
-if ( ! ($?PYTHONPATH) ) then
-    setenv PYTHONPATH=/glade/u/apps/opt/conda/ncarbin/monitor/site-packages
-else
-    setenv PYTHONPATH=/glade/u/apps/opt/conda/ncarbin/monitor/site-packages:$PYTHONPATH
 endif
 
 # Load default modules

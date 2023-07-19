@@ -1,9 +1,4 @@
 packages:
-  nag:
-    externals:
-    - spec: nag@7.1
-      prefix: /glade/u/apps/common/22.12/spack/opt/spack/nag/7.1
-    buildable: false
   gawk:
     externals:
     - spec: gawk@4.2.1
@@ -79,6 +74,16 @@ packages:
     externals:
     - spec: ghostscript@9.52
       prefix: /usr
+    buildable: false
+  intel-oneapi-vtune:
+    externals:
+    - spec: intel-oneapi-vtune@2023.0.0
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-vtune/2023.0.0
+    buildable: false
+  nag:
+    externals:
+    - spec: nag@7.1
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/nag/7.1
     buildable: false
   libpciaccess:
     require: '%gcc@7.5.0'
@@ -165,6 +170,8 @@ packages:
     buildable: false
   nvhpc:
     externals:
+    - spec: nvhpc@23.3
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/nvhpc/23.3
     - spec: nvhpc@21.3
       prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0
     - spec: nvhpc@23.1
@@ -179,6 +186,8 @@ packages:
     buildable: false
   intel-oneapi-compilers:
     externals:
+    - spec: intel-oneapi-compilers@2023.1.0
+      prefix: /glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-compilers/2023.1.0
     - spec: intel-oneapi-compilers@2023.0.0
       prefix: /glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-compilers/2023.0.0
     - spec: intel-oneapi-compilers@2022.2.1

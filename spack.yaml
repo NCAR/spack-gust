@@ -31,11 +31,6 @@ spack:
     template_dirs:
     - /glade/work/csgteam/spack-deployments/gust/23.04/envs/build/templates/modules
   packages:
-    nag:
-      externals:
-      - spec: nag@7.1
-        prefix: /glade/u/apps/common/22.12/spack/opt/spack/nag/7.1
-      buildable: false
     gawk:
       externals:
       - spec: gawk@4.2.1
@@ -111,6 +106,16 @@ spack:
       externals:
       - spec: ghostscript@9.52
         prefix: /usr
+      buildable: false
+    intel-oneapi-vtune:
+      externals:
+      - spec: intel-oneapi-vtune@2023.0.0
+        prefix: /glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-vtune/2023.0.0
+      buildable: false
+    nag:
+      externals:
+      - spec: nag@7.1
+        prefix: /glade/u/apps/common/22.12/spack/opt/spack/nag/7.1
       buildable: false
     libpciaccess:
       require: '%gcc@7.5.0'
@@ -197,6 +202,8 @@ spack:
       buildable: false
     nvhpc:
       externals:
+      - spec: nvhpc@23.3
+        prefix: /glade/u/apps/common/22.12/spack/opt/spack/nvhpc/23.3
       - spec: nvhpc@21.3
         prefix: /glade/u/apps/common/22.08/spack/opt/spack/nvhpc/21.3/gcc/7.5.0
       - spec: nvhpc@23.1
@@ -211,6 +218,8 @@ spack:
       buildable: false
     intel-oneapi-compilers:
       externals:
+      - spec: intel-oneapi-compilers@2023.1.0
+        prefix: /glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-compilers/2023.1.0
       - spec: intel-oneapi-compilers@2023.0.0
         prefix: /glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-compilers/2023.0.0
       - spec: intel-oneapi-compilers@2022.2.1
@@ -646,6 +655,13 @@ spack:
             set:
               NCAR_ROOT_IMPI: '{prefix}'
               NCAR_SPACK_HASH_IMPI: '{hash}'
+        intel-oneapi-vtune:
+          filter:
+            exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_VTUNE, NCAR_SPACK_HASH_INTEL_ONEAPI_VTUNE]
+          environment:
+            set:
+              NCAR_ROOT_VTUNE: '{prefix}'
+              NCAR_SPACK_HASH_VTUNE: '{hash}'
         nvhpc:
           environment:
             set:
@@ -749,6 +765,7 @@ spack:
           intel-oneapi-compilers-classic: intel-classic/{^intel-oneapi-compilers.version}
           intel-oneapi-mpi: impi/{version}
           intel-oneapi-mkl: mkl/{version}
+          intel-oneapi-vtune: vtune/{version}
           miniconda3: conda/latest
           parallelio build_type=Debug: parallelio/{version}-debug
         core_compilers:
@@ -961,3 +978,4 @@ spack:
   - parallelio@2.6.0%nvhpc@21.3+ncint ^cray-mpich@8.1.25%nvhpc@21.3
   - parallelio@2.6.0%nvhpc@23.1+ncint ^cray-mpich@8.1.25%nvhpc@23.1
   - parallelio@2.6.0%cce@15.0.1+ncint ^cray-mpich@8.1.25%cce@15.0.1
+  - intel-oneapi-vtune@2023.0.0

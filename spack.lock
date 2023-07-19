@@ -724,6 +724,10 @@
     {
       "hash": "ybto3s32nlp6cfqvid4b5a4yp3tjxtdb",
       "spec": "parallelio@2.6.0%cce@15.0.1+ncint ^cray-mpich@8.1.25%cce@15.0.1"
+    },
+    {
+      "hash": "fiybehnbnquzbbkdeuiyrhpivmtbv6l3",
+      "spec": "intel-oneapi-vtune@2023.0.0"
     }
   ],
   "concrete_specs": {
@@ -23936,6 +23940,37 @@
         }
       ],
       "hash": "ybto3s32nlp6cfqvid4b5a4yp3tjxtdb"
+    },
+    "fiybehnbnquzbbkdeuiyrhpivmtbv6l3": {
+      "name": "intel-oneapi-vtune",
+      "version": "2023.0.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "sles15",
+        "target": "x86_64_v3"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "7.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "generic",
+        "envmods": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/glade/u/apps/common/22.12/spack/opt/spack/intel-oneapi-vtune/2023.0.0",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "j24e7j7ndnzhdfkouokwqoez4sijmir3blddv35jckvqmao723sa====",
+      "hash": "fiybehnbnquzbbkdeuiyrhpivmtbv6l3"
     }
   }
 }

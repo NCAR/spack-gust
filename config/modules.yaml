@@ -156,6 +156,13 @@ modules:
           set:
             NCAR_ROOT_IMPI: '{prefix}'
             NCAR_SPACK_HASH_IMPI: '{hash}'
+      intel-oneapi-vtune:
+        filter:
+          exclude_env_vars: [NCAR_ROOT_INTEL_ONEAPI_VTUNE, NCAR_SPACK_HASH_INTEL_ONEAPI_VTUNE]
+        environment:
+          set:
+            NCAR_ROOT_VTUNE: '{prefix}'
+            NCAR_SPACK_HASH_VTUNE: '{hash}'
       nvhpc:
         environment:
           set:
@@ -259,6 +266,7 @@ modules:
         intel-oneapi-compilers-classic: intel-classic/{^intel-oneapi-compilers.version}
         intel-oneapi-mpi: impi/{version}
         intel-oneapi-mkl: mkl/{version}
+        intel-oneapi-vtune: vtune/{version}
         miniconda3: conda/latest
         parallelio build_type=Debug: parallelio/{version}-debug
       core_compilers:

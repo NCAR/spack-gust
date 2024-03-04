@@ -12,3 +12,4 @@ hide-modulefile /glade/u/apps/gust/modules/environment/crayenv/23.09.lua
 hide-modulefile /glade/u/apps/gust/modules/environment/crayenv/23.12.lua
 hide-modulefile /glade/u/apps/gust/modules/environment/crayenv/default
 hide-modulefile /glade/u/apps/gust/modules/environment/cesmdev/1.0.lua
+hide-modulefile /glade/u/apps/gust/modules/environment/ncarenv-basic/default

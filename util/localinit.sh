@@ -20,7 +20,7 @@ export LMOD_CONFIG_DIR=/glade/u/apps/spack-deployments/gust/23.09/envs/public/ut
 export LMOD_AVAIL_STYLE=grouped:system
 
 # Location of Lmod initialization scripts
-export LMOD_ROOT=/glade/u/apps/gust/23.09/spack/opt/spack/lmod/8.7.24/gcc/7.5.0/t7cw
+export LMOD_ROOT=/glade/u/apps/gust/23.09/spack/opt/spack/lmod/8.7.37/gcc/7.5.0/rohu
 
 # Use shell-specific init
 comm=`/bin/ps -p $$ -o cmd= |awk '{print $1}'|sed -e 's/-sh/csh/' -e 's/-csh/tcsh/' -e 's/-//g'`

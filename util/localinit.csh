@@ -18,7 +18,7 @@ setenv LMOD_CONFIG_DIR /glade/u/apps/spack-deployments/gust/23.09/envs/public/ut
 setenv LMOD_AVAIL_STYLE grouped:system
 
 # Get location of Lmod initialization scripts
-setenv LMOD_ROOT /glade/u/apps/gust/23.09/spack/opt/spack/lmod/8.7.24/gcc/7.5.0/t7cw
+setenv LMOD_ROOT /glade/u/apps/gust/23.09/spack/opt/spack/lmod/8.7.37/gcc/7.5.0/rohu
 
 # Add shell settings so Lmod can be used in bash scripts
 setenv PROFILEREAD true

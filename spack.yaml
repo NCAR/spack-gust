@@ -47,9 +47,9 @@ spack:
         prefix: /opt/cray/libfabric/1.15.2.0
       - spec: libfabric@1.15.0.0
         prefix: /opt/cray/libfabric/1.15.0.0
-      buildable: false
       require:
       - '%gcc@7.5.0'
+      - fabrics=cxi,tcp,udp
     bash:
       externals:
       - spec: bash@4.4.23
@@ -692,6 +692,9 @@ spack:
       - +hdf-eos2
       - +hdf-eos5
       - +hdf4
+    nccl:
+      require:
+      - cuda_arch=80
     netcdf:
       variants:
       - +dap
@@ -1200,7 +1203,7 @@ spack:
         - autoconf-archive
         - autoconf@2.71
         - automake
-        - libfabric
+        - libfabric@1.15
         - lmod
         exclude_implicits: true
         fftw+mpi:
@@ -1651,3 +1654,6 @@ spack:
   - nccmp@1.9.1.0%gcc@13.2.0
   - gmt@6.5.0%gcc@13.2.0
   - lmod@8.7.37
+  - libfabric@1.21.0-cxi
+  - aws-ofi-nccl@1.8.1%nvhpc@24.1 ^libfabric@1.21.0-cxi
+  - nccl@2.19.3-1

@@ -20,9 +20,9 @@ packages:
       prefix: /opt/cray/libfabric/1.15.2.0
     - spec: libfabric@1.15.0.0
       prefix: /opt/cray/libfabric/1.15.0.0
-    buildable: false
     require:
     - '%gcc@7.5.0'
+    - fabrics=cxi,tcp,udp
   bash:
     externals:
     - spec: bash@4.4.23
@@ -665,6 +665,9 @@ packages:
     - +hdf-eos2
     - +hdf-eos5
     - +hdf4
+  nccl:
+    require:
+    - cuda_arch=80
   netcdf:
     variants:
     - +dap

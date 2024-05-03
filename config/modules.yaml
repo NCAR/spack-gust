@@ -151,7 +151,7 @@ modules:
       - autoconf-archive
       - autoconf@2.71
       - automake
-      - libfabric
+      - libfabric@1.15
       - lmod
       exclude_implicits: true
       fftw+mpi:

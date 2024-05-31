@@ -341,6 +341,7 @@ modules:
       openmpi:
         environment:
           set:
+            PRTE_MCA_prte_tmpdir_base: /var/tmp
             OMPI_MCA_rmaps_default_mapping_policy: :hwtcpus
             OMPI_MCA_shmem_mmap_enable_nfs_warning: '0'
           prepend_path:

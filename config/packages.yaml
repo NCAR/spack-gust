@@ -1,28 +1,4 @@
 packages:
-  gcc:
-    externals:
-    - spec: gcc@13.2.0 languages='c,c++,fortran'
-      prefix: /glade/u/apps/common/23.08/spack/opt/spack/gcc/13.2.0
-      extra_attributes:
-        compilers:
-          c: /glade/u/apps/common/23.08/spack/opt/spack/gcc/13.2.0/bin/gcc
-          cxx: /glade/u/apps/common/23.08/spack/opt/spack/gcc/13.2.0/bin/g++
-          fortran: /glade/u/apps/common/23.08/spack/opt/spack/gcc/13.2.0/bin/gfortran
-    buildable: false
-    variants:
-    - +piclibs
-    - languages=c,c++,fortran,go
-    require:
-    - '%gcc@7.5.0'
-  libfabric:
-    externals:
-    - spec: libfabric@1.15.2 fabrics=cxi,tcp,udp
-      prefix: /opt/cray/libfabric/1.15.2.0
-    - spec: libfabric@1.15.0.0
-      prefix: /opt/cray/libfabric/1.15.0.0
-    require:
-    - '%gcc@7.5.0'
-    - fabrics=cxi,tcp,udp
   bash:
     externals:
     - spec: bash@4.4.23
@@ -104,6 +80,31 @@ packages:
     buildable: false
     require:
     - '%gcc@7.5.0'
+  gcc:
+    externals:
+    - spec: gcc@13.2.0 languages='c,c++,fortran'
+      prefix: /glade/u/apps/common/23.08/spack/opt/spack/gcc/13.2.0
+      extra_attributes:
+        compilers:
+          c: /glade/u/apps/common/23.08/spack/opt/spack/gcc/13.2.0/bin/gcc
+          cxx: /glade/u/apps/common/23.08/spack/opt/spack/gcc/13.2.0/bin/g++
+          fortran: /glade/u/apps/common/23.08/spack/opt/spack/gcc/13.2.0/bin/gfortran
+    buildable: false
+    variants:
+    - +piclibs
+    - languages=c,c++,fortran,go
+    require:
+    - '%gcc@7.5.0'
+  libfabric:
+    externals:
+    - spec: libfabric@1.15.2 fabrics=cxi,tcp,udp
+      prefix: /opt/cray/libfabric/1.15.2.0
+    - spec: libfabric@1.15.0.0
+      prefix: /opt/cray/libfabric/1.15.0.0
+    require:
+    - '%gcc@7.5.0'
+    - fabrics=cxi,tcp,udp
+    - +gdrcopy
   adios2:
     variants:
     - +hdf5
@@ -399,6 +400,10 @@ packages:
     - +tui
     - ~debuginfod
     - ~python
+  gdrcopy:
+    # Match version installed on computes
+    require:
+    - '@2.3'
   giflib:
     require:
     - '%gcc@7.5.0'
@@ -533,6 +538,8 @@ packages:
     - '@1.5'
   libjpeg-turbo:
     require: '%gcc@7.5.0'
+  libevent:
+    require: '%gcc@7.5.0'
   libogg:
     require:
     - '%gcc@7.5.0'
@@ -594,6 +601,10 @@ packages:
   matlab:
     require:
     - '%gcc@7.5.0'
+    externals:
+    - spec: matlab@R2024a
+      prefix: /glade/u/apps/opt/matlab/R2024a
+    buildable: false
   maven:
     require:
     - '%gcc@7.5.0'
@@ -694,6 +705,8 @@ packages:
     externals:
     - spec: nvhpc@24.1
       prefix: /glade/u/apps/common/23.08/spack/opt/spack/nvhpc/24.1
+    - spec: nvhpc@24.3
+      prefix: /glade/u/apps/common/23.08/spack/opt/spack/nvhpc/24.3
     buildable: false
   octave:
     variants:
@@ -730,9 +743,12 @@ packages:
     - +lustre
     - +internal-pmix
     - +cuda
-    - any_of:
-      - '^cuda@12.2:'
-      when: '@5.0.0rc16 +cuda'
+    - one_of:
+      - ^libfabric@1.22.0-cxi
+      when: '@5.0.3'
+    - one_of:
+      - ^libfabric@1.15.2
+      when: '@5.0.2'
   openpbs:
     externals:
     - spec: openpbs@2021.1.3

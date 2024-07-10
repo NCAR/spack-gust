@@ -1502,6 +1502,10 @@ spack:
               NCAR_ROOT_PARALLELIO: '{prefix}'
               NCAR_SPACK_HASH_PARALLELIO: '{hash}'
               PIO: '{prefix}'
+        podman:
+          environment:
+            set:
+              CONTAINERS_STORAGE_CONF: /glade/u/apps/etc/containers/storage.conf
         projections:
           all: '{name}/{version}'
           fftw+mpi: fftw-mpi/{version}

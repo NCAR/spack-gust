@@ -1,0 +1,67 @@
+Package Hash                     | Date Installed      | Spack Git Repo Commit                    | Jobs | Trust? | Cached? | Publish? | Register? | Raw Spec | Spec
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mrr5rnkqabeizox5a5ehcixy2xu7p4ph | 2025-02-13T16:33:03 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | libfabric@1.22.0%gcc@7.5.0 | libfabric@1.22.0%gcc@7.5.0
+skuho55t6dazykkcznolg4udnvlhjaa5 | 2025-02-13T16:34:12 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      | yes       | gcc@12.4.0%gcc@7.5.0 | gcc@12.4.0%gcc@7.5.0
+7hyatfx3iuug7youwewqf54ew7w6tdei | 2025-02-13T16:36:54 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      | yes       | nvhpc@24.11 | nvhpc@24.11
+kozcht53fsvhewgxppccsfpcpttjrksf | 2025-02-13T16:44:48 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      | yes       | intel-oneapi-compilers@2024.2.1 | intel-oneapi-compilers@2024.2.1
+cffknayck5q3n4ku2ovsnr5cudiewcoz | 2025-02-13T16:47:32 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      | yes       | intel-oneapi-compilers@2025.0.3 | intel-oneapi-compilers@2025.0.3
+7u6n6fon3h3n335qjmyiyruo3hvqch73 | 2025-02-13T16:50:35 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | automake | automake
+papg5l6yuiafsb5e4vtxkqkbopng4ed7 | 2025-02-13T16:51:06 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | autoconf | autoconf
+ifvgprklbehkngh5t7htkewep7qymcwx | 2025-02-13T16:51:34 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | autoconf-archive | autoconf-archive
+7snt6z22lrz7j5fjrju5vyeb4pn3u537 | 2025-02-13T16:52:06 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | libtool | libtool
+57yjqolhwuu2fa52pkaj3wwufe5g2q36 | 2025-02-13T16:52:36 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | nghttp2 | nghttp2
+2kjif2wnmyxirfx7njnznv73tmfbaewn | 2025-02-13T16:53:05 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | unzip | unzip
+xtxbizwdu24fl7cueztxnlnam3w2yga7 | 2025-02-13T16:53:36 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | libszip | libszip
+lopo52i4gomubkcmjyhab6z6vr6hrsf3 | 2025-02-13T16:54:07 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | bzip2 | bzip2
+tielw6lurgqycckrbnr55ne4z5qrl63b | 2025-02-13T16:58:21 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | xz | xz
+swxbagzbkw33lpvp2sbyzlway3rsnhpu | 2025-02-13T16:58:49 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | openssl | openssl
+2vwolszld6w5sxrsqtybs2a52hffdsld | 2025-02-13T16:59:20 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | perl | perl
+qotok5rtabu6oejcycwjj2pbse5cdljk | 2025-02-13T16:59:50 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | libpng | libpng
+tbijuiwzf3p7wvkwt6wnm4dflrz7letg | 2025-02-13T17:00:21 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | libjpeg-turbo | libjpeg-turbo
+p3h6dwfv2eafsy4ymjrivsfa536m2prl | 2025-02-13T17:00:54 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | libtiff | libtiff
+sfazlhb2anoieoz6sk5vq5dsfmcb2k3j | 2025-02-13T17:01:26 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | libtirpc | libtirpc
+u5zr2arn2cyx5fa3c55jodnvkaw73umb | 2025-02-13T17:01:57 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | jasper | jasper
+kjybskydc5nm2d6cdgtxeoeao4ew6owq | 2025-02-13T17:06:21 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | ncurses | ncurses
+js664srfqoz4rvyaqvxhx226b7h7el66 | 2025-02-13T17:06:51 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | readline | readline
+ckr63n74fkgj5cdnkc4x6ibgzyct4wjm | 2025-02-13T17:07:21 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | sqlite | sqlite
+a2gv672zckehpsgvkrfpfvu5amblvrde | 2025-02-13T17:07:51 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | texinfo | texinfo
+wwohgq3gb63v4d5p35dvyq7snrgz3w77 | 2025-02-13T17:08:21 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | bison | bison
+pe27kn3ycjvtmwjkpkxspafzahg7kubj | 2025-02-13T17:08:51 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | ruby | ruby
+pi2jch6ck4ivnguoglhend2yly5i3szu | 2025-02-13T17:09:22 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | tcl | tcl
+ovvhsq4wm5twcf5umch3s44ojqbpkbit | 2025-02-13T17:09:53 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | flex@2.6.4 | flex@2.6.4
+mt74xa3l5hrx6ecr47bmlpij4fgtsein | 2025-02-13T17:14:53 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | squashfs | squashfs
+am65pqvrhp3kjts4fudj3zppchsawsap | 2025-02-13T17:15:26 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | squashfuse | squashfuse
+jcybifkrbrhtgush6kravdeamqnq4kyq | 2025-02-13T17:15:55 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | antlr | antlr
+b5axyrb4zayczt2rksoqihbekckz6g34 | 2025-02-13T17:16:25 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | zstd | zstd
+2cug2myi3v7y5m3sra6n73ketfxekibv | 2025-02-13T17:16:58 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | python | python
+q2h7hcogribttbmcfvlcbn6ym4bhunh6 | 2025-02-13T17:17:30 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | py-pip | py-pip
+5pvy3me3p6r33vr6unnwu4sfxojwfrps | 2025-02-13T17:18:02 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | py-setuptools | py-setuptools
+6fojssmurjlc5yzsannyy54dqypvekyf | 2025-02-13T17:18:34 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | py-pyyaml | py-pyyaml
+xtlufjdfsup6j2yw6yupc7mtgjpzsgr3 | 2025-02-13T17:24:29 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | meson | meson
+djyss66tg3ys2scq3jluflp7yvjgxieu | 2025-02-13T17:24:59 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | openjdk | openjdk
+sm2z5ib6rcluktg55arxvp3nbqzeq4nu | 2025-02-13T17:25:30 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | tmux | tmux
+peyl4lp34sx45lnouf2j564c7qhyrhht | 2025-02-13T17:26:01 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | gdb | gdb
+hk7nblek65rldrfgbzh7shekyikc6dzj | 2025-02-13T17:26:31 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | tree | tree
+k3q2x7jj5aokdr2pc4i2xdtzu7hrkh34 | 2025-02-13T17:27:01 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | libtree | libtree
+tkdauk6ik5eec4mhmrn2viymz6rnoikr | 2025-02-13T17:27:35 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | slirp4netns | slirp4netns
+7ntrgvbygc52l5nluasyijxs26ovjpgu | 2025-02-13T17:32:58 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | deps    | yes      |           | go | go
+mvdbprlbxslunl5srvybttnds7xojojq | 2025-02-13T17:43:43 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | nano | nano
+u7oiizgku6a7aus2pcs3ufyefe4gpmlb | 2025-02-13T17:44:17 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | xnedit | xnedit
+f54l4vn2qpxwfuqzt6gdgigvqpnq4h3d | 2025-02-13T17:44:49 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | parallel | parallel
+zszbuncmo36u73agdpgbb2zwhqvv37mn | 2025-02-13T17:45:20 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | ncftp | ncftp
+upmln4nsi6mkfoumtuwdnf2povwrlebx | 2025-02-13T17:45:52 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | googletest | googletest
+2rwvsbvgzeakwnhnqg4523jvr5ks7vuv | 2025-02-13T17:46:24 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | jq | jq
+5tcinb5ep2rjrlvams6baxxo7i7t5gdl | 2025-02-13T17:46:55 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | pandoc | pandoc
+oul7atzgez4qrrzr7t2ric6lft22irtj | 2025-02-13T17:47:27 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | rclone | rclone
+g3uzh5ef7w6whsbdnkyvrf4nhduw7w3g | 2025-02-13T17:54:20 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | openjpeg | openjpeg
+4bpxkxtcujjfuemg4lfw5geyjwjyfr22 | 2025-02-13T17:54:51 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | json-c | json-c
+jby74hk6ga6ckccr77we4qxigxwrmv7t | 2025-02-13T17:55:22 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | curl | curl
+rthi7vcgyqrbbqla55b36xkalsgzx4qq | 2025-02-13T17:55:56 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | git | git
+zaf5ngft6bcvknxoq3wbr6lswla7sfwx | 2025-02-13T17:56:30 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | git-lfs | git-lfs
+ql63ldb3vyhpajerrj2xdzf5i372wla6 | 2025-02-13T17:57:06 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | imagemagick | imagemagick
+zsj5vyvplmpbrttfokcynqwnbk5b3det | 2025-02-13T18:09:01 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc | 8    | no     | yes     | yes      |           | qt | qt
+dq5jxzeowc4ditn4o3lem3orxfs46vqx | 2025-02-13T18:13:00 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | emacs | emacs
+43cl7xwmaagm327mbf4gw34kg6f2uipm | 2025-02-13T18:13:36 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | gnuplot | gnuplot
+c7saya2l7eewy7c22copvklwgi6q5iic | 2025-02-13T18:14:10 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | xxdiff | xxdiff
+jjqkzxpo63no7vgoawqc6xjie3uve3uu | 2025-02-13T18:14:46 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | vim | vim
+daf44pt4trolndfdatlkicbn2qu4t2gt | 2025-02-13T18:15:20 | 7328c2c0fbbb91b0bf1e3574e4ee8ce09bd6d4bc |      | no     | yes     | yes      |           | lmod | lmod

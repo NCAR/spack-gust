@@ -26,6 +26,9 @@ spack:
     template_dirs:
     - /glade/u/apps/gust/24.12/envs/build/templates/modules
   packages:
+    ncvis:
+      require:
+      - ^netcdf-c@:4.9.2
     openssl:
       externals:
       - spec: openssl@3.1.4
@@ -154,7 +157,7 @@ spack:
         when: '%oneapi ^netcdf-c'
       # Try to motivate use of system libfabric for cray-mpich stuff
       - spec: ^libfabric@1.22.0
-        when: ^libfabric ^cray-mpich@8.1.29
+        when: ^libfabric ^cray-mpich@8.1.31
     antlr:
       require:
       - '%gcc'
@@ -236,32 +239,32 @@ spack:
       - '%gcc'
     cray-libsci:
       externals:
-      - spec: cray-libsci@24.03.0
+      - spec: cray-libsci@24.11.0
         modules:
-        - cray-libsci/24.03.0
+        - cray-libsci/24.11.0
       buildable: false
     cray-mpich:
       externals:
-      - spec: cray-mpich@8.1.29 %gcc
-        prefix: /opt/cray/pe/mpich/8.1.29/ofi/gnu/12.3
+      - spec: cray-mpich@8.1.31 %gcc
+        prefix: /opt/cray/pe/mpich/8.1.31/ofi/gnu/12.3
         extra_attributes:
           environment:
             append_path:
               LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
-      - spec: cray-mpich@8.1.29 %cce
-        prefix: /opt/cray/pe/mpich/8.1.29/ofi/cray/17.0
+      - spec: cray-mpich@8.1.31 %cce
+        prefix: /opt/cray/pe/mpich/8.1.31/ofi/cray/17.0
         extra_attributes:
           environment:
             append_path:
               LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
-      - spec: cray-mpich@8.1.29 %nvhpc
-        prefix: /opt/cray/pe/mpich/8.1.29/ofi/nvidia/23.3
+      - spec: cray-mpich@8.1.31 %nvhpc
+        prefix: /opt/cray/pe/mpich/8.1.31/ofi/nvidia/23.3
         extra_attributes:
           environment:
             append_path:
               LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
-      - spec: cray-mpich@8.1.29 %oneapi
-        prefix: /opt/cray/pe/mpich/8.1.29/ofi/intel/2022.1
+      - spec: cray-mpich@8.1.31 %oneapi
+        prefix: /opt/cray/pe/mpich/8.1.31/ofi/intel/2022.1
         extra_attributes:
           environment:
             append_path:
@@ -1203,18 +1206,7 @@ spack:
         core_compilers:
         - gcc@7.5.0
         core_specs:
-        - go
-        - intel-oneapi-compilers
-        - nvhpc
-        - libfabric
-        - cudnn
         - nco
-        - rstudio
-        - idl
-        - matlab
-        - intel-oneapi-advisor
-        - intel-oneapi-vtune
-        - texlive
         - gmt
         - cdo
         - nccmp
@@ -1222,26 +1214,37 @@ spack:
         - cray-libsci
         - lcov
         - neovim
-        - libtorch
         - madis
         - eigen
-        - grib-util
         - wgrib2
         - grads
         - ecflow
+        - intel-oneapi-advisor
         - ncvis
-        - julia
+        - intel-oneapi-vtune
         - darshan-util
-        - linaro-forge
-        - ncl
         - charliecloud
+        - cudnn
         - peak-memusage
-        - podman
+        - cuda
         - apptainer
         - miniconda3
         - cmake
-        - cuda
         - pcre
+        - go
+        - intel-oneapi-compilers
+        - nvhpc
+        - libfabric
+        - rstudio
+        - idl
+        - matlab
+        - texlive
+        - libtorch
+        - grib-util
+        - julia
+        - linaro-forge
+        - ncl
+        - podman
         - r
         - miniconda
         cuda:
@@ -1698,3 +1701,96 @@ spack:
   - xxdiff
   - vim
   - lmod
+  - cmake@3.26.6
+  - miniconda3
+  - apptainer
+  - pcre
+  - peak-memusage
+  - cuda@12.3.2
+  - cudnn@9.2.0.82-12
+  - charliecloud
+  - darshan-util@3.4.6
+  - intel-oneapi-vtune@2025.0.1
+  - ncvis
+  - intel-oneapi-advisor@2025.0.0
+  - ecflow
+  - grads
+  - wgrib2
+  - eigen
+  - madis
+  - neovim
+  - lcov
+  - cray-libsci@24.11.0%cce@18.0.1
+  - ncview@2.1.9
+  - nccmp@1.9.1.0
+  - cdo@2.4.4
+  - gmt@6.5.0
+  - nco@5.3.1
+  - intel-oneapi-mkl@2024.2.2%oneapi@2024.2.1
+  - intel-oneapi-mkl@2025.0.1%oneapi@2025.0.3
+  - intel-oneapi-mkl@2025.0.1%gcc@12.4.0
+  - ncarcompilers@1.0.0%gcc@12.4.0
+  - ncarcompilers@1.0.0%nvhpc@24.11
+  - ncarcompilers@1.0.0%oneapi@2024.2.1
+  - ncarcompilers@1.0.0%oneapi@2025.0.3
+  - ncarcompilers@1.0.0%cce@18.0.1
+  - openblas@0.3.28%gcc@12.4.0
+  - fftw@3.3.10%gcc@12.4.0~mpi
+  - fftw@3.3.10%oneapi@2024.2.1~mpi
+  - fftw@3.3.10%nvhpc@24.11~mpi
+  - fftw@3.3.10%oneapi@2025.0.3~mpi
+  - fftw@3.3.10%cce@18.0.1~mpi
+  - udunits@2.2.28%gcc@12.4.0
+  - udunits@2.2.28%nvhpc@24.11
+  - udunits@2.2.28%oneapi@2024.2.1
+  - udunits@2.2.28%oneapi@2025.0.3
+  - udunits@2.2.28%cce@18.0.1
+  - hdf5@1.12.3%gcc@12.4.0~mpi
+  - hdf5@1.12.3%nvhpc@24.11~mpi
+  - hdf5@1.12.3%oneapi@2024.2.1~mpi
+  - hdf5@1.12.3%oneapi@2025.0.3~mpi
+  - hdf5@1.12.3%cce@18.0.1~mpi
+  - h5z-zfp@1.1.1%gcc@12.4.0
+  - netcdf@4.9.2%gcc@12.4.0~mpi
+  - netcdf@4.9.2%nvhpc@24.11~mpi
+  - netcdf@4.9.2%oneapi@2024.2.1~mpi
+  - netcdf@4.9.2%oneapi@2025.0.3~mpi
+  - netcdf@4.9.2%cce@18.0.1~mpi
+  - proj@9.4.1%gcc@12.4.0
+  - proj@9.4.1%nvhpc@24.11
+  - proj@9.4.1%oneapi@2024.2.1
+  - proj@9.4.1%oneapi@2025.0.3
+  - proj@9.4.1%cce@18.0.1
+  - geos@3.13.0%gcc@12.4.0
+  - geos@3.13.0%nvhpc@24.11
+  - geos@3.13.0%oneapi@2024.2.1
+  - geos@3.13.0%oneapi@2025.0.3
+  - geos@3.13.0%cce@18.0.1
+  - gdal@3.9.3%gcc@12.4.0
+  - gdal@3.9.3%oneapi@2024.2.1
+  - gdal@3.9.3%oneapi@2025.0.3
+  - hdf@4.2.15%gcc@12.4.0
+  - hdf@4.2.15%nvhpc@24.11
+  - hdf@4.2.15%oneapi@2024.2.1 cflags='-std=c90 -Wno-error=int-conversion'
+  - hdf@4.2.15%oneapi@2025.0.3 cflags='-std=c90 -Wno-error=int-conversion'
+  - hdf@4.2.15%cce@18.0.1 cflags='-std=c90 -Wno-error=int-conversion'
+  - superlu@6.0.0%gcc@12.4.0
+  - superlu@6.0.0%nvhpc@24.11
+  - superlu@6.0.0%oneapi@2024.2.1
+  - superlu@6.0.0%oneapi@2025.0.3
+  - superlu@6.0.0%cce@18.0.1
+  - eccodes@2.34.0%gcc@12.4.0
+  - eccodes@2.34.0%nvhpc@24.11
+  - eccodes@2.34.0%oneapi@2024.2.1
+  - eccodes@2.34.0%oneapi@2025.0.3
+  - eccodes@2.34.0%cce@18.0.1
+  - ioapi@3.2%gcc@12.4.0
+  - cray-mpich@8.1.31%gcc@12.4.0
+  - cray-mpich@8.1.31%nvhpc@24.11
+  - cray-mpich@8.1.31%oneapi@2024.2.1
+  - cray-mpich@8.1.31%oneapi@2025.0.3
+  - cray-mpich@8.1.31%cce@18.0.1
+  - mpi-serial@2.5.0%gcc@12.4.0
+  - mpi-serial@2.5.0%nvhpc@24.11
+  - mpi-serial@2.5.0%oneapi@2024.2.1
+  - mpi-serial@2.5.0%oneapi@2025.0.3

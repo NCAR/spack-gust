@@ -54,18 +54,7 @@ modules:
       core_compilers:
       - gcc@7.5.0
       core_specs:
-      - go
-      - intel-oneapi-compilers
-      - nvhpc
-      - libfabric
-      - cudnn
       - nco
-      - rstudio
-      - idl
-      - matlab
-      - intel-oneapi-advisor
-      - intel-oneapi-vtune
-      - texlive
       - gmt
       - cdo
       - nccmp
@@ -73,26 +62,37 @@ modules:
       - cray-libsci
       - lcov
       - neovim
-      - libtorch
       - madis
       - eigen
-      - grib-util
       - wgrib2
       - grads
       - ecflow
+      - intel-oneapi-advisor
       - ncvis
-      - julia
+      - intel-oneapi-vtune
       - darshan-util
-      - linaro-forge
-      - ncl
       - charliecloud
+      - cudnn
       - peak-memusage
-      - podman
+      - cuda
       - apptainer
       - miniconda3
       - cmake
-      - cuda
       - pcre
+      - go
+      - intel-oneapi-compilers
+      - nvhpc
+      - libfabric
+      - rstudio
+      - idl
+      - matlab
+      - texlive
+      - libtorch
+      - grib-util
+      - julia
+      - linaro-forge
+      - ncl
+      - podman
       - r
       - miniconda
       cuda:

@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   10:27, 24 Dec 2024
+#   Last Revised:   11:32, 20 Feb 2025
 #
 
 #
@@ -25,22 +25,22 @@ compilers="cce gcc nvhpc oneapi intel"
 mpis="cray-mpich"
 
 # Specify core modules to import into the Spack module tree
-core="  craype/2.7.31
-        cce/17.0.1
-        perftools-base/24.03.0
-        atp/3.15.3
-        cray-ccdb/5.0.3
-        cray-dyninst/12.3.1
-        cray-stat/4.12.2
-        gdb4hpc/4.16.1
-        cray-mrnet/5.1.2
-        papi/7.1.0.1
-        sanitizers4hpc/1.1.2
-        valgrind4hpc/2.13.2"
+core="  craype/2.7.33
+        cce/18.0.1
+        perftools-base/24.11.0
+        atp/3.15.5
+        cray-ccdb/5.0.5
+        cray-dyninst/12.3.4
+        cray-stat/4.12.4
+        gdb4hpc/4.16.3
+        cray-mrnet/5.1.4
+        papi/7.1.0.4
+        sanitizers4hpc/1.1.4
+        valgrind4hpc/2.13.4"
 
 # Specify compiler-dependent modules to import into the Spack module tree
-cdep="  cray-libsci/24.03.0
-        cray-mpich/8.1.29"
+cdep="  cray-libsci/24.11.0
+        cray-mpich/8.1.31"
 
 # Specify mpi-dependent modules to import into the Spack module tree
 mdep="  cray-mpixlate/1.0.2"

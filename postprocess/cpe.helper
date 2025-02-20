@@ -6,7 +6,7 @@
 #       versions for a particular CPE installation.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   15:49, 20 Feb 2025
+#   Last Revised:   16:06, 20 Feb 2025
 #
 
 #
@@ -75,4 +75,19 @@ function get_package_version {
 
     tsecho "Error: package $2 not found in any CPE release"
     exit 1
+}
+
+# As of CPE > 23.09, PALS is no longer packaged with it. Thus we need
+# conditional logic for finding the correct PALS to use. For newer versions
+# just use the default version on the system.
+function get_pals_info {
+    if [[ ${1//.} -gt 2309 ]]; then 
+        pals_version=$(readlink -f /opt/cray/pals/default | awk -F/ '{print $NF}')
+        pals_root=/opt/cray/pals/$pals_version
+    else
+        pals_version=$(get_package_version $mpich_cpe pals)
+        pals_root=/opt/cray/pe/pals/$pals_version
+    fi
+
+    declare -g pals_version pals_root
 }

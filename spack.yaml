@@ -1855,3 +1855,7 @@ spack:
   - kokkos@4.2.01%gcc@12.4.0
   - kokkos@4.2.01%nvhpc@24.11
   - linaro-forge@24.1
+  - osu-micro-benchmarks%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - osu-micro-benchmarks%nvhpc@24.11 ^cray-mpich@8.1.31%nvhpc@24.11
+  - osu-micro-benchmarks%oneapi@2024.2.1 ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - osu-micro-benchmarks%oneapi@2025.0.3 ^cray-mpich@8.1.31%oneapi@2025.0.3

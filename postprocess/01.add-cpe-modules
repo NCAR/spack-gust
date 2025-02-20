@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   16:03, 20 Feb 2025
+#   Last Revised:   16:33, 20 Feb 2025
 #
 
 #
@@ -110,6 +110,7 @@ function modify_mpi {
     mpich_cpe=$(get_cpe_version $mod_name $mod_version)
     pmi_version=$(get_package_version $mpich_cpe pmi)
     cti_version=$(get_package_version $mpich_cpe cti)
+    get_pals_info $mpich_cpe
 
     if [[ $log_me != no ]]; then
         tsecho "    using CPE=$mpich_cpe, PALS=$pals_version, PMI=$pmi_version, CTI=$cti_version"

@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   11:32, 20 Feb 2025
+#   Last Revised:   15:47, 20 Feb 2025
 #
 
 #
@@ -50,8 +50,8 @@ mdep="  cray-mpixlate/1.0.2"
 #
 
 function modify_comp {
-sed -i '/--.*Lmod hierarchy/Q; /pend_path[ ("]*MODULEPATH/d' $1
-cat >> $1 << EOF
+    sed -i '/--.*Lmod hierarchy/Q; /pend_path[ ("]*MODULEPATH/d' $1
+    cat >> $1 << EOF
 -- Find custom moduleroots
 local mroot_vars = os.getenv("__NCAR_VARS_MODULEROOT")
 
@@ -81,8 +81,8 @@ setenv("NCAR_BUILD_ENV",            my_ncar_env)
 
 EOF
 
-if [[ $mod_name == cce ]]; then
-cat >> $1 << EOF
+    if [[ $mod_name == cce ]]; then
+        cat >> $1 << EOF
 setenv("NCAR_ROOT_CCE",             CCE_M_CURPATH)
 setenv("NCAR_ROOT_COMPILER",        CCE_M_CURPATH)
 
@@ -90,42 +90,49 @@ setenv("NCAR_ROOT_COMPILER",        CCE_M_CURPATH)
 depends_on("cray-libsci")
 EOF
 
-if [[ ${mod_version%%.*} -ge 17 ]]; then
-# Apparently this is always needed, even if we LIBRARY_PATH the compiler libs
-cat >> $1 << EOF
+        if [[ ${mod_version%%.*} -ge 17 ]]; then
+            # Apparently this is always needed, even if we LIBRARY_PATH the compiler libs
+            cat >> $1 << EOF
 
 -- We need a newer GCC toolchain to use newer cray-mpich
 setenv("NCAR_MFLAGS_COMPILER", "--gcc-toolchain=$core_gcc_root")
 EOF
-fi
-elif [[ $mod_name == gcc ]]; then
-cat >> $1 << EOF
+        fi
+    elif [[ $mod_name == gcc ]]; then
+        cat >> $1 << EOF
 setenv("NCAR_ROOT_GCC",             PE_DIR)
 setenv("NCAR_ROOT_COMPILER",        PE_DIR)
 EOF
-fi
+    fi
 }
 
 function modify_mpi {
-mpich_cpe=$(get_cpe_version $mod_name $mod_version)
-pals_version=$(get_package_version $mpich_cpe pals)
-pmi_version=$(get_package_version $mpich_cpe pmi)
-cti_version=$(get_package_version $mpich_cpe cti)
+    mpich_cpe=$(get_cpe_version $mod_name $mod_version)
+    pmi_version=$(get_package_version $mpich_cpe pmi)
+    cti_version=$(get_package_version $mpich_cpe cti)
 
-if [[ $log_me != no ]]; then
-tsecho "    using CPE=$mpich_cpe, PALS=$pals_version, PMI=$pmi_version, CTI=$cti_version"
-log_me=no
-fi
+    if [[ ${mpich_cpe//.} -gt 2309 ]]; then 
+        pals_version=$(get_package_version $mpich_cpe pals)
+        pals_root=/opt/cray/pe/pals/$pals_version
+    else
+        pals_version=$(readlink -f /opt/cray/pals/default | awk -F/ '{print $NF}')
+        pals_root=/opt/cray/pals/$pals_version
+    fi
 
-# CUDA 12 is not supported by 8.1.25
-if [[ $mod_version == 8.1.25 ]]; then
-    cuda_dependency='between("cuda","1.0","<12.0")'
-else
-    cuda_dependency='"cuda"'
-fi
+    if [[ $log_me != no ]]; then
+        tsecho "    using CPE=$mpich_cpe, PALS=$pals_version, PMI=$pmi_version, CTI=$cti_version"
+        log_me=no
+    fi
 
-sed -i '/--.*Lmod hierarchy/Q; /pend_path[ ("]*MODULEPATH/d' $1
-cat >> $1 << EOF
+    # CUDA 12 is not supported by 8.1.25
+    if [[ $mod_version == 8.1.25 ]]; then
+        cuda_dependency='between("cuda","1.0","<12.0")'
+    else
+        cuda_dependency='"cuda"'
+    fi
+
+    sed -i '/--.*Lmod hierarchy/Q; /pend_path[ ("]*MODULEPATH/d' $1
+    cat >> $1 << EOF
 -- Use separate libfabric module now
 depends_on("libfabric")
 
@@ -152,7 +159,7 @@ setenv("CRAYPE_NETWORK_TARGET", "$cray_network")
 prepend_path("LD_LIBRARY_PATH", MPICH_DIR .. "/lib")
 
 -- PALS support
-local PALS_DIR = "/opt/cray/pe/pals/${pals_version}"
+local PALS_DIR = "$pals_root"
 prepend_path("PATH", PALS_DIR .. "/bin")
 prepend_path("MANPATH", PALS_DIR .. "/man")
 prepend_path("PKG_CONFIG_PATH", PALS_DIR .. "/lib/pkgconfig")
@@ -210,17 +217,17 @@ end
 setenv("PALS_FANOUT", "32")
 EOF
 
-if [[ $comp_name != gcc ]] && [[ ${mod_version//.} -ge 8129 ]] && [[ $cpe_needs_gcc -gt $core_gcc_major ]]; then
-cat >> $1 << EOF
+    if [[ $comp_name != gcc ]] && [[ ${mod_version//.} -ge 8129 ]] && [[ $cpe_needs_gcc -gt $core_gcc_major ]]; then
+        cat >> $1 << EOF
 
 -- We need a newer GCC toolchain to use newer cray-mpich
 depends_on(atleast("gcc-toolchain", "12.0.0"))
 EOF
-fi
+    fi
 }
 
 function modify_craype {
-cat >> $1 << EOF
+    cat >> $1 << EOF
 
 -- CPU architecture specification 
 prepend_path("PE_PRODUCT_LIST", "CRAYPE_X86_MILAN")
@@ -240,19 +247,19 @@ EOF
 }
 
 function modify_libsci {
-cat >> $1 << EOF
+    cat >> $1 << EOF
 
 -- Set family to indicate math routines
 family("mathpack")
 EOF
 
-if [[ $comp_name != gcc ]] && [[ ${mod_version%%.*} -ge 24 ]] && [[ $cpe_needs_gcc -gt $core_gcc_major ]]; then
-cat >> $1 << EOF
+    if [[ $comp_name != gcc ]] && [[ ${mod_version%%.*} -ge 24 ]] && [[ $cpe_needs_gcc -gt $core_gcc_major ]]; then
+        cat >> $1 << EOF
 
 -- We need a newer GCC toolchain to use newer cray-libsci
 depends_on(atleast("gcc-toolchain", "12.0.0"))
 EOF
-fi
+    fi
 }
 
 function set_dependency {
@@ -268,7 +275,7 @@ function set_dependency {
 }
 
 function add_dependency {
-cat >> $1 << EOF
+    cat >> $1 << EOF
 
 -- Module depends on Cray Compiler Drivers for proper function
 depends_on("craype")

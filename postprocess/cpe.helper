@@ -6,7 +6,7 @@
 #       versions for a particular CPE installation.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   19:45, 15 Nov 2024
+#   Last Revised:   15:49, 20 Feb 2025
 #
 
 #
@@ -14,7 +14,7 @@
 #
 
 # CPE module paths
-cray_mpath=/opt/cray/pe/lmod/modulefiles/core:/opt/cray/modulefiles:/opt/cray/pe/lmod/modulefiles/craype-targets/default
+cray_mpath=/opt/cray/pe/lmod/modulefiles/core:/opt/cray/modulefiles:/opt/cray/pals/modulefiles:/opt/cray/pe/lmod/modulefiles/craype-targets/default
 
 # Which network type are we using (ofi or ucx)
 cray_network=ofi

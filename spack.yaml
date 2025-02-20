@@ -443,8 +443,6 @@ spack:
     glibc:
       prefer:
       - '%gcc'
-      require:
-      - '%gcc'
     glpk:
       require:
       - '%gcc'
@@ -1206,6 +1204,7 @@ spack:
         core_compilers:
         - gcc@7.5.0
         core_specs:
+        - linaro-forge
         - nco
         - gmt
         - cdo
@@ -1242,7 +1241,6 @@ spack:
         - libtorch
         - grib-util
         - julia
-        - linaro-forge
         - ncl
         - podman
         - r
@@ -1794,3 +1792,66 @@ spack:
   - mpi-serial@2.5.0%nvhpc@24.11
   - mpi-serial@2.5.0%oneapi@2024.2.1
   - mpi-serial@2.5.0%oneapi@2025.0.3
+  - libemos@4.5.1%gcc@12.4.0
+  - parallelio@2.6.5%gcc@12.4.0~mpi
+  - parallelio@2.6.5%nvhpc@24.11~mpi
+  - parallelio@2.6.5%oneapi@2024.2.1~mpi
+  - parallelio@2.6.5%oneapi@2025.0.3~mpi
+  - esmf@8.8.0%gcc@12.4.0~mpi
+  - esmf@8.8.0%nvhpc@24.11~mpi
+  - esmf@8.8.0%oneapi@2024.2.1~mpi
+  - esmf@8.8.0%oneapi@2025.0.3~mpi
+  - kokkos@4.2.01%oneapi@2024.2.1
+  - kokkos@4.2.01%oneapi@2025.0.3
+  - spherepack@3.2%gcc@12.4.0
+  - spherepack@3.2%nvhpc@24.11
+  - spherepack@3.2%oneapi@2024.2.1
+  - spherepack@3.2%oneapi@2025.0.3
+  - parallel-netcdf@1.14.0%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - parallel-netcdf@1.14.0%nvhpc@24.11 ^cray-mpich@8.1.31%nvhpc@24.11
+  - parallel-netcdf@1.14.0%oneapi@2024.2.1 ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - parallel-netcdf@1.14.0%oneapi@2025.0.3 ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - hdf5@1.12.3%gcc@12.4.0+mpi ^cray-mpich@8.1.31%gcc@12.4.0
+  - hdf5@1.12.3%nvhpc@24.11+mpi ^cray-mpich@8.1.31%nvhpc@24.11
+  - hdf5@1.12.3%oneapi@2024.2.1+mpi ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - hdf5@1.12.3%oneapi@2025.0.3+mpi ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - netcdf@4.9.2%gcc@12.4.0+mpi ^cray-mpich@8.1.31%gcc@12.4.0
+  - netcdf@4.9.2%nvhpc@24.11+mpi ^cray-mpich@8.1.31%nvhpc@24.11
+  - netcdf@4.9.2%oneapi@2024.2.1+mpi ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - netcdf@4.9.2%oneapi@2025.0.3+mpi ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - fftw@3.3.10%gcc@12.4.0+mpi ^cray-mpich@8.1.31%gcc@12.4.0
+  - fftw@3.3.10%nvhpc@24.11+mpi ^cray-mpich@8.1.31%nvhpc@24.11
+  - fftw@3.3.10%oneapi@2024.2.1+mpi ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - fftw@3.3.10%oneapi@2025.0.3+mpi ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - parallelio1@1.10.1%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - parallelio1@1.10.1%nvhpc@24.11 ^cray-mpich@8.1.31%nvhpc@24.11
+  - parallelio1@1.10.1%oneapi@2024.2.1 ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - parallelio1@1.10.1%oneapi@2025.0.3 ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - darshan-runtime@3.4.6%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - darshan-runtime@3.4.6%nvhpc@24.11 ^cray-mpich@8.1.31%nvhpc@24.11
+  - darshan-runtime@3.4.6%oneapi@2024.2.1 ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - darshan-runtime@3.4.6%oneapi@2025.0.3 ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - parallelio@2.6.5%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - parallelio@2.6.5%nvhpc@24.11 ^cray-mpich@8.1.31%nvhpc@24.11
+  - parallelio@2.6.5%oneapi@2024.2.1 ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - parallelio@2.6.5%oneapi@2025.0.3 ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - esmf@8.8.0%gcc@12.4.0+mpi+pnetcdf ^cray-mpich@8.1.31%gcc@12.4.0
+  - esmf@8.8.0%nvhpc@24.11+mpi+pnetcdf ^cray-mpich@8.1.31%nvhpc@24.11
+  - esmf@8.8.0%oneapi@2024.2.1+mpi+pnetcdf ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - esmf@8.8.0%oneapi@2025.0.3+mpi+pnetcdf ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - parallelio@2.6.5%gcc@12.4.0~shared ^cray-mpich@8.1.31%gcc@12.4.0
+  - parallelio@2.6.5%nvhpc@24.11~shared ^cray-mpich@8.1.31%nvhpc@24.11
+  - parallelio@2.6.5%oneapi@2024.2.1~shared ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - parallelio@2.6.5%oneapi@2025.0.3~shared ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - gptl@8.1.1%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - gptl@8.1.1%nvhpc@24.11 ^cray-mpich@8.1.31%nvhpc@24.11
+  - gptl@8.1.1%oneapi@2024.2.1 ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - gptl@8.1.1%oneapi@2025.0.3 ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - superlu-dist@8.2.1%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - superlu-dist@8.2.1%oneapi@2024.2.1 ^cray-mpich@8.1.31%oneapi@2024.2.1
+  - superlu-dist@8.2.1%oneapi@2025.0.3 ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - mpifileutils@0.11.1%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - opencoarrays@2.10.2%gcc@12.4.0 ^cray-mpich@8.1.31%gcc@12.4.0
+  - kokkos@4.2.01%gcc@12.4.0
+  - kokkos@4.2.01%nvhpc@24.11
+  - linaro-forge@24.1

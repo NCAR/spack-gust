@@ -4,7 +4,7 @@ export MODULEPATH_ROOT=/glade/u/apps/gust/modules
 
 # Lmod configuration
 export LMOD_SYSTEM_NAME=gust
-export LMOD_SYSTEM_DEFAULT_MODULES="ncarenv/24.12:craype/2.7.31:intel/2024.2.1:ncarcompilers/1.0.0:cray-mpich/8.1.29:netcdf/4.9.2"
+export LMOD_SYSTEM_DEFAULT_MODULES="ncarenv/24.12:craype/2.7.31:intel/2024.2.1:ncarcompilers/1.0.0:cray-mpich/8.1.31:netcdf/4.9.3"
 
 case "$MODULEPATH" in
     *"${MODULEPATH_ROOT}"*)

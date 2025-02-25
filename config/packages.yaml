@@ -590,7 +590,6 @@ packages:
   libfabric:
     variants:
     - +cuda
-    - +uring
     - fabrics=sockets,tcp,udp,cxi,rxm,rxd,mrail,shm,lnx
     require:
     - '%gcc'

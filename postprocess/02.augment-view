@@ -6,7 +6,7 @@
 #       make user software easier to build (e.g., RPC symlinking).
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   08:32, 25 Feb 2025
+#   Last Revised:   08:44, 25 Feb 2025
 #
 
 #
@@ -34,7 +34,7 @@ ncar_utils[qsub]=pbstools
 ncar_utils[launch_cf]=pbstools
 ncar_utils[qhist]=qhist
 ncar_utils[gladequota]=gladequota
-ncar_utils[snapls]=gladequota
+#ncar_utils[snapls]=gladequota
 ncar_utils[set_gpu_rank]=mpitools
 ncar_utils[mpibind]=mpitools
 ncar_utils[cpu_bind]=mpitools

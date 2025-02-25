@@ -1886,6 +1886,3 @@ spack:
   - netcdf@4.9.3%nvhpc@24.11+mpi ^cray-mpich@8.1.31%nvhpc@24.11
   - netcdf@4.9.3%oneapi@2024.2.1+mpi ^cray-mpich@8.1.31%oneapi@2024.2.1
   - netcdf@4.9.3%oneapi@2025.0.3+mpi ^cray-mpich@8.1.31%oneapi@2025.0.3
-  - libfabric@2.0.x
-  - openmpi@5.0.7%gcc@12.4.0
-  - osu-micro-benchmarks%gcc@12.4.0 ^openmpi@5.0.7%gcc@12.4.0

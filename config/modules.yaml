@@ -54,6 +54,7 @@ modules:
       core_compilers:
       - gcc@7.5.0
       core_specs:
+      - libfabric
       - linaro-forge
       - nco
       - gmt
@@ -83,7 +84,6 @@ modules:
       - go
       - intel-oneapi-compilers
       - nvhpc
-      - libfabric
       - rstudio
       - idl
       - matlab

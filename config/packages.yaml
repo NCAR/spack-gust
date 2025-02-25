@@ -1,4 +1,21 @@
 packages:
+  cassini-headers:
+    externals:
+    - spec: cassini-headers@main
+      prefix: /usr
+    buildable: false
+  cxi-driver:
+    externals:
+    - spec: cxi-driver@main
+      prefix: /usr
+    buildable: false
+  libcxi:
+    externals:
+    - spec: libcxi@main
+      prefix: /usr
+    buildable: false
+    variants:
+    - +cuda
   ncvis:
     require:
     - ^netcdf-c@:4.9.2
@@ -562,9 +579,6 @@ packages:
   libcatalyst:
     require:
     - '%gcc'
-  libcxi:
-    variants:
-    - +cuda
   libdeflate:
     require:
     - '%gcc'

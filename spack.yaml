@@ -26,6 +26,23 @@ spack:
     template_dirs:
     - /glade/u/apps/gust/24.12/envs/build/templates/modules
   packages:
+    cassini-headers:
+      externals:
+      - spec: cassini-headers@main
+        prefix: /usr
+      buildable: false
+    cxi-driver:
+      externals:
+      - spec: cxi-driver@main
+        prefix: /usr
+      buildable: false
+    libcxi:
+      externals:
+      - spec: libcxi@main
+        prefix: /usr
+      buildable: false
+      variants:
+      - +cuda
     ncvis:
       require:
       - ^netcdf-c@:4.9.2
@@ -589,9 +606,6 @@ spack:
     libcatalyst:
       require:
       - '%gcc'
-    libcxi:
-      variants:
-      - +cuda
     libdeflate:
       require:
       - '%gcc'
@@ -1206,6 +1220,7 @@ spack:
         core_compilers:
         - gcc@7.5.0
         core_specs:
+        - libfabric
         - linaro-forge
         - nco
         - gmt
@@ -1235,7 +1250,6 @@ spack:
         - go
         - intel-oneapi-compilers
         - nvhpc
-        - libfabric
         - rstudio
         - idl
         - matlab
@@ -1872,3 +1886,6 @@ spack:
   - netcdf@4.9.3%nvhpc@24.11+mpi ^cray-mpich@8.1.31%nvhpc@24.11
   - netcdf@4.9.3%oneapi@2024.2.1+mpi ^cray-mpich@8.1.31%oneapi@2024.2.1
   - netcdf@4.9.3%oneapi@2025.0.3+mpi ^cray-mpich@8.1.31%oneapi@2025.0.3
+  - libfabric@2.0.x
+  - openmpi@5.0.7%gcc@12.4.0
+  - osu-micro-benchmarks%gcc@12.4.0 ^openmpi@5.0.7%gcc@12.4.0

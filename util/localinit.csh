@@ -4,7 +4,7 @@ setenv MODULEPATH_ROOT /glade/u/apps/gust/modules
 
 # Lmod configuration
 setenv LMOD_SYSTEM_NAME gust
-setenv LMOD_SYSTEM_DEFAULT_MODULES "ncarenv/24.12:craype/2.7.31:intel/2024.2.1:ncarcompilers/1.0.0:cray-mpich/8.1.31:netcdf/4.9.2"
+setenv LMOD_SYSTEM_DEFAULT_MODULES "ncarenv/24.12:craype/2.7.33:intel/2024.2.1:ncarcompilers/1.0.0:cray-mpich/8.1.31:netcdf/4.9.2"
 
 if ( ! $?MODULEPATH ) then
     setenv MODULEPATH $MODULEPATH_ROOT/environment

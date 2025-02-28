@@ -11,11 +11,11 @@ config:
       netcdf-fortran: netcdf/{^netcdf-c.version}/packages/{name}/{version}/{compiler.name}/{compiler.version}/{hash:4}
       netcdf-fortran^mpi: netcdf/{^netcdf-c.version}/packages/{name}/{version}/{^mpi.name}/{^mpi.version}/{compiler.name}/{compiler.version}/{hash:4}
   build_jobs: 4
-  test_stage: /glade/gust/scratch/$user/temp/spack/gust/24.12/tests
-  source_cache: /glade/gust/scratch/$user/temp/spack/cache
-  misc_cache: /glade/gust/scratch/$user/temp/spack/gust/24.12/misc
+  test_stage: /glade/u/home/$user/temp/spack/gust/24.12/tests
+  source_cache: /glade/u/home/$user/temp/spack/cache
+  misc_cache: /glade/u/home/$user/temp/spack/gust/24.12/misc
   build_stage:
-  - /glade/gust/scratch/$user/temp/spack/gust/24.12/builds
+  - /glade/u/home/$user/temp/spack/gust/24.12/builds
   shared_linking:
   # Turning bind setting on would be beneficial but vendor compilers do not
   # seem to work with it! Avoid!

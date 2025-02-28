@@ -1,14 +1,4 @@
 packages:
-  cassini-headers:
-    externals:
-    - spec: cassini-headers@main
-      prefix: /usr
-    buildable: false
-  cxi-driver:
-    externals:
-    - spec: cxi-driver@main
-      prefix: /usr
-    buildable: false
   libcxi:
     externals:
     - spec: libcxi@main

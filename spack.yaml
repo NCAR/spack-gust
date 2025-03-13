@@ -13,11 +13,11 @@ spack:
         netcdf-fortran: netcdf/{^netcdf-c.version}/packages/{name}/{version}/{compiler.name}/{compiler.version}/{hash:4}
         netcdf-fortran^mpi: netcdf/{^netcdf-c.version}/packages/{name}/{version}/{^mpi.name}/{^mpi.version}/{compiler.name}/{compiler.version}/{hash:4}
     build_jobs: 4
-    test_stage: /glade/u/home/$user/temp/spack/gust/24.12/tests
-    source_cache: /glade/u/home/$user/temp/spack/cache
-    misc_cache: /glade/u/home/$user/temp/spack/gust/24.12/misc
+    test_stage: /localfs/spack-cache/gust/24.12/tests
+    source_cache: /localfs/spack-cache/cache
+    misc_cache: /localfs/spack-cache/gust/24.12/misc
     build_stage:
-    - /glade/u/home/$user/temp/spack/gust/24.12/builds
+    - /localfs/spack-cache/gust/24.12/builds
     shared_linking:
     # Turning bind setting on would be beneficial but vendor compilers do not
     # seem to work with it! Avoid!
@@ -1015,6 +1015,7 @@ spack:
     baseenv:
       root: /glade/u/apps/gust/24.12/opt/view
       select:
+      - ripgrep
       - vim
       - xxdiff
       - gnuplot
@@ -1209,6 +1210,7 @@ spack:
         core_compilers:
         - gcc@7.5.0
         core_specs:
+        - podman
         - libfabric
         - linaro-forge
         - nco
@@ -1247,7 +1249,6 @@ spack:
         - grib-util
         - julia
         - ncl
-        - podman
         - r
         - miniconda
         cuda:
@@ -1301,6 +1302,7 @@ spack:
         esmf:
           autoload: none
         exclude:
+        - ripgrep
         - lmod
         - vim
         - xxdiff
@@ -1881,3 +1883,54 @@ spack:
   - netcdf@4.9.3%cce@18.0.1~mpi
   - mpi-serial@2.5.0%cce@18.0.1
   - parallelio@2.6.5%cce@18.0.1~mpi
+  - ripgrep
+  - podman
+  - openmpi@5.0.7%nvhpc@24.11
+  - openmpi@5.0.7%oneapi@2024.2.1
+  - openmpi@5.0.7%oneapi@2025.0.3
+  - osu-micro-benchmarks%nvhpc@24.11 ^openmpi@5.0.7%nvhpc@24.11
+  - osu-micro-benchmarks%oneapi@2024.2.1 ^openmpi@5.0.7%oneapi@2024.2.1
+  - osu-micro-benchmarks%oneapi@2025.0.3 ^openmpi@5.0.7%oneapi@2025.0.3
+  - parallel-netcdf@1.14.0%gcc@12.4.0 ^openmpi@5.0.7%gcc@12.4.0
+  - parallel-netcdf@1.14.0%nvhpc@24.11 ^openmpi@5.0.7%nvhpc@24.11
+  - parallel-netcdf@1.14.0%oneapi@2024.2.1 ^openmpi@5.0.7%oneapi@2024.2.1
+  - parallel-netcdf@1.14.0%oneapi@2025.0.3 ^openmpi@5.0.7%oneapi@2025.0.3
+  - hdf5@1.12.3%gcc@12.4.0+mpi ^openmpi@5.0.7%gcc@12.4.0
+  - hdf5@1.12.3%nvhpc@24.11+mpi ^openmpi@5.0.7%nvhpc@24.11
+  - hdf5@1.12.3%oneapi@2024.2.1+mpi ^openmpi@5.0.7%oneapi@2024.2.1
+  - hdf5@1.12.3%oneapi@2025.0.3+mpi ^openmpi@5.0.7%oneapi@2025.0.3
+  - netcdf@4.9.3%gcc@12.4.0+mpi ^openmpi@5.0.7%gcc@12.4.0
+  - netcdf@4.9.3%nvhpc@24.11+mpi ^openmpi@5.0.7%nvhpc@24.11
+  - netcdf@4.9.3%oneapi@2024.2.1+mpi ^openmpi@5.0.7%oneapi@2024.2.1
+  - netcdf@4.9.3%oneapi@2025.0.3+mpi ^openmpi@5.0.7%oneapi@2025.0.3
+  - fftw@3.3.10%gcc@12.4.0+mpi ^openmpi@5.0.7%gcc@12.4.0
+  - fftw@3.3.10%nvhpc@24.11+mpi ^openmpi@5.0.7%nvhpc@24.11
+  - fftw@3.3.10%oneapi@2024.2.1+mpi ^openmpi@5.0.7%oneapi@2024.2.1
+  - fftw@3.3.10%oneapi@2025.0.3+mpi ^openmpi@5.0.7%oneapi@2025.0.3
+  - parallelio1@1.10.1%gcc@12.4.0 ^openmpi@5.0.7%gcc@12.4.0
+  - parallelio1@1.10.1%nvhpc@24.11 ^openmpi@5.0.7%nvhpc@24.11
+  - parallelio1@1.10.1%oneapi@2024.2.1 ^openmpi@5.0.7%oneapi@2024.2.1
+  - parallelio1@1.10.1%oneapi@2025.0.3 ^openmpi@5.0.7%oneapi@2025.0.3
+  - darshan-runtime@3.4.6%gcc@12.4.0 ^openmpi@5.0.7%gcc@12.4.0
+  - darshan-runtime@3.4.6%nvhpc@24.11 ^openmpi@5.0.7%nvhpc@24.11
+  - darshan-runtime@3.4.6%oneapi@2024.2.1 ^openmpi@5.0.7%oneapi@2024.2.1
+  - darshan-runtime@3.4.6%oneapi@2025.0.3 ^openmpi@5.0.7%oneapi@2025.0.3
+  - parallelio@2.6.5%gcc@12.4.0 ^openmpi@5.0.7%gcc@12.4.0
+  - parallelio@2.6.5%nvhpc@24.11 ^openmpi@5.0.7%nvhpc@24.11
+  - parallelio@2.6.5%oneapi@2024.2.1 ^openmpi@5.0.7%oneapi@2024.2.1
+  - parallelio@2.6.5%oneapi@2025.0.3 ^openmpi@5.0.7%oneapi@2025.0.3
+  - esmf@8.8.0%gcc@12.4.0+mpi+pnetcdf ^openmpi@5.0.7%gcc@12.4.0
+  - esmf@8.8.0%nvhpc@24.11+mpi+pnetcdf ^openmpi@5.0.7%nvhpc@24.11
+  - esmf@8.8.0%oneapi@2024.2.1+mpi+pnetcdf ^openmpi@5.0.7%oneapi@2024.2.1
+  - esmf@8.8.0%oneapi@2025.0.3+mpi+pnetcdf ^openmpi@5.0.7%oneapi@2025.0.3
+  - parallelio@2.6.5%gcc@12.4.0~shared ^openmpi@5.0.7%gcc@12.4.0
+  - parallelio@2.6.5%nvhpc@24.11~shared ^openmpi@5.0.7%nvhpc@24.11
+  - parallelio@2.6.5%oneapi@2024.2.1~shared ^openmpi@5.0.7%oneapi@2024.2.1
+  - parallelio@2.6.5%oneapi@2025.0.3~shared ^openmpi@5.0.7%oneapi@2025.0.3
+  - gptl@8.1.1%gcc@12.4.0 ^openmpi@5.0.7%gcc@12.4.0
+  - gptl@8.1.1%nvhpc@24.11 ^openmpi@5.0.7%nvhpc@24.11
+  - gptl@8.1.1%oneapi@2024.2.1 ^openmpi@5.0.7%oneapi@2024.2.1
+  - gptl@8.1.1%oneapi@2025.0.3 ^openmpi@5.0.7%oneapi@2025.0.3
+  - superlu-dist@8.2.1%gcc@12.4.0 ^openmpi@5.0.7%gcc@12.4.0
+  - superlu-dist@8.2.1%oneapi@2024.2.1 ^openmpi@5.0.7%oneapi@2024.2.1
+  - superlu-dist@8.2.1%oneapi@2025.0.3 ^openmpi@5.0.7%oneapi@2025.0.3

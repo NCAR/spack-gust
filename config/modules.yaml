@@ -54,6 +54,7 @@ modules:
       core_compilers:
       - gcc@7.5.0
       core_specs:
+      - podman
       - libfabric
       - linaro-forge
       - nco
@@ -92,7 +93,6 @@ modules:
       - grib-util
       - julia
       - ncl
-      - podman
       - r
       - miniconda
       cuda:
@@ -146,6 +146,7 @@ modules:
       esmf:
         autoload: none
       exclude:
+      - ripgrep
       - lmod
       - vim
       - xxdiff

@@ -1,0 +1,5 @@
+hide-modulefile /glade/u/apps/gust/modules/environment/cesmdev/1.0.lua
+hide-modulefile /glade/u/apps/gust/modules/environment/crayenv/24.11.lua
+hide-modulefile /glade/u/apps/gust/modules/environment/crayenv/25.03.lua
+hide-modulefile /glade/u/apps/gust/modules/environment/ncarenv-basic/24.12.lua
+hide-modulefile /glade/u/apps/gust/modules/environment/ncarenv-basic/25.07.lua

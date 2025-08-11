@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   10:43, 11 Aug 2025
+#   Last Revised:   12:23, 11 Aug 2025
 #
 
 #
@@ -40,7 +40,8 @@ core="  craype/2.7.34
 
 # Specify compiler-dependent modules to import into the Spack module tree
 cdep="  cray-libsci/25.03.0
-        cray-mpich/8.1.32"
+        cray-mpich/8.1.32
+        cray-mpich/9.0.0"
 
 # Specify mpi-dependent modules to import into the Spack module tree
 mdep="  cray-mpixlate/1.0.2"

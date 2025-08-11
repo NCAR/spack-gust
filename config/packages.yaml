@@ -205,6 +205,30 @@ packages:
         environment:
           append_path:
             LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
+    - spec: cray-mpich@9.0.0 %gcc
+      prefix: /opt/cray/pe/mpich/9.0.0/ofi/gnu/12.3
+      extra_attributes:
+        environment:
+          append_path:
+            LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
+    - spec: cray-mpich@9.0.0 %cce
+      prefix: /opt/cray/pe/mpich/9.0.0/ofi/cray/17.0
+      extra_attributes:
+        environment:
+          append_path:
+            LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
+    - spec: cray-mpich@9.0.0 %nvhpc
+      prefix: /opt/cray/pe/mpich/9.0.0/ofi/nvidia/23.3
+      extra_attributes:
+        environment:
+          append_path:
+            LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
+    - spec: cray-mpich@9.0.0 %intel-oneapi-compilers
+      prefix: /opt/cray/pe/mpich/9.0.0/ofi/intel/2022.1
+      extra_attributes:
+        environment:
+          append_path:
+            LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
     buildable: false
   cuda:
     require:

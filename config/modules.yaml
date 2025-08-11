@@ -146,11 +146,11 @@ modules:
       - cuda@12.3.2
       - cudnn@8.9.7.29-12
       - intel-oneapi-compilers@2024.2.1
-      - gcc@12.5.0
       - libfabric@1.22.0
       esmf:
         autoload: none
       exclude:
+      - gcc@12.5.0
       - lmod
       - json-c
       - openjpeg

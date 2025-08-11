@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   10:38, 11 Aug 2025
+#   Last Revised:   10:43, 11 Aug 2025
 #
 
 #
@@ -420,6 +420,7 @@ comp_dep[gcc]=gnu
 comp_dep[nvhpc]=nvidia
 comp_dep[intel]=intel
 comp_dep[oneapi]=intel
+comp_dep[intel-oneapi-compilers]=intel
 
 declare -A comp_skip
 comp_skip[intel/2021.7.1]=cray-libsci/22.11.1.2

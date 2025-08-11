@@ -6,7 +6,7 @@
 #       attractive with descriptive section headers.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   10:39, 11 Aug 2025
+#   Last Revised:   10:55, 11 Aug 2025
 #
 
 tsecho "Creating Lmod functionality extensions"
@@ -29,10 +29,10 @@ mpi_cat_list="cray-mpich hpcx-mpi intel-mpi intel-oneapi-mpi mpi-serial mpich mv
 
 for comp_cat in $comp_cat_list; do
     for mpi_cat in $mpi_cat_list; do
-        echo "      ['modules/[^/]+/${mpi_cat//-/%-}/[^/]+/$comp_cat/[^/]*$'] = 'MPI-dependent Software - [$comp_cat + $mpi_cat]'," >> $TMP_FILE
+        echo "      ['modules/[^/]+/${mpi_cat//-/%-}/[^/]+/${comp_cat//-/%-}/[^/]*$'] = 'MPI-dependent Software - [$comp_cat + $mpi_cat]'," >> $TMP_FILE
     done
 
-    echo "      ['modules/[^/]+/$comp_cat/[^/]*$'] = 'Compiler-dependent Software - [$comp_cat]'," >> $TMP_FILE
+    echo "      ['modules/[^/]+/${comp_cat//-/%-}/[^/]*$'] = 'Compiler-dependent Software - [$comp_cat]'," >> $TMP_FILE
 done
 
 cat >> $TMP_FILE << EOF

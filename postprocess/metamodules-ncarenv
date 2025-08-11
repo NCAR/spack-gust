@@ -6,7 +6,7 @@
 #       version ncarenv stacks.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   10:09, 24 Dec 2024
+#   Last Revised:   11:09, 11 Aug 2025
 #
 
 #
@@ -63,6 +63,13 @@ for mod_type in ncarenv ncarenv-basic; do
     fi
 
     mv $TMP_FILE $mm_file
+
+    if [[ ! -f $MOD_ROOT/environment/$mod_type/default ]] || [[ $set_as_default == true ]]; then
+        cd $MOD_ROOT/environment/$mod_type
+        rm -f default
+        ln -s ${NCAR_SPACK_HOST_VERSION}.lua default
+        cd - > /dev/null
+    fi
 done
 
 if [[ $SPACK_ENV == $NCAR_SPACK_ENV_PUBLIC ]]; then

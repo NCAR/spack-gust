@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   10:32, 11 Aug 2025
+#   Last Revised:   10:38, 11 Aug 2025
 #
 
 #
@@ -21,7 +21,7 @@
 #
 
 # This script will loop through these options for module porting
-compilers="cce gcc nvhpc oneapi intel"
+compilers="cce gcc nvhpc oneapi intel intel-oneapi-compilers aocc"
 mpis="cray-mpich"
 
 # Specify core modules to import into the Spack module tree

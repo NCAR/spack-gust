@@ -6,7 +6,7 @@
 #       attractive with descriptive section headers.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   21:12, 28 Oct 2024
+#   Last Revised:   10:39, 11 Aug 2025
 #
 
 tsecho "Creating Lmod functionality extensions"
@@ -24,7 +24,7 @@ local mapT =
       ['/Core$'] = "Compilers and Core Software",
 EOF
 
-comp_cat_list="aocc arm cce clang gcc intel nag oneapi nvhpc"
+comp_cat_list="aocc arm cce clang gcc intel nag oneapi nvhpc intel-oneapi-compilers"
 mpi_cat_list="cray-mpich hpcx-mpi intel-mpi intel-oneapi-mpi mpi-serial mpich mvapich2 mvapich2-gdr openmpi"
 
 for comp_cat in $comp_cat_list; do

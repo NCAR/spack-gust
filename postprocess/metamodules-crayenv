@@ -7,7 +7,7 @@
 #       CPE is provided as-is without support for power users.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   20:05, 28 Oct 2024
+#   Last Revised:   10:30, 11 Aug 2025
 #
 
 #
@@ -22,7 +22,7 @@
 #
 
 # These are the modules we wish to be included in the defaults for the user
-cpe_defmods="cray-pals craype cray-dsmml cray-libsci PrgEnv-cray cce cray-mpich cray-pmi"
+cpe_defmods="craype cray-dsmml cray-libsci PrgEnv-cray cce cray-mpich cray-pmi"
 
 #
 ##  BEGIN METAMODULE GENERATION
@@ -33,7 +33,7 @@ mm_src=$NCAR_SPACK_ENV_BUILD/templates/modules/crayenv.lua
 
 for cpe_version in $(find /opt/cray/pe/cpe -mindepth 1 -maxdepth 1 -type d -exec basename {} \;); do
     # Create list of default modules
-    my_defmods=libfabric/${ofi_version}:craype-x86-milan:craype-network-ofi
+    my_defmods=libfabric/${ofi_version}:cray-pals/${pals_version}:craype-x86-milan:craype-network-ofi
 
     for mod_name in $cpe_defmods; do
         my_defmods=${mod_name}/$(get_package_version $cpe_version $mod_name):$my_defmods

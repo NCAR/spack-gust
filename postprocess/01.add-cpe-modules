@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   10:17, 11 Aug 2025
+#   Last Revised:   10:32, 11 Aug 2025
 #
 
 #
@@ -108,7 +108,6 @@ fi
 
 function modify_mpi {
 mpich_cpe=$(get_cpe_version $mod_name $mod_version)
-pals_version=$(get_package_version $mpich_cpe pals)
 pmi_version=$(get_package_version $mpich_cpe pmi)
 cti_version=$(get_package_version $mpich_cpe cti)
 
@@ -152,7 +151,7 @@ setenv("CRAYPE_NETWORK_TARGET", "$cray_network")
 prepend_path("LD_LIBRARY_PATH", MPICH_DIR .. "/lib")
 
 -- PALS support
-local PALS_DIR = "/opt/cray/pe/pals/${pals_version}"
+local PALS_DIR = "/opt/cray/pals/${pals_version}"
 prepend_path("PATH", PALS_DIR .. "/bin")
 prepend_path("MANPATH", PALS_DIR .. "/man")
 prepend_path("PKG_CONFIG_PATH", PALS_DIR .. "/lib/pkgconfig")

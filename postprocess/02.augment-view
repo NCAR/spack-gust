@@ -6,7 +6,7 @@
 #       make user software easier to build (e.g., RPC symlinking).
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   17:23, 18 Aug 2025
+#   Last Revised:   17:28, 18 Aug 2025
 #
 
 #
@@ -102,7 +102,7 @@ if [[ $SPACK_ENV == $NCAR_SPACK_ENV_PUBLIC ]]; then
 
         if [[ ! -e $NCAR_SPACK_ROOT_BASE/utils/bin/$util ]]; then
             # First, let's make sure the repo is up to date (and submodules pulled)
-            if [[ $my_user == $utils_owner ]] && [[ " $skip_clone " != *" $repo_name "* ]]; then
+            if [[ $my_user == $utils_owner ]] && [[ -d $util_root/$repo_name/.git ]]; then
                 cd $util_root/$repo_name
                 git pull > /dev/null
 

@@ -6,7 +6,7 @@
 #       make user software easier to build (e.g., RPC symlinking).
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   11:48, 29 Jul 2025
+#   Last Revised:   17:12, 18 Aug 2025
 #
 
 #
@@ -47,11 +47,6 @@ ncar_utils[sudox]=termtools
 ncar_utils[licstatus]=termtools
 ncar_utils[dumpenv]=termtools
 ncar_utils[vncmgr]=vncmgr
-ncar_utils[gedit]=leap-container/$suse_major
-ncar_utils[gv]=leap-container/$suse_major
-ncar_utils[evince]=leap-container/$suse_major
-ncar_utils[diffmerge]=precise-container
-ncar_utils[diffuse]=precise-container
 ncar_utils[esgfsearch]=cmipap-configuration
 ncar_utils[esgfdownload]=cmipap-configuration
 
@@ -59,6 +54,14 @@ if [[ $NCAR_SPACK_HOST == casper ]]; then
     ncar_utils[dask_resource_monitor]=negin513:ncar-dask-monitor
     ncar_utils[casper_resource_monitor]=negin513:ncar-dask-monitor
     ncar_utils[qvscode]=neumanbrett:qvscode
+fi
+
+if [[ $NCAR_SPACK_HOST != gust ]]; then
+    ncar_utils[gedit]=leap-container/$suse_major
+    ncar_utils[gv]=leap-container/$suse_major
+    ncar_utils[evince]=leap-container/$suse_major
+    ncar_utils[diffmerge]=precise-container
+    ncar_utils[diffuse]=precise-container
 fi
 
 # These utilites don't actually come from github tracked repos, so let's not

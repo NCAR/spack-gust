@@ -6,7 +6,7 @@
 #       make user software easier to build (e.g., RPC symlinking).
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   17:17, 18 Aug 2025
+#   Last Revised:   17:23, 18 Aug 2025
 #
 
 #
@@ -112,7 +112,10 @@ if [[ $SPACK_ENV == $NCAR_SPACK_ENV_PUBLIC ]]; then
                 cd - > /dev/null
             fi
 
-            if [[ -e $util_root/$repo_name/bin/$util ]]; then
+            if [[ -e $util_root/$repo_name/default/bin/$util ]]; then
+                tsecho "    adding $GCOL$util$DCOL"
+                ln -s $util_root/$repo_name/default/bin/$util $NCAR_SPACK_ROOT_BASE/utils/bin/
+            elif [[ -e $util_root/$repo_name/bin/$util ]]; then
                 tsecho "    adding $GCOL$util$DCOL"
                 ln -s $util_root/$repo_name/bin/$util $NCAR_SPACK_ROOT_BASE/utils/bin/
             elif [[ -e $util_root/$repo_name/$util ]]; then

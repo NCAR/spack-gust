@@ -1,9 +1,4 @@
 packages:
-  lustre:
-    externals:
-    - spec: lustre@2.15.5.2_cray_1_g9231caa
-      prefix: /usr
-    buildable: false
   openssl:
     externals:
     - spec: openssl@3.1.4
@@ -11,6 +6,11 @@ packages:
     buildable: false
     require:
     - certs=system
+  lustre:
+    externals:
+    - spec: lustre@2.15.5.2_cray_1_g9231caa
+      prefix: /usr
+    buildable: false
   pkg-config:
     externals:
     - spec: pkg-config@0.29.2
@@ -229,6 +229,9 @@ packages:
         environment:
           append_path:
             LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
+    prefer:
+    - +cuda
+    - cuda_arch=80
     buildable: false
   cuda:
     require:
@@ -468,6 +471,8 @@ packages:
     require:
     # Doesn't build without proj as a dependency for me
     - +proj
+    prefer:
+    - '%gcc@12.5.0'
   libllvm:
     conflict:
     - llvm-amdgpu

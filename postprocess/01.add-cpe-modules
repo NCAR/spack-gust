@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   12:23, 11 Aug 2025
+#   Last Revised:   13:20, 11 Sep 2025
 #
 
 #
@@ -152,7 +152,7 @@ setenv("CRAYPE_NETWORK_TARGET", "$cray_network")
 prepend_path("LD_LIBRARY_PATH", MPICH_DIR .. "/lib")
 
 -- PALS support
-local PALS_DIR = "/opt/cray/pals/${pals_version}"
+local PALS_DIR = "/opt/cray/pals/default"
 prepend_path("PATH", PALS_DIR .. "/bin")
 prepend_path("MANPATH", PALS_DIR .. "/man")
 prepend_path("PKG_CONFIG_PATH", PALS_DIR .. "/lib/pkgconfig")

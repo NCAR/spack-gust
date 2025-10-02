@@ -7,7 +7,7 @@
 #       many packages are not tracked in Spack at all.
 #
 #   Author:         Brian Vanderwende
-#   Last Revised:   13:20, 11 Sep 2025
+#   Last Revised:   14:43, 29 Sep 2025
 #
 
 #
@@ -40,8 +40,8 @@ core="  craype/2.7.34
 
 # Specify compiler-dependent modules to import into the Spack module tree
 cdep="  cray-libsci/25.03.0
-        cray-mpich/8.1.32
-        cray-mpich/9.0.0"
+        cray-mpich/8.1.32 default
+        cray-mpich/9.0.0 cpe=25.03"
 
 # Specify mpi-dependent modules to import into the Spack module tree
 mdep="  cray-mpixlate/1.0.2"
@@ -108,7 +108,7 @@ fi
 }
 
 function modify_mpi {
-mpich_cpe=$(get_cpe_version $mod_name $mod_version)
+mpich_cpe=${mpich_cpe:-$(get_cpe_version $mod_name $mod_version)}
 pmi_version=$(get_package_version $mpich_cpe pmi)
 cti_version=$(get_package_version $mpich_cpe cti)
 
@@ -308,14 +308,33 @@ function get_module_file {
 }
 
 function copy_mods {
-    mod_list=(${!1})
-    for mod_entry in ${mod_list[@]}; do
+    mod_list="${!1}"
+
+    while read mod_entry; do
         log_me=yes
-        mod=${mod_entry/(D)}
+        mod=${mod_entry%% *}
+        mod_meta="${mod_entry/$mod}"
         mod_name=${mod%/*}
         mod_version=${mod#*/}
         tsecho "Package: $GCOL$mod$DCOL"
         
+        # Set up known metadata
+        set_default=false mpich_cpe=
+
+        for meta_value in $mod_meta; do
+            case $meta_value in
+                default)
+                    set_default=true
+                    ;;
+                cpe=*)
+                    mpich_cpe=${meta_value#*=}
+                    ;;
+                *)
+                    tsecho "Error: unknown metadata $meta_value set on module $mod"
+                    ;;
+            esac
+        done
+
         if [[ $1 == cdep ]]; then
             for comp in $comp_list; do
                 comp_name=${comp%/*}
@@ -350,8 +369,9 @@ function copy_mods {
                 tsecho "    copying module from ${PCOL}${src_file}$DCOL (${PCOL}comp=$comp$DCOL)"
                 cp $src_file $mod_path/$mod_name
 
-                if [[ $mod != $mod_entry ]]; then
+                if [[ $set_default == true ]]; then
                     ln -sf ${mod_version}.lua $mod_path/$mod_name/default
+                    tsecho "    creating ${PCOL}default$DCOL module symlink"
                 fi
 
                 if [[ " $mpis " == *" $mod_name "* ]]; then
@@ -371,7 +391,8 @@ function copy_mods {
             cp $src_file $mod_path/$mod_name
             tsecho "    copying module from ${PCOL}${src_file}$DCOL"
 
-            if [[ $mod != $mod_entry ]]; then
+            if [[ $set_default == true ]]; then
+                tsecho "    creating ${PCOL}default$DCOL module symlink"
                 ln -sf ${mod_version}.lua $mod_path/$mod_name/default
             fi
 
@@ -396,7 +417,7 @@ function copy_mods {
                 set_dependency $mod_path/${mod}.lua
             fi
         fi
-    done
+    done <<< "$mod_list"
 }
 
 #

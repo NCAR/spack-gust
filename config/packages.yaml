@@ -55,6 +55,16 @@ packages:
     - languages=c,c++,fortran,go
   cce:
     externals:
+    - spec: cce@17.0.1
+      prefix: /opt/cray/pe/cce/17.0.1
+      extra_attributes:
+        compilers:
+          c: /opt/cray/pe/cce/17.0.1/bin/craycc
+          cxx: /opt/cray/pe/cce/17.0.1/bin/crayCC
+          fortran: /opt/cray/pe/cce/17.0.1/bin/crayftn
+        environment:
+          set:
+            CRAYPE_LINK_TYPE: dynamic
     - spec: cce@19.0.0
       prefix: /opt/cray/pe/cce/19.0.0
       extra_attributes:
@@ -170,6 +180,14 @@ packages:
     - +spglib
   cray-libsci:
     externals:
+    - spec: cray-libsci@24.03.0 %cce
+      prefix: /opt/cray/pe/libsci/24.03.0/CRAY/17.0/x86_64
+    - spec: cray-libsci@24.03.0 %gcc
+      prefix: /opt/cray/pe/libsci/24.03.0/GNU/12.3/x86_64
+    - spec: cray-libsci@24.03.0 %nvhpc
+      prefix: /opt/cray/pe/libsci/24.03.0/NVIDIA/23.3/x86_64
+    - spec: cray-libsci@24.03.0 %intel-oneapi-compilers
+      prefix: /opt/cray/pe/libsci/24.03.0/INTEL/2023.2/x86_64
     - spec: cray-libsci@25.03.0 %cce
       prefix: /opt/cray/pe/libsci/25.03.0/CRAY/17.0/x86_64
     - spec: cray-libsci@25.03.0 %gcc
@@ -181,6 +199,30 @@ packages:
     buildable: false
   cray-mpich:
     externals:
+    - spec: cray-mpich@8.1.29 %gcc
+      prefix: /opt/cray/pe/mpich/8.1.29/ofi/gnu/12.3
+      extra_attributes:
+        environment:
+          append_path:
+            LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
+    - spec: cray-mpich@8.1.29 %cce
+      prefix: /opt/cray/pe/mpich/8.1.29/ofi/cray/17.0
+      extra_attributes:
+        environment:
+          append_path:
+            LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
+    - spec: cray-mpich@8.1.29 %nvhpc
+      prefix: /opt/cray/pe/mpich/8.1.29/ofi/nvidia/23.3
+      extra_attributes:
+        environment:
+          append_path:
+            LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
+    - spec: cray-mpich@8.1.29 %intel-oneapi-compilers
+      prefix: /opt/cray/pe/mpich/8.1.29/ofi/intel/2022.1
+      extra_attributes:
+        environment:
+          append_path:
+            LD_LIBRARY_PATH: /opt/cray/libfabric/1.22.0/lib64
     - spec: cray-mpich@8.1.32 %gcc
       prefix: /opt/cray/pe/mpich/8.1.32/ofi/gnu/12.3
       extra_attributes:
